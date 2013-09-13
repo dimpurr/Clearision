@@ -14,9 +14,11 @@
 	?></title>
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+<link rel="stylesheet" href="http://192.168.1.200/wp/wp-content/themes/clearision/style.css">
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="author" content="dimpurr" />
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 
@@ -34,6 +36,18 @@
 <body>
 <div id="page">
 
+<hgroup id="ctn_header">
+	<div id="title">
+		<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
+		<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
+	</div>
+	<div id="title_r">
+	<form method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+		<input type="text" name="s" id="s" placeholder="" size="10" />
+	</form>
+	</div>
+</hgroup>
+
 <div id="float" >
 
 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img id="logo" alt="Dimpurr" title="Dimpurr" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" ></a>
@@ -47,15 +61,3 @@
 </nav>
 
 </div>
-
-<hgroup id="ctn_header">
-	<div id="title">
-		<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
-		<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
-	</div>
-	<div id="title_r">
-	<form method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-		<input type="text" name="s" id="s" placeholder="" size="10" />
-	</form>
-	</div>
-</hgroup>
