@@ -1,7 +1,7 @@
 /*
 Theme Name: Clearision
 Theme URI: http://blog.dimpurr.com
-Version: 0.1
+Version: 0.11
 Author: Dimpurr
 Author URI: http://dimpurr.com
 Description: Dimpurr Blog Theme.
@@ -61,7 +61,7 @@ input:invalid,textarea:invalid {background-color:#f0dddd;}
 table {border-collapse:collapse;border-spacing:0;}
 td {vertical-align:top;}
 
-@font-face{ font-family: Century Gothic; src: local('Century Gothic'), url(http://img1.cheny.org/cyfont/CenturyGothic.TTF) format('ttf');}
+@font-face { font-family: Century Gothic; src: local('Century Gothic'), url(http://img1.cheny.org/cyfont/CenturyGothic.TTF) format('ttf');}
 
 .round { -webkit-border-radius: 500px; -moz-border-radius: 500px; border-radius: 500px; }
 .hide { display: none; }
@@ -83,9 +83,11 @@ blockquote , q { margin: 10px 30px 10px 50px; padding: 10px 5px;
 	border-width: 1px 0 1px 0; border-style: dashed; border-color: #BBB; }
 blockquote p , q p { margin: 0; }
 ol , ul { font-size: 15px; padding-left: 70px; line-height: 24px; }
-pre { margin: 15px 0; padding: 10px; display: block;
-	background: #f7f7f9; color: #222; border: 1px solid #e1e1e8;
-	font-family: "Yahei Consolas Hybird", "Consolas", "Ubuntu Mono", Monaco, Menlo, "Courier New", monospace, sans-serif; font-size: 14px; word-break: break-all; word-wrap: break-word; }
+pre , code { margin: 15px 0; padding: 10px; display: block;
+	background: #FBFBFD; color: #222; border: 1px solid #e1e1e8;
+	font-family: "Yahei Consolas Hybird", "Consolas", "Ubuntu Mono", Monaco, Menlo, "Courier New", monospace, sans-serif; font-size: 14px; word-break: break-all; word-wrap: break-word;
+	-webkit-transition: background linear 0.2s; -moz-transition: background linear 0.2s; transition: background linear 0.2s; }
+pre:hover , code:hover { background: #FDFDFF; }
 button , input[type="submit"] { border: 2px #DDD solid; background: #EFEFEF; padding: 5px 10px;
 	-webkit-transition: background linear 0.2s, border linear 0.2s; -moz-transition: backgroundbackground linear 0.2s, border linear 0.2s; transition: background linear 0.2s, border linear 0.2s; }
 button:hover , input[type="submit"]:hover { background: #DDD; }
