@@ -50,7 +50,7 @@
 
 <div id="float" >
 
-<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img id="logo" alt="Dimpurr" title="Dimpurr" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" ></a>
+<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img id="logo" alt="Dimpurr" title="Dimpurr" src="<?php echo get_option('clrs_logo'); ?>" ></a>
 
 <nav id="nav" role="navigation">
 	<?php wp_nav_menu( array( 'theme_location' => 'main' ) ); ?>

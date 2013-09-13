@@ -18,8 +18,9 @@ function clrs_config(){ ?>
 	<br><h3>LOGO头像：</h3>
 	<input type="text" size="80" name="clrs_logo" id="clrs_logo" placeholder="粘贴链接或点击上传" value="<?php echo get_option('clrs_logo'); ?>"/>
 	<input type="button" name="upload_button" value="上传" id="upbottom"/><br>
+	<p>默认值：http://blog.dimpurr.com/wp-content/themes/clearision/img/logo.png</p>
 
-	<br><img src="<?php echo get_option('clrs_logo'); ?>" style="max-width: 114px; -webkit-border-radius: 500px; -moz-border-radius: 500px; border-radius: 500px;" />
+	<img src="<?php echo get_option('clrs_logo'); ?>" style="max-width: 114px; -webkit-border-radius: 500px; -moz-border-radius: 500px; border-radius: 500px;" />
 
 	<?php wp_enqueue_script('thickbox'); wp_enqueue_style('thickbox'); ?>
 	<script type="text/javascript">
@@ -56,9 +57,6 @@ add_action('admin_menu', 'clrs_menu_function');
 if(isset($_POST['option_save'])){
 	$clrs_tongji = stripslashes($_POST['clrs_tongji']);
 	update_option( 'clrs_tongji', $clrs_tongji );
-}
-
-if(isset($_POST['option_save'])){
 	$clrs_logo = stripslashes($_POST['clrs_logo']);
 	update_option( 'clrs_logo', $clrs_logo );
 }
