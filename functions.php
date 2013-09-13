@@ -1,5 +1,68 @@
 <?php
 
+function clrs_menu_function(){   
+	add_theme_page(
+		'Clearision 设置',
+		'Clearision 设置',
+		'administrator',
+		'clrs_menu',
+		'clrs_config');
+}
+
+function clrs_config(){ ?>
+
+<h1>Clearision 主题设置</h1>
+
+<form method="post" name="clrs_form" id="clrs_form">
+
+	<br><h3>LOGO头像：</h3>
+	<input type="text" size="80" name="clrs_logo" id="clrs_logo" placeholder="粘贴链接或点击上传" value="<?php echo get_option('clrs_logo'); ?>"/>
+	<input type="button" name="upload_button" value="上传" id="upbottom"/><br>
+
+	<br><img src="<?php echo get_option('clrs_logo'); ?>" style="max-width: 114px; -webkit-border-radius: 500px; -moz-border-radius: 500px; border-radius: 500px;" />
+
+	<?php wp_enqueue_script('thickbox'); wp_enqueue_style('thickbox'); ?>
+	<script type="text/javascript">
+jQuery(document).ready(function() {
+	jQuery('#upbottom').click(function() {
+		targetfield = jQuery(this).prev('#clrs_logo');
+		tb_show('', 'media-upload.php?type=image&amp;TB_iframe=true');
+		return false;
+	});
+	window.send_to_editor = function(html) {
+		imgurl = jQuery('img',html).attr('src');
+		jQuery(targetfield).val(imgurl);
+		tb_remove();
+	}	
+});
+	</script>
+
+	<h3>统计代码：</h3>
+	<textarea name="clrs_tongji" rows="10" cols="60" placeholder="输入网站统计代码，可适当加入字符" style="font-size: 14px; font-family: Consolas, monospace, sans-serif, sans"><?php echo get_option('clrs_tongji'); ?></textarea><br>
+
+	<br><h3>提交更改：</h3>
+	<input type="submit" name="option_save" value="保存全部设置" />
+
+	<?php wp_nonce_field('update-options'); ?>
+	<input type="hidden" name="action" value="update" />
+	<input type="hidden" name="page_options" value="clrs_copy_right" />
+
+</form>
+
+<?php }
+
+add_action('admin_menu', 'clrs_menu_function');
+
+if(isset($_POST['option_save'])){
+	$clrs_tongji = stripslashes($_POST['clrs_tongji']);
+	update_option( 'clrs_tongji', $clrs_tongji );
+}
+
+if(isset($_POST['option_save'])){
+	$clrs_logo = stripslashes($_POST['clrs_logo']);
+	update_option( 'clrs_logo', $clrs_logo );
+}
+
 function c_pagenavi () {
 	global $wp_query, $wp_rewrite;
 	$wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
