@@ -41,6 +41,13 @@ jQuery(document).ready(function() {
 	<h3>统计代码：</h3>
 	<textarea name="clrs_tongji" rows="10" cols="60" placeholder="输入网站统计代码，可适当加入字符" style="font-size: 14px; font-family: Consolas, monospace, sans-serif, sans"><?php echo get_option('clrs_tongji'); ?></textarea><br>
 
+	<br><h3>友情链接：</h3>
+	<input type="radio" name="clrs_ldis" value="yes" required="required" />显示&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="radio" name="clrs_ldis" value="no" required="required" />不显示<br>
+	当前状态：<?php echo get_option('clrs_ldis'); ?><br>
+	<br><textarea name="clrs_link" rows="10" cols="60" placeholder="在这里使用 HTML 代码自定义友链区的内容" style="font-size: 14px; font-family: Consolas, monospace, sans-serif, sans"><?php echo get_option('clrs_link'); ?></textarea><br>
+
+
 	<br><h3>提交更改：</h3>
 	<input type="submit" name="option_save" value="保存全部设置" />
 
@@ -59,6 +66,10 @@ if(isset($_POST['option_save'])){
 	update_option( 'clrs_tongji', $clrs_tongji );
 	$clrs_logo = stripslashes($_POST['clrs_logo']);
 	update_option( 'clrs_logo', $clrs_logo );
+	$clrs_ldis = stripslashes($_POST['clrs_ldis']);
+	update_option( 'clrs_ldis', $clrs_ldis );
+	$clrs_link = stripslashes($_POST['clrs_link']);
+	update_option( 'clrs_link', $clrs_link );
 }
 
 function c_pagenavi () {

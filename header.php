@@ -4,13 +4,10 @@
 <head>
 
 <title><?php
-	global $page, $paged;
+	/* global $page, $paged;
 	if ( $paged >= 2 || $page >= 2 )
-		echo sprintf( ('页面 %s'), max( $paged, $page ) . ' | ' );
-	bloginfo( 'name' );
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) )
-		echo " | $site_description";
+		echo sprintf( ('页面 %s'), max( $paged, $page ) . ' | ' ); */
+	wp_title( '|', true, 'right' );
 	?></title>
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">

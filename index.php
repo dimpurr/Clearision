@@ -51,6 +51,14 @@
 </div>
 </div>
 
+<?php $ldis = get_option('clrs_ldis'); 
+	if ($ldis == "yes") { $c_ldis = "block"; } else { $c_ldis = "none"; }; ?>
+
+<div id="link" style="display:<?php echo $c_ldis; ?>"><div id="link_content">
+	<h3 id="link_h">友情链接</h3>
+		<?php echo get_option('clrs_link'); ?>
+</div></div>
+
 <?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

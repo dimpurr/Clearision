@@ -1,7 +1,7 @@
 /*
 Theme Name: Clearision
 Theme URI: http://blog.dimpurr.com
-Version: 0.32
+Version: 0.4
 Author: Dimpurr
 Author URI: http://dimpurr.com
 Description: A HTML5 grey and one column WordPress theme.
@@ -105,7 +105,7 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 
 #page { margin: 0 auto 0 auto; text-align: left; max-width: 1200px; }
 #float { width: 160px; float: left; position: fixed; top: 0; text-align: right; }
-#ctn { margin-left: 200px; }
+#ctn , #link { margin-left: 200px; }
 #content { margin: 20px; }
 #footer { width: 160px; float: left; position: fixed; bottom: 0; text-align: right; }
 
@@ -154,9 +154,9 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 	background: #FFF url(img/enter.png) right no-repeat; background-size: 12px; background-origin: content-box;
 	-moz-box-shadow: inset 0 0 0 #DDD; -webkit-box-shadow: inset 0 0 0 #DDD; box-shadow: inset 0 0 0 #DDD; }
 
-#ctn { background: #FFF; margin: 40px 20px 0 200px;
+#ctn , #link { background: #FFF; margin: 40px 20px 0 200px;
  -moz-box-shadow: 0 0 20px #DDD; -webkit-box-shadow: 0 0 20px #DDD; box-shadow: 0 0 20px #DDD; }
-#content { margin: 30px; padding: 30px 0; }
+#content , #link_content { margin: 30px; padding: 30px 0; }
 
 .post_ctn { border-top: 1px dashed #DDD; }
 .post_t { margin: 15px 0 30px 0; }
@@ -191,6 +191,12 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 	-moz-box-shadow:0 0 10px #DDD; -webkit-box-shadow:0 0 10px #DDD; box-shadow:0 0 10px #DDD;
 	-webkit-transition: background linear 0.2s; -moz-transition: background linear 0.2s; transition: background linear 0.2s; }
 #page_nav a:hover , #post_nav a:hover , #cmt-nav a:hover { background: #777; color: #FFF; }
+
+#link_content { margin: 10px 30px; padding: 15px 0; }
+#link_h { vertical-align: middle; padding: 0; margin: 0;
+	font-size: 16px; line-height: 32px; }
+#link a { vertical-align: middle; padding: 0; margin: 0 15px 0 0; 
+	font-size: 14px; line-height: 32px; }
 
 #post_nav { margin: 0 0 30px 0; }
 #p_n_r { float: right; margin-left: 0; }
