@@ -1,7 +1,7 @@
 /*
 Theme Name: Clearision
 Theme URI: http://blog.dimpurr.com
-Version: 0.4
+Version: 0.5
 Author: Dimpurr
 Author URI: http://dimpurr.com
 Description: A HTML5 grey and one column WordPress theme.
@@ -260,8 +260,8 @@ blockquote , q { margin-left: 15px; }
 
 #page { margin: 0 auto 0 auto; text-align: left; }
 #float { width: auto; float: none; position: static; margin-top: 20px; padding: 0px; text-align: center; }
-#ctn { margin: 0; }
-#content { margin: 0px; }
+#ctn , #link { margin: 0; }
+#content , #link_content { margin: 0px; }
 #footer { width: auto; float: none; position: static; text-align: center; }
 
 #logo { display: none; }
@@ -287,6 +287,8 @@ blockquote , q { margin-left: 15px; }
 
 #ctn { background: #FFF; margin: 0; }
 #content { margin: 15px; padding: 30px 0; }
+
+#link_content { margin: 15px; }
 
 .post_tag a { line-height: 28px; }
 

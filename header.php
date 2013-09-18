@@ -3,12 +3,7 @@
 
 <head>
 
-<title><?php
-	/* global $page, $paged;
-	if ( $paged >= 2 || $page >= 2 )
-		echo sprintf( ('页面 %s'), max( $paged, $page ) . ' | ' ); */
-	wp_title( '|', true, 'right' );
-	?></title>
+<title><?php wp_title( '|', true, 'right' ); ?></title>
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 <link rel="stylesheet" href="http://192.168.1.200/wp/wp-content/themes/clearision/style.css">
@@ -23,7 +18,8 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 
-<?php if ( is_user_logged_in() ) { echo '<style type="text/css" media="screen"> #float { top: 28px; } </style>' ;
+<?php if ( is_user_logged_in() ) { 
+	echo '<style type="text/css" media="screen"> #float { top: 28px; } </style>' ;
 } ?>
 
 <?php wp_head(); ?>

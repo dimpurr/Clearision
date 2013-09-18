@@ -1,0 +1,200 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Clearison en_US\n"
+"POT-Creation-Date: 2013-09-18 18:55+0800\n"
+"PO-Revision-Date: 2013-09-18 18:58+0800\n"
+"Last-Translator: \n"
+"Language-Team: DimWorks <dimpurr@live.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_n:1,2;_x:1,2c;_ex:1,2c\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../comments.php:13
+msgid "&larr; 更旧的吐槽"
+msgstr "&larr; Older comments"
+
+#: ../comments.php:14
+msgid "更新的吐槽 &rarr;"
+msgstr "Newer comments &rarr;"
+
+#: ../comments.php:19
+msgid "要和谐，不要吐槽~"
+msgstr "Can't comments here."
+
+#: ../comments.php:28
+#, php-format
+msgid "吐槽 %s"
+msgstr "Comments %s"
+
+#: ../comments.php:29
+msgid "放弃吐槽"
+msgstr "Cancel comments"
+
+#: ../comments.php:30
+msgid "发射"
+msgstr "Send"
+
+#: ../comments.php:37
+#, php-format
+msgid "你必须 <a href=\"%s\">登录</a> 后吐槽。"
+msgstr "You must <a href=\"%s\">Login</a> to reply."
+
+#: ../comments.php:43
+#, php-format
+msgid ""
+"以 <a href=\"%1$s\">%2$s</a> 登录。 <a href=\"%3$s\" title=\"Log out of this "
+"account\">退出</a>"
+msgstr ""
+"Login with <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out</a>"
+
+#: ../comments.php:56
+msgid "称呼"
+msgstr "Name"
+
+#: ../comments.php:60
+msgid "邮箱"
+msgstr "Email"
+
+#: ../comments.php:64
+msgid "站点"
+msgstr "Site"
+
+#: ../functions.php:5 ../functions.php:6
+msgid "Clearision 设置"
+msgstr "Clearision Setting"
+
+#: ../functions.php:14
+msgid "Clearision 主题设置"
+msgstr "Clearision Setting"
+
+#: ../functions.php:18
+msgid "LOGO头像："
+msgstr "LOGO:"
+
+#: ../functions.php:19
+msgid "粘贴链接或点击上传"
+msgstr "Paste image link or click upload."
+
+#: ../functions.php:20
+msgid "上传"
+msgstr "Upload"
+
+#: ../functions.php:21
+msgid "默认值："
+msgstr "Default:"
+
+#: ../functions.php:41
+msgid "统计代码："
+msgstr "Analysis code:"
+
+#: ../functions.php:42
+msgid "输入网站统计代码，可适当加入字符"
+msgstr "Paste website analysis code. Also can add some text."
+
+#: ../functions.php:44
+msgid "友情链接："
+msgstr "Links:"
+
+#: ../functions.php:45
+msgid "显示"
+msgstr "Enable"
+
+#: ../functions.php:46
+msgid "不显示"
+msgstr "Disable"
+
+#: ../functions.php:47
+msgid "当前状态："
+msgstr "Current status:"
+
+#: ../functions.php:48
+msgid "在这里使用 HTML 代码自定义友链区的内容"
+msgstr "Use HTML code to custom links section."
+
+#: ../functions.php:51
+msgid "提交更改："
+msgstr "Submit changes:"
+
+#: ../functions.php:52
+msgid "保存全部设置"
+msgstr "Save all changes"
+
+#: ../functions.php:88
+msgid "上一页"
+msgstr "Prev Page"
+
+#: ../functions.php:89
+msgid "下一页"
+msgstr "Next Page"
+
+#: ../functions.php:123
+msgid "文章作者"
+msgstr "Write"
+
+#: ../functions.php:134
+msgid "你的评论正在等待和谐审查"
+msgstr "Your comment is waiting for examine."
+
+#: ../functions.php:139
+msgid "编辑"
+msgstr "Edit"
+
+#: ../functions.php:140
+msgid "回复"
+msgstr "Reply"
+
+#: ../functions.php:163
+#, php-format
+msgid "页面 %s"
+msgstr "Page %s"
+
+#: ../functions.php:169
+msgid "主菜单"
+msgstr "Main Menu"
+
+#: ../functions.php:170
+msgid "辅助链接"
+msgstr "Secondary Link"
+
+#: ../functions.php:175
+msgid "底部栏1"
+msgstr "Bottom Siderbar One"
+
+#: ../functions.php:188
+msgid "底部栏2"
+msgstr "Bottom Sidebar Two"
+
+#: ../index.php:23
+msgid "木有吐槽"
+msgstr "No Reply"
+
+#: ../index.php:23
+msgid "落单的吐槽"
+msgstr "Alone Relpy"
+
+#: ../index.php:23
+msgid "%发吐槽"
+msgstr "% Reply"
+
+#: ../index.php:40
+msgid "什么都没有找到"
+msgstr "Nothing Found"
+
+#: ../index.php:44
+msgid "哎呀，你要找的东西好像被贝爷吃掉了……"
+msgstr "Ouch! Please retry."
+
+#: ../index.php:58
+msgid "友情链接"
+msgstr "Links"
+
+#~ msgid "Page %s"
+#~ msgstr "Page %s"

@@ -20,7 +20,7 @@
 
 			<div class="post_tag">
 				<?php the_tags('',' ',''); ?>
-				<span class="post_c"><a href="<?php comments_link(); ?>" ><?php comments_number('木有吐槽','落单的吐槽','%发吐槽'); ?></a></span>
+				<span class="post_c"><a href="<?php comments_link(); ?>" ><?php comments_number( __('木有吐槽','clrs') , __('落单的吐槽','clrs') , __('%发吐槽','clrs') ); ?></a></span>
 			</div>
 		</div>
 	</hgroup>
@@ -37,11 +37,11 @@
 
 <article id="post-0" class="post no-results not-found">
 	<header class="entry-header">
-		<h1 class="entry-title">什么都没有找到</h1>
+		<h1 class="entry-title"><?php _e('什么都没有找到','clrs'); ?></h1>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<p>哎呀，你要找的东西好像被贝爷吃掉了……</p>
+		<p><?php _e('哎呀，你要找的东西好像被贝爷吃掉了……','clrs'); ?></p>
 		<?php get_search_form(); ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-0 -->
@@ -55,7 +55,7 @@
 	if ($ldis == "yes") { $c_ldis = "block"; } else { $c_ldis = "none"; }; ?>
 
 <div id="link" style="display:<?php echo $c_ldis; ?>"><div id="link_content">
-	<h3 id="link_h">友情链接</h3>
+	<h3 id="link_h"><?php _e('友情链接','clrs'); ?></h3>
 		<?php echo get_option('clrs_link'); ?>
 </div></div>
 
