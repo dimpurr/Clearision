@@ -7,7 +7,7 @@
 
 	<?php while ( have_posts() ) : the_post(); ?>
 
-<div class="post_ctn">
+<div class="post_ctn" <?php post_class(); ?>>
 
 	<hgroup class="post_hctn">
 		<div class="post_time">

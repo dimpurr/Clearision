@@ -54,11 +54,11 @@
 
     'author' =>
       '<div id="cmt_form_meta"><input placeholder="'.__('称呼','clrs').'" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-      '" ' . $aria_req . ' />',
+      '" />',
 
     'email' =>
       '<input placeholder="'.__('邮箱','clrs').'" id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
-      '" ' . $aria_req . ' />',
+      '" />',
 
     'url' =>
       '<input placeholder="'.__('站点','clrs').'" id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .

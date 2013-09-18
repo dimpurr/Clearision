@@ -26,7 +26,7 @@
 
 </head>
 
-<body>
+<body <?php body_class(); ?>>
 <div id="page">
 
 <hgroup id="ctn_header">
