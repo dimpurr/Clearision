@@ -131,8 +131,8 @@ function tt_comment( $comment, $args, $depth ) {
 					printf( '<div class="cmt_meta_head"><cite class="fn">%1$s',
 						get_comment_author_link() );
 					printf( '%1$s </cite>',
-						( $comment->user_id === $post->post_author ) ? '<span class="cmt_meta_auth"> ' . __('文章作者','clrs') . '</span></div>' : '' );
-					printf( '<span class="cmt_meta_time"><a href="%1$s"><time datetime="%2$s">%3$s</time></a></span>',
+						( $comment->user_id === $post->post_author ) ? '<span class="cmt_meta_auth"> ' . __('文章作者','clrs') . '</span>' : '' );
+					printf( '</div><span class="cmt_meta_time"><a href="%1$s"><time datetime="%2$s">%3$s</time></a></span>',
 						esc_url( get_comment_link( $comment->comment_ID ) ),
 						get_comment_time( 'c' ),
 						sprintf( '%1$s %2$s' , get_comment_date(), get_comment_time() )
