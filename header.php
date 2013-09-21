@@ -6,7 +6,7 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-<link rel="stylesheet" href="http://192.168.1.200/wp/wp-content/themes/clearision/style.css">
+<link rel="stylesheet" href="wp-content/themes/clearision/style.css">
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 

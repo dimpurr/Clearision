@@ -47,6 +47,14 @@ jQuery(document).ready(function() {
 	<?php _e('当前状态：','clrs'); ?><?php echo get_option('clrs_ldis'); ?><br>
 	<br><textarea name="clrs_link" rows="10" cols="60" placeholder="<?php _e('在这里使用 HTML 代码自定义友链区的内容','clrs'); ?>" style="font-size: 14px; font-family: Consolas, monospace, sans-serif, sans"><?php echo get_option('clrs_link'); ?></textarea><br>
 
+	<br><h3><?php _e('访客环境：','clrs'); ?></h3>
+	<input type="radio" name="clrs_wbos" value="yes" required="required" /><?php _e('显示','clrs'); ?>&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="radio" name="clrs_wbos" value="no" required="required" /><?php _e('不显示','clrs'); ?><br>
+	<?php _e('当前状态：','clrs'); ?><?php echo get_option('clrs_wbos'); ?><br>
+	<br>需配合 Show-UserAgent 插件使用，并在插件设置中的 Web Browser and OS Template 填写：<br>
+	<br><code>
+		&lt;span class="WB-OS"&gt;&lt;img src="%IMAGE_BASE%/%BROWSER_CODE%.png" title="%BROWSER_NAME%" alt="%BROWSER_NAME%" /&gt;&lt;span class="WB-OS-N"&gt;%BROWSER_NAME% %BROWSER_VERSION%&lt;/span&gt;&lt;img src="%IMAGE_BASE%/%OS_CODE%.png" title="%OS_NAME%" alt="%OS_NAME%" /&gt;&lt;span class="WB-OS-N">%OS_NAME% %OS_VERSION%&lt;/span&gt;&lt;/span&gt;
+	</code><br>
 
 	<br><h3><?php _e('提交更改：','clrs'); ?></h3>
 	<input type="submit" name="option_save" value="<?php _e('保存全部设置','clrs'); ?>" />
@@ -68,6 +76,8 @@ if(isset($_POST['option_save'])){
 	update_option( 'clrs_logo', $clrs_logo );
 	$clrs_ldis = stripslashes($_POST['clrs_ldis']);
 	update_option( 'clrs_ldis', $clrs_ldis );
+	$clrs_wbos = stripslashes($_POST['clrs_wbos']);
+	update_option( 'clrs_wbos', $clrs_wbos );
 	$clrs_link = stripslashes($_POST['clrs_link']);
 	update_option( 'clrs_link', $clrs_link );
 }
@@ -118,15 +128,20 @@ function tt_comment( $comment, $args, $depth ) {
 			<header class="comment-meta comment-author vcard">
 				<?php
 					echo get_avatar( $comment, 44 );
-					printf( '<div class="cmt_meta_head"><cite class="fn">%1$s %2$s</cite>',
-						get_comment_author_link(),
-						( $comment->user_id === $post->post_author ) ? '<span class="cmt_meta_auth"> ' . __('文章作者','clrs') . '</span></div>' : ''
-					);
-					printf( '<div class="cmt_meta_time"><a href="%1$s"><time datetime="%2$s">%3$s</time></a></div>',
+					printf( '<div class="cmt_meta_head"><cite class="fn">%1$s',
+						get_comment_author_link() );
+					printf( '%1$s </cite>',
+						( $comment->user_id === $post->post_author ) ? '<span class="cmt_meta_auth"> ' . __('文章作者','clrs') . '</span></div>' : '' );
+					printf( '<span class="cmt_meta_time"><a href="%1$s"><time datetime="%2$s">%3$s</time></a></span>',
 						esc_url( get_comment_link( $comment->comment_ID ) ),
 						get_comment_time( 'c' ),
-						sprintf( '%1$s 的 %2$s' , get_comment_date(), get_comment_time() )
+						sprintf( '%1$s %2$s' , get_comment_date(), get_comment_time() )
 					);
+					$wbos = get_option('clrs_wbos');
+					if ($wbos == "yes" ) {
+						if (function_exists( 'CID_print_comment_browser' ))
+							{ CID_print_comment_browser(); };
+					};
 				?>
 			</header>
 
@@ -137,7 +152,7 @@ function tt_comment( $comment, $args, $depth ) {
 			<section class="comment-content comment">
 				<?php comment_text(); ?>
 				<?php edit_comment_link( __('编辑','clrs'), '<span class="edit-link">', '</span>' ); ?>
-				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __('回复','clrs'), 'after' => ' <span>&darr;</span>', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __('回复','clrs'), 'after' => '', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 			</section>
 
 		</article>
