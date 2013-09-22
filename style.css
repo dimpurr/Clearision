@@ -1,7 +1,7 @@
 /*
 Theme Name: Clearision
 Theme URI: http://blog.dimpurr.com/Clearison
-Version: 1.1
+Version: 1.2
 Author: Dimpurr
 Author URI: http://dimpurr.com
 Description: A HTML5 grey and one column WordPress theme.
@@ -213,9 +213,9 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 .fn { font-weight: 600; font-style: normal; }
 .cmt_meta_auth { font-weight: normal; font-style: italic; }
 .cmt_meta_time { font-size: 12px; }
-.WB-OS { margin-left: 12px; }
-.WB-OS img { margin: 0 2px; }
-.WB-OS-N { margin: 0 2px; }
+.cmt_ua { margin-left: 4px; }
+.cmt_ua_img { margin: 0 2px; }
+.cmt_ua_n { margin: 0 2px; font-size: 12px; }
 .comment-edit-link , .comment-reply-link { 
 	display: inline-block; margin: 0 5px 0 0; padding: 2px 6px; margin-right: 4px;
 	font-size: 12px; border: 0; background: #EEE; color: #000;
@@ -308,7 +308,9 @@ blockquote , q { margin-left: 15px; }
 #p_n_r { float: right; margin-left: 0; }
 
 .comment .children li { margin-left: -55px; }
-.WB-OS-N { display: none; }
+.cmt_ua_n { display: none; }
+.cmt_ua_img { display: inline-block; }
+
 
 #sidebar , .widget , #one , #two , .recentcomments , #recentcomments , #recentcomments li { position: static; float: none; width: auto; text-align: center; padding: 0; margin: 0; list-style: none; }
 #sidebar { margin-bottom: 20px; }

@@ -1,5 +1,7 @@
 <?php
 
+include( get_stylesheet_directory().'/func/wp-useragent.php');
+
 function clrs_menu_function(){   
 	add_theme_page(
 		__('Clearision 设置','clrs'),
@@ -51,11 +53,7 @@ jQuery(document).ready(function() {
 	<input type="radio" name="clrs_wbos" value="yes" required="required" /><?php _e('显示','clrs'); ?>&nbsp;&nbsp;&nbsp;&nbsp;
 	<input type="radio" name="clrs_wbos" value="no" required="required" /><?php _e('不显示','clrs'); ?><br>
 	<?php _e('当前状态：','clrs'); ?><?php echo get_option('clrs_wbos'); ?><br>
-	<br>需配合 Show-UserAgent 插件使用，并在插件设置中的 Web Browser and OS Template 填写：<br>
-	<br><code>
-		&lt;span class="WB-OS"&gt;&lt;img src="%IMAGE_BASE%/%BROWSER_CODE%.png" title="%BROWSER_NAME%" alt="%BROWSER_NAME%" /&gt;&lt;span class="WB-OS-N"&gt;%BROWSER_NAME% %BROWSER_VERSION%&lt;/span&gt;&lt;img src="%IMAGE_BASE%/%OS_CODE%.png" title="%OS_NAME%" alt="%OS_NAME%" /&gt;&lt;span class="WB-OS-N">%OS_NAME% %OS_VERSION%&lt;/span&gt;&lt;/span&gt;
-	</code><br>
-
+	
 	<br><h3><?php _e('提交更改：','clrs'); ?></h3>
 	<input type="submit" name="option_save" value="<?php _e('保存全部设置','clrs'); ?>" />
 
@@ -139,8 +137,9 @@ function tt_comment( $comment, $args, $depth ) {
 					);
 					$wbos = get_option('clrs_wbos');
 					if ($wbos == "yes" ) {
-						if (function_exists( 'CID_print_comment_browser' ))
-							{ CID_print_comment_browser(); };
+						echo '<span class="cmt_ua">';
+						clrs_wp_useragent();
+						echo '</span>';
 					};
 				?>
 			</header>

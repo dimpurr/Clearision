@@ -19,7 +19,7 @@
 <![endif]-->
 
 <?php if ( is_user_logged_in() ) { 
-	echo '<style type="text/css" media="screen"> #float { top: 28px; } </style>' ;
+	echo '<style type="text/css" media="screen"> #float { top: 32px; } </style>' ;
 } ?>
 
 <?php wp_head(); ?>
