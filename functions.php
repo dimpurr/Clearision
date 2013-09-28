@@ -137,9 +137,9 @@ function tt_comment( $comment, $args, $depth ) {
 					);
 					$wbos = get_option('clrs_wbos');
 					if ($wbos == "yes" ) {
-						echo '<span class="cmt_ua">';
+						echo '<a href="javascript:void(0)" class="cmt_ua_a">';
 						clrs_wp_useragent();
-						echo '</span>';
+						echo '</a>';
 					};
 				?>
 			</header>
