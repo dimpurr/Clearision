@@ -13,7 +13,7 @@ audio,canvas,video {display:inline;zoom:1;}
 audio:not([controls]) {display:none;}
 [hidden] {display:none;}
 html {font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
-html,button,input,select,textarea {font-family: "Segeo UI Mono", "微软雅黑", "文泉驿微米黑", "华文细黑", "Droid Sans Fallback", "仿宋", "黑体", Sans; color:#222;}
+html,button,input,select,textarea {font-family: "Segeo UI Mono", "Hiragino Sans GB", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "Droid Sans Fallback", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "SimHei", "ST Heiti", "WenQuanYi Zen Hei Sharp", Sans; color:#222;}
 body {margin:0;font-size:1em;line-height:1.4;}
 ::-moz-selection {background:#f7d2d2;color:#333;text-shadow:none;}
 ::selection {background:#fe57a1;color:#fff;text-shadow:none;}
