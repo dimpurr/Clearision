@@ -1,13 +1,14 @@
 /*
 Theme Name: Clearision
 Theme URI: http://blog.dimpurr.com/Clearison
-Version: 1.3
+Version: 1.31
 Author: Dimpurr
 Author URI: http://dimpurr.com
 Description: A HTML5 grey and one column WordPress theme.
 Text Domain: clearision
 */
 
+/* 重置样式 */
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section {display:block;}
 audio,canvas,video {display:inline;zoom:1;}
 audio:not([controls]) {display:none;}
@@ -19,7 +20,7 @@ body {margin:0;font-size:1em;line-height:1.4;}
 ::selection {background:#fe57a1;color:#fff;text-shadow:none;}
 a {color:#00e;}
 a:visited {color:#551a8b;}
-a:hover {color:#06e;}
+a:hover {color:#06e;} */
 a:focus {outline:thin dotted;}
 a:hover,a:active {outline:0;}
 abbr[title] {border-bottom:1px dotted;}
@@ -61,7 +62,7 @@ input:invalid,textarea:invalid {background-color:#f0dddd;}
 table {border-collapse:collapse;border-spacing:0;}
 td {vertical-align:top;}
 
-@font-face { font-family: Century Gothic; src: local('Century Gothic'), url(http://img1.cheny.org/cyfont/CenturyGothic.TTF) format('ttf');}
+/* 通用样式 */
 
 .round { -webkit-border-radius: 500px; -moz-border-radius: 500px; border-radius: 500px; }
 .hide { display: none; }
@@ -72,11 +73,12 @@ td {vertical-align:top;}
 .linear { background: -webkit-linear-gradient(top, rgba(200,200,200,0.3), rgba(0,0,0,0.7));
 	background: -moz-linear-gradient(linear, top, from(rgba(255,255, 255,0.1)), to(rgba(255,255,255,0.9))); }
 
-body { background: #F5F5F5; color: #444; font-size: 15px; }
+/* 基本样式 */
 
+body { background: #F5F5F5; color: #444; font-size: 15px; }
 p { font-size: 15px; line-height: 28px; }
-a { text-decoration: none; color: #222; border-bottom: 1px dashed #BBB;
-	-webkit-transition: color linear 0.2s; -moz-transition: color linear 0.2s; transition: color linear 0.2s; }
+a { text-decoration: none; color: #222; border-bottom: 1px dashed #BBB; }
+#page a { -webkit-transition: color linear 0.2s; -moz-transition: color linear 0.2s; transition: color linear 0.2s; }
 a:hover { color: #000; border-bottom: 1px dashed #666; }
 a:visited { color: #222 }
 blockquote , q { margin: 10px 30px 10px 50px; padding: 10px 5px;
@@ -104,13 +106,15 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 .wp-caption:hover { background: #F6F6F6; }
 .wp-caption-text { margin: 5px 0 0 0; }
 
+/* 基本布局 */
+
 #page { margin: 0 auto 0 auto; text-align: left; max-width: 1200px; }
 #float { width: 160px; float: left; position: fixed; top: 0; text-align: right; }
 #ctn , #link { margin-left: 200px; }
 #content { margin: 20px; }
 #footer { width: 160px; float: left; position: fixed; bottom: 0; text-align: right; }
 
-#wpadminbar a { border: 0; }
+/* 悬浮导航 */
 
 #float { padding-top: 40px; text-align: right; }
 #logo { width: 112px; background: #FFF; margin-bottom: 26px;
@@ -132,6 +136,8 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 	border: 0; font-size: 20px; color: #555; }
 #next a { font-size: 15px; }
 #float a { border: 0; }
+
+/* 头部标题 */
 
 #ctn_header { margin: 70px 20px 70px 200px; }
 
@@ -156,9 +162,13 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 	background: #FFF url(img/enter.png) right no-repeat; background-size: 12px; background-origin: content-box;
 	-moz-box-shadow: inset 0 0 0 #DDD; -webkit-box-shadow: inset 0 0 0 #DDD; box-shadow: inset 0 0 0 #DDD; }
 
+/* 内容容器 */
+
 #ctn , #link { background: #FFF; margin: 40px 20px 0 200px;
  -moz-box-shadow: 0 0 20px #DDD; -webkit-box-shadow: 0 0 20px #DDD; box-shadow: 0 0 20px #DDD; }
 #content , #link_content { margin: 30px; padding: 30px 0; }
+
+/* 文章样式 */
 
 .post_ctn { border-top: 1px dashed #DDD; }
 .post_ctn .wp-caption { max-width: 100% !important; }
@@ -206,6 +216,8 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 #post_nav { margin: 0 0 30px 0; }
 #p_n_r { float: right; margin-left: 0; }
 
+/* 评论样式 */
+
 .comment , .comment li { list-style-type: none; }
 .cmt_list { margin: 0; margin-left: -70px; }
 .cmt_list li , .comment li { padding: 15px; margin: 0;
@@ -244,6 +256,8 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 #respond textarea { width: 91.7%; max-width: 666px; padding: 15px; margin-top: -10px; }
 #respond input[type="submit"] { min-width: 0; width: 80px; }
 
+/* 边栏样式 */
+
 #sidebar { margin: 0 5px 20px 200px; text-align: center; color: #555; font-size: 14px; }
 #sidebar a { color: #777; border-bottom: 1px dashed #BBB; }
 #sidebar a:hover { color: #000; border-bottom: 1px dashed #888; }
@@ -255,6 +269,8 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 #two { text-align: right; }
 .tagcloud { margin-right: 20px; }
 
+/* 尾部样式 */
+
 #footer { margin-left: 20px; width: 140px; padding: 10px 0 10px 0; font-size: 13px; background: #F5F5F5; color: #CCC;
 	border-style: solid; border-color: #DDD; border-width: 1px 0 0 0; }
 #footer a { text-decoration: none; color: #BBB; }
@@ -265,7 +281,11 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 #footer { -webkit-transition: color linear 0.2s; -moz-transition: color linear 0.2s; transition: color linear 0.2s; }
 #footer a { -webkit-transition: color linear 0.2s; -moz-transition: color linear 0.2s; transition: color linear 0.2s; }
 
+/* 移动适配 */
+
 @media screen and (max-width: 550px) {
+
+/* 基本样式布局 */
 
 * { float: none; }
 p { font-size: 14px; line-height: 26px; }
@@ -276,6 +296,8 @@ blockquote , q { margin-left: 15px; }
 #ctn , #link { margin: 0; }
 #content , #link_content { margin: 0px; }
 #footer { width: auto; float: none; position: static; text-align: center; }
+
+/* 细节样式适配 */
 
 #logo { display: none; }
 
@@ -317,7 +339,6 @@ blockquote , q { margin-left: 15px; }
 .cmt_ua_a { display: inline-block; }
 .cmt_ua_a:hover , .cmt_ua_a:hover .cmt_ua_n { display: inline; }
 .cmt_ua_img { display: inline-block; }
-
 
 #sidebar , .widget , #one , #two , .recentcomments , #recentcomments , #recentcomments li { position: static; float: none; width: auto; text-align: center; padding: 0; margin: 0; list-style: none; }
 #sidebar { margin-bottom: 20px; }

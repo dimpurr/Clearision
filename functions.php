@@ -1,7 +1,15 @@
 <?php
 
+// 加载内置插件
 include( get_stylesheet_directory().'/func/wp-useragent.php');
 
+// 加载语言包
+add_action('after_setup_theme', 'my_theme_setup');
+function my_theme_setup() {
+	load_theme_textdomain('clrs', get_template_directory() . '/lang');
+}
+
+// 加载后台设置
 function clrs_menu_function(){   
 	add_theme_page(
 		__('Clearision 设置','clrs'),
@@ -11,11 +19,15 @@ function clrs_menu_function(){
 		'clrs_config');
 }
 
+// 后台设置页面
+
 function clrs_config(){ ?>
 
 <h1><?php _e('Clearision 主题设置','clrs'); ?></h1>
 
 <form method="post" name="clrs_form" id="clrs_form">
+
+	<a href="http://blog.dimpurr.com/clrs-theme">Clearison 主题专页→</a>
 
 	<br><h3><?php _e('LOGO头像：','clrs'); ?></h3>
 	<input type="text" size="80" name="clrs_logo" id="clrs_logo" placeholder="<?php _e('粘贴链接或点击上传','clrs'); ?>" value="<?php echo get_option('clrs_logo'); ?>"/>
@@ -80,6 +92,8 @@ if(isset($_POST['option_save'])){
 	update_option( 'clrs_link', $clrs_link );
 }
 
+// 定义页面导航
+
 function c_pagenavi () {
 	global $wp_query, $wp_rewrite;
 	$wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
@@ -106,8 +120,9 @@ function c_pagenavi () {
 	echo paginate_links($pagination);
 }
 
-if ( ! function_exists( 'tt_comment' ) ) :
+// 定义评论显示
 
+if ( ! function_exists( 'tt_comment' ) ) :
 function tt_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 	switch ( $comment->comment_type ) :
@@ -161,6 +176,8 @@ function tt_comment( $comment, $args, $depth ) {
 }
 endif;
 
+// 定义站点标题
+
 function tt_wp_title( $title, $sep ) {
 	global $paged, $page;
 
@@ -179,10 +196,14 @@ function tt_wp_title( $title, $sep ) {
 	return $title;
 }
 
+// 加载菜单设置
+
 register_nav_menus(array(
 	'main' => __( '主菜单','clrs' ),
 	'next' => __( '辅助链接','clrs' )
 ));
+
+// 加载小工具设置
 
 if ( function_exists('register_sidebar') )
 	register_sidebar(array(
@@ -209,10 +230,5 @@ if ( function_exists('register_sidebar') )
 		'after_title' => '</h2>',
 	)
 );
-
-add_action('after_setup_theme', 'my_theme_setup');
-function my_theme_setup(){
-	load_theme_textdomain('clrs', get_template_directory() . '/lang');
-}
 
 ?>

@@ -3125,7 +3125,8 @@ function clrs_detect_browser_version($title)
 
 	// Grab the browser version if its present
 	preg_match('/'.$start.'[\ |\/]?([.0-9a-zA-Z]+)/i', $useragent, $regmatch);
-	$version=$regmatch[1];
+	$version_o=$regmatch[1];
+	$version=substr($version_o,0,strpos($version_o,'.'));
 
 	// Return browser Title and Version, but first..some titles need to be changed
 	if(strtolower($title)=="msie"

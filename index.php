@@ -38,13 +38,13 @@
 <article id="post-0" class="post no-results not-found">
 	<header class="entry-header">
 		<h1 class="entry-title"><?php _e('什么都没有找到','clrs'); ?></h1>
-	</header><!-- .entry-header -->
+	</header>
 
 	<div class="entry-content">
 		<p><?php _e('哎呀，你要找的东西好像被贝爷吃掉了……','clrs'); ?></p>
 		<?php get_search_form(); ?>
-	</div><!-- .entry-content -->
-</article><!-- #post-0 -->
+	</div>
+</article>
 
 <?php endif; ?>
 
