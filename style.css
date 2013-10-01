@@ -1,7 +1,7 @@
 /*
 Theme Name: Clearision
 Theme URI: http://blog.dimpurr.com/Clearison
-Version: 1.31
+Version: 1.5
 Author: Dimpurr
 Author URI: http://dimpurr.com
 Description: A HTML5 grey and one column WordPress theme.
@@ -25,7 +25,7 @@ a:focus {outline:thin dotted;}
 a:hover,a:active {outline:0;}
 abbr[title] {border-bottom:1px dotted;}
 b,strong {font-weight:700;}
-blockquote {margin:1em 40px;}
+blockquote {margin:1em 40px;}	
 dfn {font-style:italic;}
 hr {display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}
 ins {background:#ff9;color:#000;text-decoration:none;}
@@ -78,7 +78,7 @@ td {vertical-align:top;}
 body { background: #F5F5F5; color: #444; font-size: 15px; }
 p { font-size: 15px; line-height: 28px; }
 a { text-decoration: none; color: #222; border-bottom: 1px dashed #BBB; }
-#page a { -webkit-transition: color linear 0.2s; -moz-transition: color linear 0.2s; transition: color linear 0.2s; }
+a { -webkit-transition: color linear 0.2s; -moz-transition: color linear 0.2s; transition: color linear 0.2s; }
 a:hover { color: #000; border-bottom: 1px dashed #666; }
 a:visited { color: #222 }
 blockquote , q { margin: 10px 30px 10px 50px; padding: 10px 5px;
@@ -305,6 +305,8 @@ blockquote , q { margin-left: 15px; }
 #next { padding-top: 2px; }
 #nav li { padding: 0 8px 0 0; margin: 8px 2px 8px 2px; display: inline-block; }
 #next li { padding: 0 8px 0 0; margin: 3px 2px 3px 2px; display: inline-block; }
+#nav li:hover , #next li:hover { padding-right: 8px; border: 0; }
+#nav li:active , #next li:active { position: static; padding-right: 8px; }
 #nav a { font-size: 16px; }
 #next a { font-size: 14px; }
 
@@ -336,13 +338,11 @@ blockquote , q { margin-left: 15px; }
 
 .comment .children li { margin-left: -55px; }
 .cmt_ua_n { display: none; }
-.cmt_ua_a { display: inline-block; }
 .cmt_ua_a:hover , .cmt_ua_a:hover .cmt_ua_n { display: inline; }
-.cmt_ua_img { display: inline-block; }
 
 #sidebar , .widget , #one , #two , .recentcomments , #recentcomments , #recentcomments li { position: static; float: none; width: auto; text-align: center; padding: 0; margin: 0; list-style: none; }
 #sidebar { margin-bottom: 20px; }
-#recentcomments li { font-size: 14px; line-height: 32px; }
+#recentcomments li { font-size: 14px; line-height: 30px; }
 
 #footer { float: none; margin: auto; padding: 10px 0; width: auto; text-align: center; }
 

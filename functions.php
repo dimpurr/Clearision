@@ -21,13 +21,15 @@ function clrs_menu_function(){
 
 // 后台设置页面
 
-function clrs_config(){ ?>
+function clrs_config(){ clrs_thtj(); ?>
 
 <h1><?php _e('Clearision 主题设置','clrs'); ?></h1>
 
 <form method="post" name="clrs_form" id="clrs_form">
 
-	<a href="http://blog.dimpurr.com/clrs-theme">Clearison 主题专页→</a>
+	<h3><a href="http://blog.dimpurr.com/clrs-theme">Clearison 主题专页→</a></h3>
+
+	<div id="up-div"></div>
 
 	<br><h3><?php _e('LOGO头像：','clrs'); ?></h3>
 	<input type="text" size="80" name="clrs_logo" id="clrs_logo" placeholder="<?php _e('粘贴链接或点击上传','clrs'); ?>" value="<?php echo get_option('clrs_logo'); ?>"/>
@@ -230,5 +232,51 @@ if ( function_exists('register_sidebar') )
 		'after_title' => '</h2>',
 	)
 );
+
+// 检测主题更新
+
+require_once(TEMPLATEPATH . '/func/theme-update-checker.php'); 
+$wpdaxue_update_checker = new ThemeUpdateChecker(
+	'Clearision',
+	'http://work.dimpurr.com/theme/clearision/update/info.json'
+);
+
+// 这段代码用来统计模版使用情况，只会获取站点的URL，希望能够保留！
+function clrs_thtj() {
+
+// 执行函数
+
+function clrs_tjaj() {
+	$clrs_burl = get_bloginfo('url');
+?>
+	<script type="text/javascript">
+jQuery(document).ready(function() {
+	jQuery.get("http://work.dimpurr.com/theme/theme_tj.php?theme_name=Clearision&blog_url=<?=$clrs_burl?>&t=" + Math.random());
+});
+	</script>
+<?php
+};
+
+// 执行条件
+
+$clrs_fitj = get_option('clrs_fitj');
+$clrs_dayv = get_option('clrs_dayv');
+$clrs_date = date('d'); 
+
+if ($clrs_fitj == true) { 
+	if($clrs_date == '01') {
+		if ($clrs_dayv != true) {
+			clrs_tjaj();
+			update_option( 'clrs_dayv', true );
+		};
+	} elseif ($clrs_date != '01') {
+		update_option( 'clrs_dayv', false );
+	};
+} else {
+	clrs_tjaj();
+	update_option( 'clrs_fitj', true );
+};
+
+};
 
 ?>
