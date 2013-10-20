@@ -122,6 +122,14 @@ function c_pagenavi () {
 	echo paginate_links($pagination);
 }
 
+// 评论附加函数
+
+function delete_comment_link( $id ) {
+	if (current_user_can('level_5')) {
+		echo '<a class="comment-edit-link" href="'.admin_url("comment.php?action=cdc&c=$id").'">删除</a> ';
+	}
+}
+
 // 定义评论显示
 
 if ( ! function_exists( 'tt_comment' ) ) :
@@ -168,6 +176,7 @@ function tt_comment( $comment, $args, $depth ) {
 			<section class="comment-content comment">
 				<?php comment_text(); ?>
 				<?php edit_comment_link( __('编辑','clrs'), '<span class="edit-link">', '</span>' ); ?>
+				<?php delete_comment_link(get_comment_ID()); ?>
 				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __('回复','clrs'), 'after' => '', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 			</section>
 
