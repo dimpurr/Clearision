@@ -1,7 +1,7 @@
 /*
 Theme Name: Clearision
 Theme URI: http://blog.dimpurr.com/Clearison
-Version: 1.6
+Version: 1.7
 Author: Dimpurr
 Author URI: http://dimpurr.com
 Description: A HTML5 grey and one column WordPress theme.
@@ -20,7 +20,7 @@ body {margin:0;font-size:1em;line-height:1.4;}
 ::selection {background:#fe57a1;color:#fff;text-shadow:none;}
 a {color:#00e;}
 a:visited {color:#551a8b;}
-a:hover {color:#06e;} */
+a:hover {color:#06e;}
 a:focus {outline:thin dotted;}
 a:hover,a:active {outline:0;}
 abbr[title] {border-bottom:1px dotted;}
@@ -67,7 +67,7 @@ td {vertical-align:top;}
 .round { -webkit-border-radius: 500px; -moz-border-radius: 500px; border-radius: 500px; }
 .hide { display: none; }
 .box-shadow { -moz-box-shadow:0 0 10px #DDD; -webkit-box-shadow:0 0 10px #DDD; box-shadow:0 0 10px #DDD; }
-.text-shadow { -moz-text-shadow: 0 0 10px #000; -webkit-text-shadow: 0 0 10px #000; text-shadow: 0 0 8px #000; }
+.text-shadow { text-shadow: 0 0 8px #000; }
 .opacity { filter:alpha(opacity=50); -moz-opacity:0.5; -khtml-opacity: 0.5; opacity: 0.5; }
 .blur { -webkit-filter: blur(2px); -moz-filter: blur(2px); -ms-filter: blur(2px); filter: blur(2px); }
 .linear { background: -webkit-linear-gradient(top, rgba(200,200,200,0.3), rgba(0,0,0,0.7));
@@ -152,8 +152,7 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 #title_r input { width: 22px; height: 34px; border: 0; padding: 2px 8px; cursor: pointer;
 	background: url(img/search.png) no-repeat #FFF center; background-size: 18px;
 	-webkit-border-radius: 500px; -moz-border-radius: 500px; border-radius: 500px;
-	-moz-box-shadow:0 0 10px #DDD; -webkit-box-shadow:0 0 10px #DDD; box-shadow:0 0 10px #DDD
-	border: 2px solid #DDD; }
+	-moz-box-shadow:0 0 10px #DDD; -webkit-box-shadow:0 0 10px #DDD; box-shadow:0 0 10px #DDD; }
 #title_r input:hover { background: url(img/search.png) no-repeat #F9F9F9 center; background-size: 18px; }
 #title_r input:focus { width: 100px; height: 30px; padding: 2px 18px; vertical-align: middle;
 	background: #FAFAFA url(img/enter.png) right no-repeat; background-size: 12px; background-origin: content-box;
@@ -188,12 +187,13 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 .post_ct a:after { content: " >"; }
 .post_h { display: inline; font-size: 24px; line-height: 32px; vertical-align: middle; font-weight: 600; }
 .post_tag { margin: 5px 0 5px 0; }
-.post_tag a , .post_c a { padding: 2px 5px; margin-right: 4px;
+.post_tag a , .post_c a { display: inline-block; padding: 2px 5px; margin-right: 4px;
 	font-size: 12px; border: 0; background: #EEE; color: #000;
 	-webkit-transition: background linear 0.2s; -moz-transition: background linear 0.2s; transition: background linear 0.2s; }
 .post_tag a:hover { background: #DEDEDE; }
 .post_c a { background: #999; color: #FFF; }
 .post_c a:hover { background: #777; color: #FFF; }
+.wp-postviews { cursor: pointer; }
 .more-link { text-align: right; padding: 2px 5px; font-size: 14px; font-weight: normal;
 	background: #EEE; color: #000; border: 0;
 	-webkit-transition: background linear 0.2s; -moz-transition: background linear 0.2s; transition: background linear 0.2s; }

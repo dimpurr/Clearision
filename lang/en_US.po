@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Clearison en_US\n"
-"POT-Creation-Date: 2013-09-18 18:55+0800\n"
-"PO-Revision-Date: 2013-09-18 18:58+0800\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2013-10-27 13:04+0800\n"
+"PO-Revision-Date: 2013-10-27 13:04+0800\n"
+"Last-Translator: Dimpurr <dimpurr@live.com>\n"
 "Language-Team: DimWorks <dimpurr@live.com>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
@@ -67,132 +67,140 @@ msgstr "Email"
 msgid "站点"
 msgstr "Site"
 
-#: ../functions.php:5 ../functions.php:6
+#: ../functions.php:15 ../functions.php:16
 msgid "Clearision 设置"
 msgstr "Clearision Setting"
 
-#: ../functions.php:14
+#: ../functions.php:26
 msgid "Clearision 主题设置"
 msgstr "Clearision Setting"
 
-#: ../functions.php:18
+#: ../functions.php:34
 msgid "LOGO头像："
 msgstr "LOGO:"
 
-#: ../functions.php:19
+#: ../functions.php:35
 msgid "粘贴链接或点击上传"
 msgstr "Paste image link or click upload."
 
-#: ../functions.php:20
+#: ../functions.php:36
 msgid "上传"
 msgstr "Upload"
 
-#: ../functions.php:21
+#: ../functions.php:37
 msgid "默认值："
 msgstr "Default:"
 
-#: ../functions.php:41
+#: ../functions.php:57
 msgid "统计代码："
 msgstr "Analysis code:"
 
-#: ../functions.php:42
+#: ../functions.php:58
 msgid "输入网站统计代码，可适当加入字符"
 msgstr "Paste website analysis code. Also can add some text."
 
-#: ../functions.php:44
+#: ../functions.php:60
 msgid "友情链接："
 msgstr "Links:"
 
-#: ../functions.php:45
+#: ../functions.php:61 ../functions.php:67
 msgid "显示"
 msgstr "Enable"
 
-#: ../functions.php:46
+#: ../functions.php:62 ../functions.php:68
 msgid "不显示"
 msgstr "Disable"
 
-#: ../functions.php:47
+#: ../functions.php:63 ../functions.php:69
 msgid "当前状态："
 msgstr "Current status:"
 
-#: ../functions.php:48
+#: ../functions.php:64
 msgid "在这里使用 HTML 代码自定义友链区的内容"
 msgstr "Use HTML code to custom links section."
 
-#: ../functions.php:51
+#: ../functions.php:66
+msgid "访客环境："
+msgstr "Guest UA:"
+
+#: ../functions.php:71
 msgid "提交更改："
 msgstr "Submit changes:"
 
-#: ../functions.php:52
+#: ../functions.php:72
 msgid "保存全部设置"
 msgstr "Save all changes"
 
-#: ../functions.php:88
+#: ../functions.php:112
 msgid "上一页"
 msgstr "Prev Page"
 
-#: ../functions.php:89
+#: ../functions.php:113
 msgid "下一页"
 msgstr "Next Page"
 
-#: ../functions.php:123
+#: ../functions.php:157
 msgid "文章作者"
 msgstr "Write"
 
-#: ../functions.php:134
+#: ../functions.php:173
 msgid "你的评论正在等待和谐审查"
 msgstr "Your comment is waiting for examine."
 
-#: ../functions.php:139
+#: ../functions.php:178
 msgid "编辑"
 msgstr "Edit"
 
-#: ../functions.php:140
+#: ../functions.php:180
 msgid "回复"
 msgstr "Reply"
 
-#: ../functions.php:163
+#: ../functions.php:205
 #, php-format
 msgid "页面 %s"
 msgstr "Page %s"
 
-#: ../functions.php:169
+#: ../functions.php:213
 msgid "主菜单"
 msgstr "Main Menu"
 
-#: ../functions.php:170
+#: ../functions.php:214
 msgid "辅助链接"
 msgstr "Secondary Link"
 
-#: ../functions.php:175
+#: ../functions.php:221
 msgid "底部栏1"
 msgstr "Bottom Siderbar One"
 
-#: ../functions.php:188
+#: ../functions.php:234
 msgid "底部栏2"
 msgstr "Bottom Sidebar Two"
 
-#: ../index.php:23
+#: ../index.php:23 ../single.php:21
 msgid "木有吐槽"
 msgstr "No Reply"
 
-#: ../index.php:23
+#: ../index.php:23 ../single.php:21
 msgid "落单的吐槽"
 msgstr "Alone Relpy"
 
-#: ../index.php:23
+#: ../index.php:23 ../single.php:21
 msgid "%发吐槽"
 msgstr "% Reply"
 
-#: ../index.php:40
+#: ../index.php:24 ../single.php:22
+msgid "调教文章"
+msgstr "Edit Post"
+
+#: ../index.php:41
 msgid "什么都没有找到"
 msgstr "Nothing Found"
 
-#: ../index.php:44
+#: ../index.php:45
 msgid "哎呀，你要找的东西好像被贝爷吃掉了……"
 msgstr "Ouch! Please retry."
 
-#: ../index.php:58
+#: ../index.php:59
 msgid "友情链接"
 msgstr "Links"
 

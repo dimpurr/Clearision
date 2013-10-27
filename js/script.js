@@ -5,3 +5,8 @@ function cmt_submit(){
 	};
 };
 document.onkeydown = cmt_submit;
+
+console.log('Theme Clearision by Dimpurr')
+console.log('http://dimpurr.com')
+console.log('')
+console.log('Welcome to my blog!')

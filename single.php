@@ -18,7 +18,8 @@
 
 			<div class="post_tag">
 				<?php the_tags('',' ',''); ?>
-				<span class="post_c"><a href="<?php comments_link(); ?>" ><?php comments_number('木有吐槽','落单的吐槽','%发吐槽'); ?></a></span>
+				<span class="post_c"><a href="<?php comments_link(); ?>" ><?php comments_number( __('木有吐槽','clrs') , __('落单的吐槽','clrs') , __('%发吐槽','clrs') ); ?></a></span>
+				<span class="post_c"><?php echo edit_post_link( __('调教文章','clrs') ); ?></span>
 			</div>
 		</div>
 	</hgroup>
