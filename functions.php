@@ -19,6 +19,87 @@ function clrs_menu_function(){
 		'clrs_config');
 }
 
+// 加载菜单设置
+
+register_nav_menus(array(
+	'main' => __( '主菜单','clrs' ),
+	'next' => __( '辅助链接','clrs' )
+));
+
+// 加载小工具设置
+
+if ( function_exists('register_sidebar') )
+	register_sidebar(array(
+		'name' => __( '底部栏1', 'clrs' ),
+		'id' => 'one',
+		'description' => '底部的工具栏',
+		'class' => 'side_col',
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '<h2>',
+		'after_title' => '</h2>',
+	)
+);
+
+if ( function_exists('register_sidebar') )
+	register_sidebar(array(
+		'name' => __( '底部栏2', 'clrs' ),
+		'id' => 'two',
+		'description' => '底部的工具栏',
+		'class' => 'side_col',
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '<h2>',
+		'after_title' => '</h2>',
+	)
+);
+
+// 检测主题更新
+
+require_once(TEMPLATEPATH . '/func/theme-update-checker.php'); 
+$wpdaxue_update_checker = new ThemeUpdateChecker(
+	'Clearision',
+	'http://work.dimpurr.com/theme/clearision/update/info.json'
+);
+
+// 这段代码用来统计模版使用情况，只会获取站点的URL，希望能够保留！
+function clrs_thtj() {
+
+// 执行函数
+
+function clrs_tjaj() {
+	$clrs_burl = get_bloginfo('url');
+?>
+	<script type="text/javascript">
+jQuery(document).ready(function() {
+	jQuery.get("http://work.dimpurr.com/theme/theme_tj.php?theme_name=Clearision&blog_url=<?=$clrs_burl?>&t=" + Math.random());
+});
+	</script>
+<?php
+};
+
+// 执行条件
+
+$clrs_fitj = get_option('clrs_fitj');
+$clrs_dayv = get_option('clrs_dayv');
+$clrs_date = date('d'); 
+
+if ($clrs_fitj == true) { 
+	if($clrs_date == '01') {
+		if ($clrs_dayv != true) {
+			clrs_tjaj();
+			update_option( 'clrs_dayv', true );
+		};
+	} elseif ($clrs_date != '01') {
+		update_option( 'clrs_dayv', false );
+	};
+} else {
+	clrs_tjaj();
+	update_option( 'clrs_fitj', true );
+};
+
+};
+
 // 后台设置页面
 
 function clrs_config(){ clrs_thtj(); ?>
@@ -57,16 +138,30 @@ jQuery(document).ready(function() {
 	<h3><?php _e('统计代码：','clrs'); ?></h3>
 	<textarea name="clrs_tongji" rows="10" cols="60" placeholder="<?php _e('输入网站统计代码，可适当加入字符','clrs'); ?>" style="font-size: 14px; font-family: Consolas, monospace, sans-serif, sans"><?php echo get_option('clrs_tongji'); ?></textarea><br>
 
+	<br><h3><?php _e('访客环境：','clrs'); ?></h3>
+	<input type="radio" name="clrs_wbos" value="yes" required="required" /><?php _e('显示','clrs'); ?>&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="radio" name="clrs_wbos" value="no" required="required" /><?php _e('不显示','clrs'); ?><br>
+	<?php _e('当前状态：','clrs'); ?><?php echo get_option('clrs_wbos'); ?><br>
+
+	<br><h3><?php _e('社交图标','clrs'); ?></h3>
+	请带上 http:// <br>
+	<?php
+
+	$clrs_sns = array("twitter","fb","gplus","weibo","qqw","github");
+	$clrs_snsn = array("Twitter","Facebook","Google+","SinaWeibo","QQ / Qzone / QQWeibo","Github");
+
+	for ($i=0; $i<6; $i++) {
+		$clrs_sopt = 'clrs_s_' . $clrs_sns[$i];
+		echo '<input type="text" size="80" name="' . $clrs_sopt . '" id="' . $clrs_sopt . '" placeholder="' . $clrs_snsn[$i] . '" value="' . get_option($clrs_sopt) . '"/>';
+	}
+
+	?>
+
 	<br><h3><?php _e('友情链接：','clrs'); ?></h3>
 	<input type="radio" name="clrs_ldis" value="yes" required="required" /><?php _e('显示','clrs'); ?>&nbsp;&nbsp;&nbsp;&nbsp;
 	<input type="radio" name="clrs_ldis" value="no" required="required" /><?php _e('不显示','clrs'); ?><br>
 	<?php _e('当前状态：','clrs'); ?><?php echo get_option('clrs_ldis'); ?><br>
 	<br><textarea name="clrs_link" rows="10" cols="60" placeholder="<?php _e('在这里使用 HTML 代码自定义友链区的内容','clrs'); ?>" style="font-size: 14px; font-family: Consolas, monospace, sans-serif, sans"><?php echo get_option('clrs_link'); ?></textarea><br>
-
-	<br><h3><?php _e('访客环境：','clrs'); ?></h3>
-	<input type="radio" name="clrs_wbos" value="yes" required="required" /><?php _e('显示','clrs'); ?>&nbsp;&nbsp;&nbsp;&nbsp;
-	<input type="radio" name="clrs_wbos" value="no" required="required" /><?php _e('不显示','clrs'); ?><br>
-	<?php _e('当前状态：','clrs'); ?><?php echo get_option('clrs_wbos'); ?><br>
 	
 	<br><h3><?php _e('提交更改：','clrs'); ?></h3>
 	<input type="submit" name="option_save" value="<?php _e('保存全部设置','clrs'); ?>" />
@@ -92,6 +187,27 @@ if(isset($_POST['option_save'])){
 	update_option( 'clrs_wbos', $clrs_wbos );
 	$clrs_link = stripslashes($_POST['clrs_link']);
 	update_option( 'clrs_link', $clrs_link );
+	
+	$clrs_sns = array("twitter","fb","gplus","weibo","qqw","github");
+	for ($i=0; $i<6; $i++) {
+		$clrs_sopt = 'clrs_s_' . $clrs_sns[$i];
+		update_option( $clrs_sopt, stripslashes($_POST[$clrs_sopt]) );
+	}
+
+}
+
+
+// 首页 SNS 输出
+
+function clrs_sns () {
+	// 修改此顺序可以改变输出顺序
+	$clrs_sns = array("gplus","twitter","fb","github","weibo","qqw");
+	for ($i=0; $i<6; $i++) {
+		$clrs_sopt = 'clrs_s_' . $clrs_sns[$i];
+		if( get_option($clrs_sopt) != null ) {
+			echo '<a href="' . get_option($clrs_sopt) . '"><button class="tr_' . $clrs_sns[$i] . '"></button></a>';
+		}
+	}
 }
 
 // 定义页面导航
@@ -206,86 +322,5 @@ function tt_wp_title( $title, $sep ) {
 
 	return $title;
 }
-
-// 加载菜单设置
-
-register_nav_menus(array(
-	'main' => __( '主菜单','clrs' ),
-	'next' => __( '辅助链接','clrs' )
-));
-
-// 加载小工具设置
-
-if ( function_exists('register_sidebar') )
-	register_sidebar(array(
-		'name' => __( '底部栏1', 'clrs' ),
-		'id' => 'one',
-		'description' => '底部的工具栏',
-		'class' => 'side_col',
-		'before_widget' => '',
-		'after_widget' => '',
-		'before_title' => '<h2>',
-		'after_title' => '</h2>',
-	)
-);
-
-if ( function_exists('register_sidebar') )
-	register_sidebar(array(
-		'name' => __( '底部栏2', 'clrs' ),
-		'id' => 'two',
-		'description' => '底部的工具栏',
-		'class' => 'side_col',
-		'before_widget' => '',
-		'after_widget' => '',
-		'before_title' => '<h2>',
-		'after_title' => '</h2>',
-	)
-);
-
-// 检测主题更新
-
-require_once(TEMPLATEPATH . '/func/theme-update-checker.php'); 
-$wpdaxue_update_checker = new ThemeUpdateChecker(
-	'Clearision',
-	'http://work.dimpurr.com/theme/clearision/update/info.json'
-);
-
-// 这段代码用来统计模版使用情况，只会获取站点的URL，希望能够保留！
-function clrs_thtj() {
-
-// 执行函数
-
-function clrs_tjaj() {
-	$clrs_burl = get_bloginfo('url');
-?>
-	<script type="text/javascript">
-jQuery(document).ready(function() {
-	jQuery.get("http://work.dimpurr.com/theme/theme_tj.php?theme_name=Clearision&blog_url=<?=$clrs_burl?>&t=" + Math.random());
-});
-	</script>
-<?php
-};
-
-// 执行条件
-
-$clrs_fitj = get_option('clrs_fitj');
-$clrs_dayv = get_option('clrs_dayv');
-$clrs_date = date('d'); 
-
-if ($clrs_fitj == true) { 
-	if($clrs_date == '01') {
-		if ($clrs_dayv != true) {
-			clrs_tjaj();
-			update_option( 'clrs_dayv', true );
-		};
-	} elseif ($clrs_date != '01') {
-		update_option( 'clrs_dayv', false );
-	};
-} else {
-	clrs_tjaj();
-	update_option( 'clrs_fitj', true );
-};
-
-};
 
 ?>

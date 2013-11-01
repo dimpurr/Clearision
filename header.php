@@ -36,9 +36,20 @@
 		<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
 	</div>
 	<div id="title_r">
-	<form method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-		<input type="text" name="s" id="s" placeholder="" size="10" />
-	</form>
+
+		<?php clrs_sns(); ?>
+
+		<!-- <a href="#"><button class="tr_gplus"></button></a>
+		<a href="#"><button class="tr_twitter"></button></a>
+		<a href="#"><button class="tr_fb"></button></a>
+		<a href="#"><button class="tr_weibo"></button></a>
+		<a href="#"><button class="tr_qqw"></button></a> -->
+
+		<a href="<?php bloginfo('rss2_url'); ?>"><button id="tr_rss"></button></a>
+		<a href="<?php echo admin_url();?>"><button id="tr_admin"></button></a>
+		<form method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+			<input id="tr_search" type="text" name="s" id="s" placeholder="" size="10" />
+		</form>
 	</div>
 </hgroup>
 
