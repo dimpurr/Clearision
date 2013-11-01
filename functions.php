@@ -147,10 +147,10 @@ jQuery(document).ready(function() {
 	请带上 http:// <br>
 	<?php
 
-	$clrs_sns = array("twitter","fb","gplus","weibo","qqw","github");
-	$clrs_snsn = array("Twitter","Facebook","Google+","SinaWeibo","QQ / Qzone / QQWeibo","Github");
+	$clrs_sns = array("profile","gplus","twitter","fb","weibo","qqw","github");
+	$clrs_snsn = array("个人页","Google+","Twitter","Facebook","SinaWeibo","QQ / Qzone / QQWeibo","Github");
 
-	for ($i=0; $i<6; $i++) {
+	for ($i=0; $i<7; $i++) {
 		$clrs_sopt = 'clrs_s_' . $clrs_sns[$i];
 		echo '<input type="text" size="80" name="' . $clrs_sopt . '" id="' . $clrs_sopt . '" placeholder="' . $clrs_snsn[$i] . '" value="' . get_option($clrs_sopt) . '"/>';
 	}
@@ -188,8 +188,8 @@ if(isset($_POST['option_save'])){
 	$clrs_link = stripslashes($_POST['clrs_link']);
 	update_option( 'clrs_link', $clrs_link );
 	
-	$clrs_sns = array("twitter","fb","gplus","weibo","qqw","github");
-	for ($i=0; $i<6; $i++) {
+	$clrs_sns = array("profile","gplus","twitter","fb","weibo","qqw","github");
+	for ($i=0; $i<7; $i++) {
 		$clrs_sopt = 'clrs_s_' . $clrs_sns[$i];
 		update_option( $clrs_sopt, stripslashes($_POST[$clrs_sopt]) );
 	}
@@ -201,8 +201,8 @@ if(isset($_POST['option_save'])){
 
 function clrs_sns () {
 	// 修改此顺序可以改变输出顺序
-	$clrs_sns = array("gplus","twitter","fb","github","weibo","qqw");
-	for ($i=0; $i<6; $i++) {
+	$clrs_sns = array("profile","gplus","twitter","fb","weibo","qqw","github");
+	for ($i=0; $i<7; $i++) {
 		$clrs_sopt = 'clrs_s_' . $clrs_sns[$i];
 		if( get_option($clrs_sopt) != null ) {
 			echo '<a href="' . get_option($clrs_sopt) . '"><button class="tr_' . $clrs_sns[$i] . '"></button></a>';

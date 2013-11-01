@@ -64,6 +64,7 @@ td {vertical-align:top;}
 
 /* 通用样式 */
 
+.clearfix { clear: both; }
 .round { -webkit-border-radius: 500px; -moz-border-radius: 500px; border-radius: 500px; }
 .hide { display: none; }
 .box-shadow { -moz-box-shadow:0 0 10px #DDD; -webkit-box-shadow:0 0 10px #DDD; box-shadow:0 0 10px #DDD; }
@@ -139,19 +140,19 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 
 /* 头部标题 */
 
-#ctn_header { margin: 70px 20px 70px 200px; height: 40px; }
+#ctn_header { margin: 70px 20px 0px 200px; }
 
-#title { float: left; text-align: left; }
+#title { float: left; text-align: left; margin-bottom: 10px; }
 #title a { text-decoration: none; color: #444; border: 0; font-weight: normal; }
 #title a:hover { color: #000; }
 #title h1 { font-size: 32px; line-height: 38px; font-weight: normal; margin: 0; }
 #title h2 { font-size: 18px; line-height: 28px; font-weight: normal; margin: 0; color: #777; }
 
-#title_r { text-align: right; float: right; }
+#title_r { text-align: right; max-width: 100%; }
 #title_r a { border: 0; }
 #title_r input , #title_r button { 
 	-webkit-transition: width linear 0.2s, height linear 0.2s, box-shadow linear 0.2s, background linear 0.2s, -webkit-transform linear 0.08s; -moz-transition: width linear 0.2s, height linear 0.2s, box-shadow linear 0.2s, background linear 0.2s, -moz-transform linear 0.08s; transition: width linear 0.2s, height linear 0.2s, box-shadow linear 0.2s, background linear 0.2s, transform linear 0.08s;
-	display: inline-block; width: 38px; height: 38px; padding: 2px 8px; margin: 0 0 0 10px;
+	display: inline-block; width: 38px; height: 38px; padding: 2px 8px; margin: 0 0 10px 10px;
 	cursor: pointer; border: 0;
 	background: url(img/search.png) no-repeat #FFF center; background-size: 18px;
 	-webkit-border-radius: 500px; -moz-border-radius: 500px; border-radius: 500px;
@@ -176,11 +177,12 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 #title_r .tr_weibo { background-image: url(img/sns_weibo.png); }
 #title_r .tr_qqw { background-image: url(img/sns_qqw.png); }
 #title_r .tr_github { background-image: url(img/sns_github.png); background-size: 30px; }
+#title_r .tr_profile { background-image: url(img/profile.png); }
 
 
 /* 内容容器 */
 
-#ctn , #link { background: #FFF; margin: 40px 20px 0 200px;
+#ctn , #link { background: #FFF; margin: 10px 20px 0 200px;
  -moz-box-shadow: 0 0 20px #DDD; -webkit-box-shadow: 0 0 20px #DDD; box-shadow: 0 0 20px #DDD; }
 #content , #link_content { margin: 30px; padding: 30px 0; }
 
@@ -301,7 +303,7 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 
 /* 移动适配 */
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
 
 /* 基本样式布局 */
 
@@ -332,14 +334,18 @@ blockquote , q { margin-left: 15px; }
 #title { margin: 0 0 5px 0; float: none; text-align: center; }
 #site-title a { font-size: 28px; margin: 5px 0 0 0; }
 #site-description { font-size: 14px !important; margin: 0; }
-#title_r { text-align: center; }
 
-#title_r input , #title_r input:hover , #title_r input:focus {
-	width: 180px; height: 20px; padding: 2px 18px; vertical-align: middle;
+#title_r { text-align: center; margin: 0; }
+#title_r button { box-shadow: none; background: none; background-repeat: no-repeat; background-position: center; background-size: 16px; margin: -5px 0 0 0;  }
+#tr_clear { display: block; }
+#title_r #tr_search { text-align: center; }
+#title_r #tr_search , #title_r #tr_search:hover , #title_r #tr_search:focus {
+	display: block; width: 180px; height: 20px; padding: 2px 18px; vertical-align: middle;
 	background: #FFF url(img/enter.png) right no-repeat; background-size: 12px; background-origin: content-box;
 	border-style: solid; border-width: 2px; border-color: #E7E7E7; cursor: text;
 	-moz-box-shadow: inset 0 0 0 #DDD; -webkit-box-shadow: inset 0 0 0 #DDD; box-shadow: inset 0 0 0 #DDD; }
 
+#float { margin-top: 0; }
 #ctn { background: #FFF; margin: 0; }
 #content { margin: 15px; padding: 30px 0; }
 

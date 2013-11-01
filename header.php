@@ -38,19 +38,14 @@
 	<div id="title_r">
 
 		<?php clrs_sns(); ?>
-
-		<!-- <a href="#"><button class="tr_gplus"></button></a>
-		<a href="#"><button class="tr_twitter"></button></a>
-		<a href="#"><button class="tr_fb"></button></a>
-		<a href="#"><button class="tr_weibo"></button></a>
-		<a href="#"><button class="tr_qqw"></button></a> -->
-
 		<a href="<?php bloginfo('rss2_url'); ?>"><button id="tr_rss"></button></a>
 		<a href="<?php echo admin_url();?>"><button id="tr_admin"></button></a>
-		<form method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+		<span id="tr_clear"></span>
+		<form id="tr_s_f" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 			<input id="tr_search" type="text" name="s" id="s" placeholder="" size="10" />
 		</form>
 	</div>
+<div class="clearfix"></div>
 </hgroup>
 
 <div id="float" >
