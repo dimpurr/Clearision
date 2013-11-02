@@ -26,10 +26,10 @@
   'id_submit'         => 'cmt_submit',
   'title_reply'       => '',
   'title_reply_to'    => __('吐槽 %s','clrs'),
-  'cancel_reply_link' => __('放弃吐槽','clrs'),
+  'cancel_reply_link' => __('放弃治疗','clrs'),
   'label_submit'      => __('发射','clrs'),
 
-  'comment_field' =>  '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true">' .
+  'comment_field' =>  '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" required aria-required="true">' .
     '</textarea></p>',
 
   'must_log_in' => '<p class="must-log-in">' .
@@ -57,7 +57,7 @@
       '" />',
 
     'email' =>
-      '<input placeholder="'.__('邮箱','clrs').'" id="email" name="email" type="text" required="required" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+      '<input placeholder="'.__('邮箱','clrs').'" id="email" name="email" type="email" required="required" value="' . esc_attr(  $commenter['comment_author_email'] ) .
       '" />',
 
     'url' =>

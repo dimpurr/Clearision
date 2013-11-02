@@ -143,6 +143,11 @@ jQuery(document).ready(function() {
 	<input type="radio" name="clrs_wbos" value="no" required="required" /><?php _e('不显示','clrs'); ?><br>
 	<?php _e('当前状态：','clrs'); ?><?php echo get_option('clrs_wbos'); ?><br>
 
+	<br><h3><?php _e('文章作者：','clrs'); ?></h3>
+	<input type="radio" name="clrs_adis" value="yes" required="required" /><?php _e('显示','clrs'); ?>&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="radio" name="clrs_adis" value="no" required="required" /><?php _e('不显示','clrs'); ?><br>
+	<?php _e('当前状态：','clrs'); ?><?php echo get_option('clrs_adis'); ?><br>
+
 	<br><h3><?php _e('社交图标','clrs'); ?></h3>
 	请带上 http:// <br>
 	<?php
@@ -185,6 +190,8 @@ if(isset($_POST['option_save'])){
 	update_option( 'clrs_ldis', $clrs_ldis );
 	$clrs_wbos = stripslashes($_POST['clrs_wbos']);
 	update_option( 'clrs_wbos', $clrs_wbos );
+	$clrs_adis = stripslashes($_POST['clrs_adis']);
+	update_option( 'clrs_adis', $clrs_adis );
 	$clrs_link = stripslashes($_POST['clrs_link']);
 	update_option( 'clrs_link', $clrs_link );
 	

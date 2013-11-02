@@ -1,7 +1,7 @@
 /*
 Theme Name: Clearision
 Theme URI: http://blog.dimpurr.com/Clearison
-Version: 1.8
+Version: 1.10
 Author: Dimpurr
 Author URI: http://dimpurr.com
 Description: A HTML5 grey and one column WordPress theme.
@@ -58,7 +58,6 @@ input[type=search]::-webkit-search-decoration,input[type=search]::-webkit-search
 input,button,select,textarea { outline:none; }
 button::-moz-focus-inner,input::-moz-focus-inner {border:0;padding:0;}
 textarea {overflow:auto;vertical-align:top;resize:vertical;}
-input:invalid,textarea:invalid {background-color:#f0dddd;}
 table {border-collapse:collapse;border-spacing:0;}
 td {vertical-align:top;}
 
@@ -95,9 +94,9 @@ button , input[type="submit"] { border: 2px #DDD solid; background: #EFEFEF; pad
 	-webkit-transition: background linear 0.2s, border linear 0.2s; -moz-transition: backgroundbackground linear 0.2s, border linear 0.2s; transition: background linear 0.2s, border linear 0.2s; }
 button:hover , input[type="submit"]:hover { background: #DDD; }
 button:active , input[type="submit"]:active { border-color: #CDCDCD; background: #CDCDCD; }
-input[type="text"] , input[type="password"] , textarea { border: 2px #DDD solid; background: #FAFAFA; padding: 5px 10px;
+input , textarea { border: 2px #DDD solid; background: #FAFAFA; padding: 5px 10px;
 	-webkit-transition: background linear 0.2s; -moz-transition: backgroundbackground linear 0.2s; transition: background linear 0.2s; }
-input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input[type="text"]:focus , input[type="password"]:focus , textarea:focus { background: #FFF; }
+input:hover , textarea:hover , input:focus , textarea:focus { background: #FFF; }
 
 .post_t img { -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
 .wp-caption { margin: 20px auto; background: #F9F9F9; text-align: center; padding: 5px;
@@ -140,9 +139,9 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 
 /* 头部标题 */
 
-#ctn_header { margin: 70px 20px 0px 200px; }
+#ctn_header { margin: 60px 20px 0px 200px; }
 
-#title { float: left; text-align: left; margin-bottom: 10px; }
+#title { float: left; text-align: left; margin: 10px 30px 30px 0; }
 #title a { text-decoration: none; color: #444; border: 0; font-weight: normal; }
 #title a:hover { color: #000; }
 #title h1 { font-size: 32px; line-height: 38px; font-weight: normal; margin: 0; }
@@ -182,7 +181,7 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 
 /* 内容容器 */
 
-#ctn , #link { background: #FFF; margin: 10px 20px 0 200px;
+#ctn , #link { background: #FFF; margin: -16px 20px 0 200px;
  -moz-box-shadow: 0 0 20px #DDD; -webkit-box-shadow: 0 0 20px #DDD; box-shadow: 0 0 20px #DDD; }
 #content , #link_content { margin: 30px; padding: 30px 0; }
 
