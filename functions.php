@@ -104,6 +104,11 @@ if ($clrs_fitj == true) {
 
 function clrs_config(){ clrs_thtj(); ?>
 
+<style type="text/css">
+input[type="text"] { max-width: 510px; }
+textarea { font-size: 14px; font-family: Consolas, monospace, sans-serif, sans; }
+</style>
+
 <h1><?php _e('Clearision 主题设置','clrs'); ?></h1>
 
 <form method="post" name="clrs_form" id="clrs_form">
@@ -115,7 +120,7 @@ function clrs_config(){ clrs_thtj(); ?>
 	<br><h3><?php _e('LOGO头像：','clrs'); ?></h3>
 	<input type="text" size="80" name="clrs_logo" id="clrs_logo" placeholder="<?php _e('粘贴链接或点击上传','clrs'); ?>" value="<?php echo get_option('clrs_logo'); ?>"/>
 	<input type="button" name="upload_button" value="<?php _e('上传','clrs'); ?>" id="upbottom"/><br>
-	<p><?php _e('默认值：','clrs'); ?>http://blog.dimpurr.com/wp-content/themes/clearision/img/logo.png</p>
+	<p style="display:none;"><?php _e('默认值：','clrs'); ?>http://blog.dimpurr.com/wp-content/themes/clearision/img/logo.png</p><br>
 
 	<img src="<?php echo get_option('clrs_logo'); ?>" style="max-width: 114px; -webkit-border-radius: 500px; -moz-border-radius: 500px; border-radius: 500px;" />
 
@@ -136,7 +141,7 @@ jQuery(document).ready(function() {
 	</script>
 
 	<h3><?php _e('统计代码：','clrs'); ?></h3>
-	<textarea name="clrs_tongji" rows="10" cols="60" placeholder="<?php _e('输入网站统计代码，可适当加入字符','clrs'); ?>" style="font-size: 14px; font-family: Consolas, monospace, sans-serif, sans"><?php echo get_option('clrs_tongji'); ?></textarea><br>
+	<textarea name="clrs_tongji" rows="10" cols="60" placeholder="<?php _e('输入网站统计代码','clrs'); ?>" style="font-size: 14px; font-family: Consolas, monospace, sans-serif, sans"><?php echo get_option('clrs_tongji'); ?></textarea><br>
 
 	<br><h3><?php _e('访客环境：','clrs'); ?></h3>
 	<input type="radio" name="clrs_wbos" value="yes" required="required" /><?php _e('显示','clrs'); ?>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -207,12 +212,13 @@ if(isset($_POST['option_save'])){
 // 首页 SNS 输出
 
 function clrs_sns () {
-	// 修改此顺序可以改变输出顺序
+	// 修改此顺序可以改变输出顺序，记得修改对应的注释
 	$clrs_sns = array("profile","gplus","twitter","fb","weibo","qqw","github");
+	$clrs_snsn = array("个人页","Google+","Twitter","Facebook","SinaWeibo","QQ","Github");
 	for ($i=0; $i<7; $i++) {
 		$clrs_sopt = 'clrs_s_' . $clrs_sns[$i];
 		if( get_option($clrs_sopt) != null ) {
-			echo '<a href="' . get_option($clrs_sopt) . '"><button class="tr_' . $clrs_sns[$i] . '"></button></a>';
+			echo '<a href="' . get_option($clrs_sopt) . '" title="' . $clrs_snsn[$i] . '"><button class="tr_' . $clrs_sns[$i] . '"></button></a>';
 		}
 	}
 }
