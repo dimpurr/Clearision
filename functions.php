@@ -100,115 +100,6 @@ if ($clrs_fitj == true) {
 
 };
 
-// 后台设置页面
-
-function clrs_config(){ clrs_thtj(); ?>
-
-<style type="text/css">
-input[type="text"] { max-width: 510px; }
-textarea { font-size: 14px; font-family: Consolas, monospace, sans-serif, sans; }
-</style>
-
-<h1><?php _e('Clearision 主题设置','clrs'); ?></h1>
-
-<form method="post" name="clrs_form" id="clrs_form">
-
-	<h3><a href="http://blog.dimpurr.com/clrs-theme">Clearison 主题专页→</a></h3>
-
-	<div id="up-div"></div>
-
-	<br><h3><?php _e('LOGO头像：','clrs'); ?></h3>
-	<input type="text" size="80" name="clrs_logo" id="clrs_logo" placeholder="<?php _e('粘贴链接或点击上传','clrs'); ?>" value="<?php echo get_option('clrs_logo'); ?>"/>
-	<input type="button" name="upload_button" value="<?php _e('上传','clrs'); ?>" id="upbottom"/><br>
-	<p style="display:none;"><?php _e('默认值：','clrs'); ?>http://blog.dimpurr.com/wp-content/themes/clearision/img/logo.png</p><br>
-
-	<img src="<?php echo get_option('clrs_logo'); ?>" style="max-width: 114px; -webkit-border-radius: 500px; -moz-border-radius: 500px; border-radius: 500px;" />
-
-	<?php wp_enqueue_script('thickbox'); wp_enqueue_style('thickbox'); ?>
-	<script type="text/javascript">
-jQuery(document).ready(function() {
-	jQuery('#upbottom').click(function() {
-		targetfield = jQuery(this).prev('#clrs_logo');
-		tb_show('', 'media-upload.php?type=image&amp;TB_iframe=true');
-		return false;
-	});
-	window.send_to_editor = function(html) {
-		imgurl = jQuery('img',html).attr('src');
-		jQuery(targetfield).val(imgurl);
-		tb_remove();
-	}	
-});
-	</script>
-
-	<h3><?php _e('统计代码：','clrs'); ?></h3>
-	<textarea name="clrs_tongji" rows="10" cols="60" placeholder="<?php _e('输入网站统计代码','clrs'); ?>" style="font-size: 14px; font-family: Consolas, monospace, sans-serif, sans"><?php echo get_option('clrs_tongji'); ?></textarea><br>
-
-	<br><h3><?php _e('访客环境：','clrs'); ?></h3>
-	<input type="radio" name="clrs_wbos" value="yes" required="required" /><?php _e('显示','clrs'); ?>&nbsp;&nbsp;&nbsp;&nbsp;
-	<input type="radio" name="clrs_wbos" value="no" required="required" /><?php _e('不显示','clrs'); ?><br>
-	<?php _e('当前状态：','clrs'); ?><?php echo get_option('clrs_wbos'); ?><br>
-
-	<br><h3><?php _e('文章作者：','clrs'); ?></h3>
-	<input type="radio" name="clrs_adis" value="yes" required="required" /><?php _e('显示','clrs'); ?>&nbsp;&nbsp;&nbsp;&nbsp;
-	<input type="radio" name="clrs_adis" value="no" required="required" /><?php _e('不显示','clrs'); ?><br>
-	<?php _e('当前状态：','clrs'); ?><?php echo get_option('clrs_adis'); ?><br>
-
-	<br><h3><?php _e('社交图标','clrs'); ?></h3>
-	请带上 http:// <br>
-	<?php
-
-	$clrs_sns = array("profile","gplus","twitter","fb","weibo","qqw","github");
-	$clrs_snsn = array("个人页","Google+","Twitter","Facebook","SinaWeibo","QQ / Qzone / QQWeibo","Github");
-
-	for ($i=0; $i<7; $i++) {
-		$clrs_sopt = 'clrs_s_' . $clrs_sns[$i];
-		echo '<input type="text" size="80" name="' . $clrs_sopt . '" id="' . $clrs_sopt . '" placeholder="' . $clrs_snsn[$i] . '" value="' . get_option($clrs_sopt) . '"/>';
-	}
-
-	?>
-
-	<br><h3><?php _e('友情链接：','clrs'); ?></h3>
-	<input type="radio" name="clrs_ldis" value="yes" required="required" /><?php _e('显示','clrs'); ?>&nbsp;&nbsp;&nbsp;&nbsp;
-	<input type="radio" name="clrs_ldis" value="no" required="required" /><?php _e('不显示','clrs'); ?><br>
-	<?php _e('当前状态：','clrs'); ?><?php echo get_option('clrs_ldis'); ?><br>
-	<br><textarea name="clrs_link" rows="10" cols="60" placeholder="<?php _e('在这里使用 HTML 代码自定义友链区的内容','clrs'); ?>" style="font-size: 14px; font-family: Consolas, monospace, sans-serif, sans"><?php echo get_option('clrs_link'); ?></textarea><br>
-	
-	<br><h3><?php _e('提交更改：','clrs'); ?></h3>
-	<input type="submit" name="option_save" value="<?php _e('保存全部设置','clrs'); ?>" />
-
-	<?php wp_nonce_field('update-options'); ?>
-	<input type="hidden" name="action" value="update" />
-	<input type="hidden" name="page_options" value="clrs_copy_right" />
-
-</form>
-
-<?php }
-
-add_action('admin_menu', 'clrs_menu_function');
-
-if(isset($_POST['option_save'])){
-	$clrs_tongji = stripslashes($_POST['clrs_tongji']);
-	update_option( 'clrs_tongji', $clrs_tongji );
-	$clrs_logo = stripslashes($_POST['clrs_logo']);
-	update_option( 'clrs_logo', $clrs_logo );
-	$clrs_ldis = stripslashes($_POST['clrs_ldis']);
-	update_option( 'clrs_ldis', $clrs_ldis );
-	$clrs_wbos = stripslashes($_POST['clrs_wbos']);
-	update_option( 'clrs_wbos', $clrs_wbos );
-	$clrs_adis = stripslashes($_POST['clrs_adis']);
-	update_option( 'clrs_adis', $clrs_adis );
-	$clrs_link = stripslashes($_POST['clrs_link']);
-	update_option( 'clrs_link', $clrs_link );
-	
-	$clrs_sns = array("profile","gplus","twitter","fb","weibo","qqw","github");
-	for ($i=0; $i<7; $i++) {
-		$clrs_sopt = 'clrs_s_' . $clrs_sns[$i];
-		update_option( $clrs_sopt, stripslashes($_POST[$clrs_sopt]) );
-	}
-
-}
-
-
 // 首页 SNS 输出
 
 function clrs_sns () {
@@ -334,6 +225,116 @@ function tt_wp_title( $title, $sep ) {
 		$title = "$title $sep " . sprintf( __( '页面 %s', 'twentytwelve' ), max( $paged, $page ) );
 
 	return $title;
+}
+
+// 后台设置页面
+
+add_action('admin_menu', 'clrs_menu_function');
+
+function clrs_config(){ clrs_thtj(); ?>
+
+<style type="text/css">
+input[type="text"] { max-width: 510px; }
+textarea { font-size: 14px; font-family: Consolas, monospace, sans-serif, sans; }
+</style>
+
+<h1><?php _e('Clearision 主题设置','clrs'); ?></h1>
+
+<form method="post" name="clrs_form" id="clrs_form">
+
+	<h3><a href="http://blog.dimpurr.com/clrs-theme">Clearison 主题专页→</a></h3>
+
+	<div id="up-div"></div>
+
+	<br><h3><?php _e('LOGO头像：','clrs'); ?></h3>
+	<input type="text" size="80" name="clrs_logo" id="clrs_logo" placeholder="<?php _e('粘贴链接或点击上传','clrs'); ?>" value="<?php echo get_option('clrs_logo'); ?>"/>
+	<input type="button" name="upload_button" value="<?php _e('上传','clrs'); ?>" id="upbottom"/><br>
+	<p style="display:none;"><?php _e('默认值：','clrs'); ?>http://blog.dimpurr.com/wp-content/themes/clearision/img/logo.png</p><br>
+
+	<img src="<?php echo get_option('clrs_logo'); ?>" style="max-width: 114px; -webkit-border-radius: 500px; -moz-border-radius: 500px; border-radius: 500px;" />
+
+	<?php wp_enqueue_script('thickbox'); wp_enqueue_style('thickbox'); ?>
+	<script type="text/javascript">
+jQuery(document).ready(function() {
+	jQuery('#upbottom').click(function() {
+		targetfield = jQuery(this).prev('#clrs_logo');
+		tb_show('', 'media-upload.php?type=image&amp;TB_iframe=true');
+		return false;
+	});
+	window.send_to_editor = function(html) {
+		imgurl = jQuery('img',html).attr('src');
+		jQuery(targetfield).val(imgurl);
+		tb_remove();
+	}	
+});
+	</script>
+
+	<h3><?php _e('统计代码：','clrs'); ?></h3>
+	<textarea name="clrs_tongji" rows="10" cols="60" placeholder="<?php _e('输入网站统计代码','clrs'); ?>" style="font-size: 14px; font-family: Consolas, monospace, sans-serif, sans"><?php echo get_option('clrs_tongji'); ?></textarea><br>
+
+	<br><h3><?php _e('访客环境：','clrs'); ?></h3>
+	<input type="radio" name="clrs_wbos" value="yes" required="required" /><?php _e('显示','clrs'); ?>&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="radio" name="clrs_wbos" value="no" required="required" /><?php _e('不显示','clrs'); ?><br>
+	<?php _e('当前状态：','clrs'); ?><?php echo get_option('clrs_wbos'); ?><br>
+
+	<br><h3><?php _e('文章作者：','clrs'); ?></h3>
+	<input type="radio" name="clrs_adis" value="yes" required="required" /><?php _e('显示','clrs'); ?>&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="radio" name="clrs_adis" value="no" required="required" /><?php _e('不显示','clrs'); ?><br>
+	<?php _e('当前状态：','clrs'); ?><?php echo get_option('clrs_adis'); ?><br>
+
+	<br><h3><?php _e('社交图标','clrs'); ?></h3>
+	请带上 http:// <br>
+	<?php
+
+	$clrs_sns = array("profile","gplus","twitter","fb","weibo","qqw","github");
+	$clrs_snsn = array("个人页","Google+","Twitter","Facebook","SinaWeibo","QQ / Qzone / QQWeibo","Github");
+
+	for ($i=0; $i<7; $i++) {
+		$clrs_sopt = 'clrs_s_' . $clrs_sns[$i];
+		echo '<input type="text" size="80" name="' . $clrs_sopt . '" id="' . $clrs_sopt . '" placeholder="' . $clrs_snsn[$i] . '" value="' . get_option($clrs_sopt) . '"/>';
+	}
+
+	?>
+
+	<br><h3><?php _e('友情链接：','clrs'); ?></h3>
+	<input type="radio" name="clrs_ldis" value="yes" required="required" /><?php _e('显示','clrs'); ?>&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="radio" name="clrs_ldis" value="no" required="required" /><?php _e('不显示','clrs'); ?><br>
+	<?php _e('当前状态：','clrs'); ?><?php echo get_option('clrs_ldis'); ?><br>
+	<br><textarea name="clrs_link" rows="10" cols="60" placeholder="<?php _e('在这里使用 HTML 代码自定义友链区的内容','clrs'); ?>" style="font-size: 14px; font-family: Consolas, monospace, sans-serif, sans"><?php echo get_option('clrs_link'); ?></textarea><br>
+	
+	<br><h3><?php _e('提交更改：','clrs'); ?></h3>
+	<input type="submit" name="option_save" value="<?php _e('保存全部设置','clrs'); ?>" />
+
+	<?php wp_nonce_field('update-options'); ?>
+	<input type="hidden" name="action" value="update" />
+	<input type="hidden" name="page_options" value="clrs_copy_right" />
+
+</form>
+
+<?php }
+
+// 提交设置
+
+if(isset($_POST['option_save'])){
+	$clrs_tongji = stripslashes($_POST['clrs_tongji']);
+	update_option( 'clrs_tongji', $clrs_tongji );
+	$clrs_logo = stripslashes($_POST['clrs_logo']);
+	update_option( 'clrs_logo', $clrs_logo );
+	$clrs_ldis = stripslashes($_POST['clrs_ldis']);
+	update_option( 'clrs_ldis', $clrs_ldis );
+	$clrs_wbos = stripslashes($_POST['clrs_wbos']);
+	update_option( 'clrs_wbos', $clrs_wbos );
+	$clrs_adis = stripslashes($_POST['clrs_adis']);
+	update_option( 'clrs_adis', $clrs_adis );
+	$clrs_link = stripslashes($_POST['clrs_link']);
+	update_option( 'clrs_link', $clrs_link );
+	
+	$clrs_sns = array("profile","gplus","twitter","fb","weibo","qqw","github");
+	for ($i=0; $i<7; $i++) {
+		$clrs_sopt = 'clrs_s_' . $clrs_sns[$i];
+		update_option( $clrs_sopt, stripslashes($_POST[$clrs_sopt]) );
+	}
+
 }
 
 ?>

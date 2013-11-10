@@ -1,7 +1,7 @@
 /*
 Theme Name: Clearision
 Theme URI: http://blog.dimpurr.com/Clearison
-Version: 1.11
+Version: 1.12
 Author: Dimpurr
 Author URI: http://dimpurr.com
 Description: A HTML5 grey and one column WordPress theme.
@@ -280,12 +280,18 @@ input:hover , textarea:hover , input:focus , textarea:focus { background: #FFF; 
 #sidebar a { color: #777; border-bottom: 1px dashed #BBB; }
 #sidebar a:hover { color: #000; border-bottom: 1px dashed #888; }
 .widget { float: left; width: 45%; margin: 0 0px 10px 20px; }
-#wp-calendar td { width: 1%; height: 20px; }
-#wp-calendar caption { font-weight: bold; margin-bottom: 5px; }
 #one { text-align: left; }
-#recentcomments li { margin: 10px 0 10px -30px; }
 #two { text-align: right; }
-.tagcloud { margin-right: 20px; }
+.widget ul { margin-bottom: 20px; }
+
+#one ul > li , #one > form , #one > div { margin: 10px 0 10px -30px; text-align: left; }
+#two ul > li , #two > form , #two > div { margin: 10px 30px 10px 0px; list-style: none; text-align: right; }
+#two ul > li:after { content: ''; margin-left: 5px;
+	display: inline-block; background: #555; width: 5px; height: 5px;
+	-webkit-border-radius: 100px; -moz-border-radius: 100px; border-radius: 100px; }
+
+#wp-calendar td { width: 1%; height: 20px; }
+#wp-calendar caption { font-weight: bold; margin-bottom: 5px; margin-left: -5px; }
 
 /* 尾部样式 */
 
