@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Clearison en_US\n"
-"POT-Creation-Date: 2013-11-02 22:48+0800\n"
-"PO-Revision-Date: 2013-11-02 22:49+0800\n"
+"POT-Creation-Date: 2013-11-28 16:26+0800\n"
+"PO-Revision-Date: 2013-11-28 16:26+0800\n"
 "Last-Translator: Dimpurr <dimpurr@live.com>\n"
 "Language-Team: DimWorks <dimpurr@live.com>\n"
 "Language: en_US\n"
@@ -67,6 +67,26 @@ msgstr "Email"
 msgid "站点"
 msgstr "Site"
 
+#: ../content.php:12
+msgid "出品"
+msgstr "Written"
+
+#: ../content.php:14
+msgid "木有吐槽"
+msgstr "No Reply"
+
+#: ../content.php:14
+msgid "落单的吐槽"
+msgstr "Alone Relpy"
+
+#: ../content.php:14
+msgid "%发吐槽"
+msgstr "% Reply"
+
+#: ../content.php:18
+msgid "调教文章"
+msgstr "Edit Post"
+
 #: ../functions.php:15 ../functions.php:16
 msgid "Clearision 设置"
 msgstr "Clearision Setting"
@@ -87,134 +107,113 @@ msgstr "Bottom Siderbar One"
 msgid "底部栏2"
 msgstr "Bottom Sidebar Two"
 
-#: ../functions.php:107
-msgid "Clearision 主题设置"
-msgstr "Clearision Setting"
-
-#: ../functions.php:115
-msgid "LOGO头像："
-msgstr "LOGO:"
-
-#: ../functions.php:116
-msgid "粘贴链接或点击上传"
-msgstr "Paste image link or click upload."
-
-#: ../functions.php:117
-msgid "上传"
-msgstr "Upload"
-
-#: ../functions.php:118
-msgid "默认值："
-msgstr "Default:"
-
-#: ../functions.php:138
-msgid "统计代码："
-msgstr "Analysis code:"
-
-#: ../functions.php:139
-msgid "输入网站统计代码，可适当加入字符"
-msgstr "Paste website analysis code. Also can add some text."
-
-#: ../functions.php:141
-msgid "访客环境："
-msgstr "Guest UA:"
-
-#: ../functions.php:142 ../functions.php:147 ../functions.php:166
-msgid "显示"
-msgstr "Enable"
-
-#: ../functions.php:143 ../functions.php:148 ../functions.php:167
-msgid "不显示"
-msgstr "Disable"
-
-#: ../functions.php:144 ../functions.php:149 ../functions.php:168
-msgid "当前状态："
-msgstr "Current status:"
-
-#: ../functions.php:146
-msgid "文章作者："
-msgstr "Post writer:"
-
-#: ../functions.php:151
-msgid "社交图标"
-msgstr "SNS icon:"
-
-#: ../functions.php:165
-msgid "友情链接："
-msgstr "Links:"
-
-#: ../functions.php:169
-msgid "在这里使用 HTML 代码自定义友链区的内容"
-msgstr "Use HTML code to custom links section."
-
-#: ../functions.php:171
-msgid "提交更改："
-msgstr "Submit changes:"
-
-#: ../functions.php:172
-msgid "保存全部设置"
-msgstr "Save all changes"
-
-#: ../functions.php:235
+#: ../functions.php:132
 msgid "上一页"
 msgstr "Prev Page"
 
-#: ../functions.php:236
+#: ../functions.php:133
 msgid "下一页"
 msgstr "Next Page"
 
-#: ../functions.php:280
+#: ../functions.php:177
 msgid "文章作者"
 msgstr "Write"
 
-#: ../functions.php:296
+#: ../functions.php:193
 msgid "你的评论正在等待和谐审查"
 msgstr "Your comment is waiting for examine."
 
-#: ../functions.php:301
+#: ../functions.php:198
 msgid "编辑"
 msgstr "Edit"
 
-#: ../functions.php:303
+#: ../functions.php:200
 msgid "回复"
 msgstr "Reply"
 
-#: ../functions.php:328
+#: ../functions.php:225
 #, php-format
 msgid "页面 %s"
 msgstr "Page %s"
 
-#: ../index.php:23
-msgid "出品"
-msgstr "Written"
+#: ../functions.php:251
+msgid "Clearision 主题设置"
+msgstr "Clearision Setting"
 
-#: ../index.php:25 ../single.php:21
-msgid "木有吐槽"
-msgstr "No Reply"
+#: ../functions.php:259
+msgid "LOGO头像："
+msgstr "LOGO:"
 
-#: ../index.php:25 ../single.php:21
-msgid "落单的吐槽"
-msgstr "Alone Relpy"
+#: ../functions.php:260
+msgid "粘贴链接或点击上传"
+msgstr "Paste image link or click upload."
 
-#: ../index.php:25 ../single.php:21
-msgid "%发吐槽"
-msgstr "% Reply"
+#: ../functions.php:261
+msgid "上传"
+msgstr "Upload"
 
-#: ../index.php:29 ../single.php:22
-msgid "调教文章"
-msgstr "Edit Post"
+#: ../functions.php:262
+msgid "默认值："
+msgstr "Default:"
 
-#: ../index.php:46
+#: ../functions.php:282
+msgid "统计代码："
+msgstr "Analysis code:"
+
+#: ../functions.php:283
+msgid "输入网站统计代码"
+msgstr "Paste website analysis code. Also can add some text."
+
+#: ../functions.php:285
+msgid "访客环境："
+msgstr "Guest UA:"
+
+#: ../functions.php:286 ../functions.php:290 ../functions.php:308
+msgid "显示"
+msgstr "Enable"
+
+#: ../functions.php:287 ../functions.php:291 ../functions.php:309
+msgid "不显示"
+msgstr "Disable"
+
+#: ../functions.php:289
+msgid "文章作者："
+msgstr "Post writer:"
+
+#: ../functions.php:293
+msgid "社交图标"
+msgstr "SNS icon:"
+
+#: ../functions.php:307
+msgid "友情链接："
+msgstr "Links:"
+
+#: ../functions.php:310
+msgid "在这里使用 HTML 代码自定义友链区的内容"
+msgstr "Use HTML code to custom links section."
+
+#: ../functions.php:312
+msgid "提交更改："
+msgstr "Submit changes:"
+
+#: ../functions.php:313
+msgid "保存全部设置"
+msgstr "Save all changes"
+
+#: ../index.php:24
 msgid "什么都没有找到"
 msgstr "Nothing Found"
 
-#: ../index.php:50
+#: ../index.php:28
 msgid "哎呀，你要找的东西好像被贝爷吃掉了……"
 msgstr "Ouch! Please retry."
 
-#: ../index.php:64
+#: ../index.php:42
 msgid "友情链接"
 msgstr "Links"
+
+#~ msgid "当前状态："
+#~ msgstr "Current status:"
 
 #~ msgid "放弃吐槽"
 #~ msgstr "Cancel comments"
