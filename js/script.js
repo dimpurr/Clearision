@@ -4,7 +4,17 @@ function cmt_submit(){
 		document.getElementById("cmt_form").submit.click();
 	};
 };
+
+// 代码可编辑
+function clrs_code(){
+	var controls = document.getElementsByTagName('pre');
+	for(var i=0; i<controls.length; i++){
+		controls[i].setAttribute("contenteditable","true")
+	};
+}
+
 document.onkeydown = cmt_submit;
+window.onload = clrs_code;
 
 console.log('Theme Clearision by Dimpurr')
 console.log('http://dimpurr.com')

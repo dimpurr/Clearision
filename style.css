@@ -1,7 +1,7 @@
 /*
 Theme Name: Clearision
 Theme URI: http://blog.dimpurr.com/Clearison
-Version: 1.12
+Version: 1.14
 Author: Dimpurr
 Author URI: http://dimpurr.com
 Description: A HTML5 grey and one column WordPress theme.
@@ -87,10 +87,11 @@ blockquote , q { margin: 10px 30px 10px 50px; padding: 10px 5px;
 blockquote p , q p { margin: 0; }
 ol , ul { font-size: 15px; padding-left: 70px; line-height: 24px; }
 pre , code { margin: 15px 0; padding: 10px; display: block;
-	background: #FBFBFD; color: #222; border: 1px solid #e1e1e8;
+	background: #FBFBFD; color: #222; border: 1.5px solid #e1e1e8;
 	font-family: "Yahei Consolas Hybird", "Consolas", "Ubuntu Mono", Monaco, Menlo, "Courier New", monospace, sans-serif; font-size: 14px; word-break: break-all; word-wrap: break-word;
-	-webkit-transition: background linear 0.2s; -moz-transition: background linear 0.2s; transition: background linear 0.2s; }
+	-webkit-transition: all linear 0.2s; -moz-transition: all linear 0.2s; transition: all linear 0.2s; }
 pre:hover , code:hover { background: #FDFDFF; }
+pre:focus , code:focus { background: #FEFEFF; outline: none; border-color: #AAA; border-radius: 0; }
 button , input[type="submit"] { border: 2px #DDD solid; background: #EFEFEF; padding: 5px 10px;
 	-webkit-transition: background linear 0.2s, border linear 0.2s; -moz-transition: backgroundbackground linear 0.2s, border linear 0.2s; transition: background linear 0.2s, border linear 0.2s; }
 button:hover , input[type="submit"]:hover { background: #DDD; }
@@ -319,6 +320,8 @@ input:hover , textarea:hover , input:focus , textarea:focus { background: #FFF; 
 * { float: none; }
 p { font-size: 14px; line-height: 26px; }
 blockquote , q { margin-left: 15px; }
+ol , ul { padding-left: 35px; font-size: 14px; }
+.post_ctn img  { width: auto !important; height: auto !important; max-height: auto !important; max-width: 100% !important; min-height: 1px !important; }
 
 #page { margin: 0 auto 0 auto; text-align: left; }
 #float { width: auto; float: none; position: static; margin-top: 20px; padding: 0px; text-align: center; }
@@ -346,8 +349,9 @@ blockquote , q { margin-left: 15px; }
 
 #title_r { text-align: center; margin: 0; }
 #title_r button { box-shadow: none; background: none; background-repeat: no-repeat; background-position: center; background-size: 16px; margin: -5px 0 0 0;  }
+#title_r #tr_admin , #title_r #tr_rss { display: none; }
 #tr_clear { display: block; }
-#title_r #tr_search { text-align: center; }
+#title_r #tr_search { text-align: center; margin: 0; }
 #title_r #tr_search , #title_r #tr_search:hover , #title_r #tr_search:focus {
 	display: block; width: 180px; height: 20px; padding: 2px 18px; vertical-align: middle;
 	background: #FFF url(img/enter.png) right no-repeat; background-size: 12px; background-origin: content-box;
@@ -365,6 +369,7 @@ blockquote , q { margin-left: 15px; }
 .post_h a { font-size: 20px; line-height: 22px; }
 .post_t_d , .post_t_u { font-size: 16px; }
 #p_n_r { float: right; margin-left: 0; }
+.post_ct { line-height: 25px; margin: 0; padding: 0; }
 
 .comment .children li { margin-left: -70px; }
 .comment { font-size: 13px; }
