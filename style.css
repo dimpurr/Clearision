@@ -241,7 +241,7 @@ input:hover , textarea:hover , input:focus , textarea:focus { background: #FFF; 
 .cmt_list li , .comment li { padding: 15px; margin: 0;
 	border-style: dashed; border-color: #DDD; border-width: 1px 0 0 0; }
 .comment .children { margin-bottom: 0; }
-.comment .children li { margin-left: -35px; margin-bottom: 0;
+.comment .children li { margin-left: -35px; margin-bottom: 0; padding-bottom: 0;
 	border-style: dashed; border-color: #DDD; border-width: 1px 0 0 0; }
 .comment-content { font-size: 14px; line-height: 24px; }
 .comment-meta .avatar { float: left; margin-right: 15px; box-shadow:0 0 10px #DDD; }
@@ -281,15 +281,20 @@ input:hover , textarea:hover , input:focus , textarea:focus { background: #FFF; 
 #sidebar a:hover { color: #000; border-bottom: 1px dashed #888; }
 .widget { float: left; width: 45%; margin: 0 0px 10px 20px; }
 #one { text-align: left; }
-#two { text-align: right; }
+#two { text-align: right; padding: 0; }
 .widget ul { margin-bottom: 20px; }
 
-#one ul > li , #one > form , #one > div { margin: 10px 0 10px -30px; text-align: left; }
-#two ul > li , #two > form , #two > div { margin: 10px 30px 10px 0px; list-style: none; text-align: right; }
-#two ul > li:after { content: ''; margin-left: 5px;
+#two ul { padding: 0; }
+#one ul > li , #one > form , #one > div { margin: 10px 0 10px 20px; text-align: left; }
+#one ul > li { margin-left: -30px; }
+#two ul > li , #two > form , #two > div { margin: 10px 30px 10px 0px;
+	list-style: none; text-align: right; }
+#two ul > li { margin-right: 30px; }
+#two ul > li:after { content: ''; margin: 0 -15px 0 5px;
 	display: inline-block; background: #555; width: 5px; height: 5px;
 	-webkit-border-radius: 100px; -moz-border-radius: 100px; border-radius: 100px; }
 
+.tagcloud a { display: inline-block; }
 #wp-calendar td { width: 1%; height: 20px; }
 #wp-calendar caption { font-weight: bold; margin-bottom: 5px; margin-left: -5px; }
 
@@ -371,7 +376,7 @@ blockquote , q { margin-left: 15px; }
 .cmt_ua_n { display: none; }
 .cmt_ua_a:hover , .cmt_ua_a:hover .cmt_ua_n { display: inline; }
 
-#sidebar , .widget , #one , #two , .recentcomments , #recentcomments , #recentcomments li { position: static; float: none; width: auto; text-align: center; padding: 0; margin: 0; list-style: none; }
+#sidebar , .widget , #one , #two , .recentcomments , #recentcomments , #recentcomments li , #two ul > li, #two > form, #two > div , #one ul > li, #one > form, #one > div { position: static; float: none; width: auto; text-align: center; padding: 0; margin: 0; list-style: none; }
 #sidebar { margin-bottom: 20px; }
 #recentcomments li { font-size: 14px; line-height: 30px; }
 

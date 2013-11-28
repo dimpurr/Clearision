@@ -12,7 +12,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="author" content="dimpurr" />
 <meta name="application-name" content="<?php bloginfo('name' ); ?>"/>
-<meta charset="<?php bloginfo( 'charset' ); ?>" 
+<meta charset="<?php bloginfo( 'charset' ); ?>" />
 <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url')?>" />
 <link rel="alternate" type="application/rdf+xml" title="RSS 1.0" href="<?php bloginfo('rss_url')?>" />
 <link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="<?php bloginfo('atom_url')?>" />
