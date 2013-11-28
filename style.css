@@ -301,7 +301,7 @@ input:hover , textarea:hover , input:focus , textarea:focus { background: #FFF; 
 
 /* 尾部样式 */
 
-#footer { margin-left: 20px; width: 140px; padding: 10px 0 10px 0; font-size: 13px; background: #F5F5F5; color: #CCC;
+#footer { margin-left: 20px; width: 140px; padding: 10px 0 10px 0; font-size: 12px; line-height: 20px; background: #F5F5F5; color: #CECECE;
 	border-style: solid; border-color: #DDD; border-width: 1px 0 0 0; }
 #footer a { text-decoration: none; color: #BBB; }
 #footer:hover { color: #999; }
