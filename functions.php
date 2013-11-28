@@ -227,6 +227,16 @@ function tt_wp_title( $title, $sep ) {
 	return $title;
 }
 
+// 设置页单选按钮
+
+function clrs_va($option) {
+	if ( get_option($option) == "yes" ) { echo 'checked="true"'; }
+}
+
+function clrs_vb($option) {
+	if ( get_option($option) == "no" ) { echo 'checked="true"'; }
+}
+
 // 后台设置页面
 
 add_action('admin_menu', 'clrs_menu_function');
@@ -273,14 +283,12 @@ jQuery(document).ready(function() {
 	<textarea name="clrs_tongji" rows="10" cols="60" placeholder="<?php _e('输入网站统计代码','clrs'); ?>" style="font-size: 14px; font-family: Consolas, monospace, sans-serif, sans"><?php echo get_option('clrs_tongji'); ?></textarea><br>
 
 	<br><h3><?php _e('访客环境：','clrs'); ?></h3>
-	<input type="radio" name="clrs_wbos" value="yes" required="required" /><?php _e('显示','clrs'); ?>&nbsp;&nbsp;&nbsp;&nbsp;
-	<input type="radio" name="clrs_wbos" value="no" required="required" /><?php _e('不显示','clrs'); ?><br>
-	<?php _e('当前状态：','clrs'); ?><?php echo get_option('clrs_wbos'); ?><br>
+	<input type="radio" name="clrs_wbos" value="yes" required="required" <?php clrs_va("clrs_wbos"); ?> /><?php _e('显示','clrs'); ?>&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="radio" name="clrs_wbos" value="no" required="required" <?php clrs_vb("clrs_wbos"); ?> /><?php _e('不显示','clrs'); ?><br>
 
 	<br><h3><?php _e('文章作者：','clrs'); ?></h3>
-	<input type="radio" name="clrs_adis" value="yes" required="required" /><?php _e('显示','clrs'); ?>&nbsp;&nbsp;&nbsp;&nbsp;
-	<input type="radio" name="clrs_adis" value="no" required="required" /><?php _e('不显示','clrs'); ?><br>
-	<?php _e('当前状态：','clrs'); ?><?php echo get_option('clrs_adis'); ?><br>
+	<input type="radio" name="clrs_adis" value="yes" required="required" <?php clrs_va("clrs_adis"); ?> /><?php _e('显示','clrs'); ?>&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="radio" name="clrs_adis" value="no" required="required" <?php clrs_vb("clrs_adis"); ?> /><?php _e('不显示','clrs'); ?><br>
 
 	<br><h3><?php _e('社交图标','clrs'); ?></h3>
 	请带上 http:// <br>
@@ -297,9 +305,8 @@ jQuery(document).ready(function() {
 	?>
 
 	<br><h3><?php _e('友情链接：','clrs'); ?></h3>
-	<input type="radio" name="clrs_ldis" value="yes" required="required" /><?php _e('显示','clrs'); ?>&nbsp;&nbsp;&nbsp;&nbsp;
-	<input type="radio" name="clrs_ldis" value="no" required="required" /><?php _e('不显示','clrs'); ?><br>
-	<?php _e('当前状态：','clrs'); ?><?php echo get_option('clrs_ldis'); ?><br>
+	<input type="radio" name="clrs_ldis" value="yes" required="required" <?php clrs_va("clrs_ldis"); ?> /><?php _e('显示','clrs'); ?>&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="radio" name="clrs_ldis" value="no" required="required" <?php clrs_vb("clrs_ldis"); ?> /><?php _e('不显示','clrs'); ?><br>
 	<br><textarea name="clrs_link" rows="10" cols="60" placeholder="<?php _e('在这里使用 HTML 代码自定义友链区的内容','clrs'); ?>" style="font-size: 14px; font-family: Consolas, monospace, sans-serif, sans"><?php echo get_option('clrs_link'); ?></textarea><br>
 	
 	<br><h3><?php _e('提交更改：','clrs'); ?></h3>
