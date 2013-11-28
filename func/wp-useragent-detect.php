@@ -1253,7 +1253,18 @@ function clrs_detect_os()
 	{
 		$link="http://www.microsoft.com/windows/";
 
-		if(preg_match('/Windows NT 6.2; Win64; x64;/i', $useragent)
+		if(preg_match('/Windows NT 6.3; Win64; x64;/i', $useragent)
+			|| preg_match('/Windows NT 6.3; WOW64/i', $useragent))
+		{
+			 $title="Windows 8.1 x64 Edition";
+			 $code="win-5";
+		}
+		elseif(preg_match('/Windows NT 6.3/i', $useragent))
+		{
+			 $title="Windows 8.1";
+			 $code="win-5";
+		}
+		elseif(preg_match('/Windows NT 6.2; Win64; x64;/i', $useragent)
 			|| preg_match('/Windows NT 6.2; WOW64/i', $useragent))
 		{
 			$title="Windows 8 x64 Edition";
@@ -3040,15 +3051,18 @@ function clrs_detect_webbrowser()
 	}
 	elseif(preg_match('/Mozilla/i', $useragent))
 	{
-		$link="http://www.mozilla.org/";
-		$title="Mozilla Compatible";
-
-		if(preg_match('/rv:([.0-9a-zA-Z]+)/i', $useragent, $regmatch))
+		if(preg_match('/rv:(11.0)/i', $useragent, $regmatch))
 		{
-			$title="Mozilla ".$regmatch[1];
+		$link="http://www.microsoft.com/windows/products/winfamily/ie/default.mspx";
+			$title="Internet Explorer 11.0";
+			$code="msie10";
 		}
-
+		elseif(preg_match('/rv:([^11]...)/i', $useragent, $regmatch))
+		{
+		$link="http://www.mozilla.org/";
+		$title="Mozilla ".$regmatch[1];
 		$code="mozilla";
+		}
 	}
 	else
 	{

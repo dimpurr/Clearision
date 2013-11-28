@@ -11,6 +11,10 @@ function clrs_code(){
 	for(var i=0; i<controls.length; i++){
 		controls[i].setAttribute("contenteditable","true")
 	};
+	var controls = document.getElementsByTagName('code');
+	for(var i=0; i<controls.length; i++){
+		controls[i].setAttribute("contenteditable","true")
+	};
 }
 
 document.onkeydown = cmt_submit;
