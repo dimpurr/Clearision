@@ -38,7 +38,6 @@
 		<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
 	</div>
 	<div id="title_r">
-
 		<?php clrs_sns(); ?>
 		<a href="<?php bloginfo('rss2_url'); ?>"><button id="tr_rss"></button></a>
 		<a href="<?php echo admin_url();?>"><button id="tr_admin"></button></a>
