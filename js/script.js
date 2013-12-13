@@ -9,11 +9,13 @@ function cmt_submit(){
 function clrs_code(){
 	var controls = document.getElementsByTagName('pre');
 	for(var i=0; i<controls.length; i++){
+		controls[i].spellcheck = false;
 		controls[i].setAttribute("contenteditable","true")
 	};
 	var controls = document.getElementsByTagName('code');
 	for(var i=0; i<controls.length; i++){
-		controls[i].setAttribute("contenteditable","true")
+		controls[i].spellcheck = false;
+		controls[i].setAttribute("contenteditable","true");
 	};
 }
 
