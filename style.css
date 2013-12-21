@@ -1,7 +1,7 @@
 /*
 Theme Name: Clearision
 Theme URI: http://blog.dimpurr.com/Clearison
-Version: 2.2
+Version: 2.4
 Author: Dimpurr
 Author URI: http://dimpurr.com
 Description: A HTML5 grey and one column WordPress theme.
@@ -152,7 +152,7 @@ input:hover , textarea:hover , input:focus , textarea:focus { background: #FFF; 
 #title_r { text-align: right; max-width: 100%; }
 #title_r a { border: 0; }
 #title_r input , #title_r button { 
-	-webkit-transition: width linear 0.2s, height linear 0.2s, box-shadow linear 0.2s, background linear 0.2s, -webkit-transform linear 0.08s; -moz-transition: width linear 0.2s, height linear 0.2s, box-shadow linear 0.2s, background linear 0.2s, -moz-transform linear 0.08s; transition: width linear 0.2s, height linear 0.2s, box-shadow linear 0.2s, background linear 0.2s, transform linear 0.08s;
+	-webkit-transition: width ease 0.2s, height ease 0.2s, box-shadow linear 0.2s, background linear 0.2s, -webkit-transform linear 0.08s; -moz-transition: width ease 0.2s, height ease 0.2s, box-shadow linear 0.2s, background linear 0.2s, -moz-transform linear 0.08s; transition: width ease 0.2s, height ease 0.2s, box-shadow linear 0.2s, background linear 0.2s, transform linear 0.08s;
 	display: inline-block; width: 38px; height: 38px; padding: 2px 8px; margin: 0 0 10px 10px;
 	cursor: pointer; border: 0;
 	background: url(img/search.png) no-repeat #FFF center; background-size: 18px;
@@ -193,7 +193,7 @@ input:hover , textarea:hover , input:focus , textarea:focus { background: #FFF; 
 .post_ctn .wp-caption { max-width: 100% !important; }
 .post_ctn .wp-caption img  { width: auto !important; height: auto !important; max-height: auto !important; max-width: 100% !important; min-height: 40px !important; }
 .wp-caption a { border: 0; }
-.post_t { margin: 15px 0 30px 0; }
+.post_t { margin: 15px 0 15px 0; }
 .post_time { display: inline-block; float: right; padding: 5px; margin-left: 15px;
 	text-align: center; font-family: "Times New Roman", serif, sans-serif;
 	border-width: 0 1px 1px 1px; border-style: dashed; border-color: #DDD; }
@@ -233,7 +233,7 @@ input:hover , textarea:hover , input:focus , textarea:focus { background: #FFF; 
 #link a { vertical-align: middle; padding: 0; margin: 0 15px 0 0;
 	font-size: 14px; line-height: 32px; }
 
-#post_nav { margin: 0 0 30px 0; }
+#post_nav { margin: 30px 0 30px 0; }
 #p_n_r { float: right; margin-left: 0; }
 
 /* 评论样式 */

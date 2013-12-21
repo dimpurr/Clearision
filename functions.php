@@ -279,6 +279,9 @@ jQuery(document).ready(function() {
 });
 	</script>
 
+	<br><h3><?php _e('网站图标：','clrs'); ?></h3>
+	<input type="text" size="80" name="clrs_favi" id="clrs_favi" placeholder="<?php _e('输入 ICO/PNG 图标链接，留空调用根目录 favicon.ico','clrs'); ?>" value="<?php echo get_option('clrs_favi'); ?>"/>
+
 	<h3><?php _e('统计代码：','clrs'); ?></h3>
 	<textarea name="clrs_tongji" rows="10" cols="60" placeholder="<?php _e('输入网站统计代码','clrs'); ?>" style="font-size: 14px; font-family: Consolas, monospace, sans-serif, sans"><?php echo get_option('clrs_tongji'); ?></textarea><br>
 
@@ -327,6 +330,8 @@ if(isset($_POST['option_save'])){
 	update_option( 'clrs_tongji', $clrs_tongji );
 	$clrs_logo = stripslashes($_POST['clrs_logo']);
 	update_option( 'clrs_logo', $clrs_logo );
+	$clrs_favi = stripslashes($_POST['clrs_favi']);
+	update_option( 'clrs_favi', $clrs_favi );
 	$clrs_ldis = stripslashes($_POST['clrs_ldis']);
 	update_option( 'clrs_ldis', $clrs_ldis );
 	$clrs_wbos = stripslashes($_POST['clrs_wbos']);
