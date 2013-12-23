@@ -54,6 +54,28 @@ if ( function_exists('register_sidebar') )
 	)
 );
 
+// 获取博客标题
+
+function clrs_title( $title, $sep ) {
+	global $paged, $page;
+
+	if ( is_feed() )
+		return $title;
+
+	$title .= get_bloginfo( 'name' );
+
+	$site_description = get_bloginfo( 'description', 'display' );
+	if ( $site_description && ( is_home() || is_front_page() ) )
+		$title = "$title $sep $site_description";
+
+	if ( $paged >= 2 || $page >= 2 )
+		$title = "$title $sep " . sprintf( __( '页面 %s', 'clrs' ), max( $paged, $page ) );
+
+	return $title;
+}
+
+add_filter( 'wp_title', 'clrs_title', 10, 2 );
+
 // 检测主题更新
 
 require_once(TEMPLATEPATH . '/func/theme-update-checker.php'); 
@@ -206,26 +228,6 @@ function tt_comment( $comment, $args, $depth ) {
 	endswitch;
 }
 endif;
-
-// 定义站点标题
-
-function tt_wp_title( $title, $sep ) {
-	global $paged, $page;
-
-	if ( is_feed() )
-		return $title;
-
-	$title .= get_bloginfo( 'name' );
-
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) )
-		$title = "$title $sep $site_description";
-
-	if ( $paged >= 2 || $page >= 2 )
-		$title = "$title $sep " . sprintf( __( '页面 %s', 'twentytwelve' ), max( $paged, $page ) );
-
-	return $title;
-}
 
 // 设置页单选按钮
 
