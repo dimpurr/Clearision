@@ -6,6 +6,11 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+<?php if (get_option('clrs_opct') == "no") { ?>
+	<link rel="stylesheet" href="<?=get_template_directory_uri(); ?>/style.opacity.css">
+	<?php $bg = get_option('clrs_opbg'); if ( !empty( $bg ) ) { ?>
+	<style>body { background-image: url("<?=$bg;?>"); };</style>
+<?php }; }; ?>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel="shortcut icon" type="image/x-icon" href="<?=get_option( 'clrs_favi', 'favicon.ico' );?>" />
@@ -43,8 +48,8 @@
 	</div>
 	<div id="title_r">
 		<?php clrs_sns(); ?>
-		<a href="<?php bloginfo('rss2_url'); ?>"><button id="tr_rss"></button></a>
-		<a href="<?php echo admin_url();?>"><button id="tr_admin"></button></a>
+		<a href="<?php bloginfo('rss2_url'); ?>" target="_blank"><button id="tr_rss"></button></a>
+		<a href="<?php echo admin_url();?>" target="_blank"><button id="tr_admin"></button></a>
 		<span id="tr_clear"></span>
 		<form id="tr_s_f" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 			<input id="tr_search" type="text" name="s" id="s" placeholder="" size="10" />

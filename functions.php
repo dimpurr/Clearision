@@ -10,14 +10,27 @@ function my_theme_setup() {
 }
 
 // 加载后台设置
+
 function clrs_menu_function(){   
 	add_theme_page(
-		__('Clearision 设置','clrs'),
-		__('Clearision 设置','clrs'),
+		__('Clearision 调教','clrs'),
+		__('Clearision 调教','clrs'),
 		'administrator',
 		'clrs_menu',
 		'clrs_config');
 }
+add_action('admin_menu', 'clrs_menu_function');
+
+function clrs_admin_bar() {
+	global $wp_admin_bar;
+	$wp_admin_bar->add_menu( array(
+		'parent' => false,
+		'id' => 'theme_setting',
+		'title' => __('Clearision 调教','dpt'),
+		'href' => admin_url( 'themes.php?page=clrs_menu'),
+	));
+}
+add_action('wp_before_admin_bar_render', 'clrs_admin_bar');
 
 // 加载菜单设置
 
@@ -131,7 +144,8 @@ function clrs_sns () {
 	for ($i=0; $i<7; $i++) {
 		$clrs_sopt = 'clrs_s_' . $clrs_sns[$i];
 		if( get_option($clrs_sopt) != null ) {
-			echo '<a href="' . get_option($clrs_sopt) . '" title="' . $clrs_snsn[$i] . '"><button class="tr_' . $clrs_sns[$i] . '"></button></a>';
+			echo '<a href="' . get_option($clrs_sopt) . '" title="' . $clrs_snsn[$i] . '" target="_blank"><button class="tr_' . $clrs_sns[$i] . '"></button></a>
+';
 		}
 	}
 }
@@ -241,8 +255,6 @@ function clrs_vb($option) {
 
 // 后台设置页面
 
-add_action('admin_menu', 'clrs_menu_function');
-
 function clrs_config(){ clrs_thtj(); ?>
 
 <style type="text/css">
@@ -254,15 +266,22 @@ textarea { font-size: 14px; font-family: Consolas, monospace, sans-serif, sans; 
 
 <form method="post" name="clrs_form" id="clrs_form">
 
-	<h3><a href="http://blog.dimpurr.com/clrs-theme">Clearison 主题专页→</a></h3>
+	<h3><a href="http://blog.dimpurr.com/clearison">Clearison 主题专页→</a></h3>
 
 	<div id="up-div"></div>
+
+	<br><h3><?php _e('模版样式：','clrs'); ?></h3>
+	<input type="radio" name="clrs_opct" value="yes" required="required" <?php clrs_va("clrs_opct"); ?> /><?php _e('灰色素雅','clrs'); ?>&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="radio" name="clrs_opct" value="no" required="required" <?php clrs_vb("clrs_opct"); ?> /><?php _e('透明清新','clrs'); ?><br>
+	<br>
+	<input type="text" size="80" name="clrs_opbg" id="clrs_opbg" placeholder="<?php _e('透明样式下的页面背景，留空为默认。粘贴链接或点击上传','clrs'); ?>" value="<?php echo get_option('clrs_opbg'); ?>"/>
+	<input type="button" name="upload_button" value="<?php _e('上传','clrs'); ?>" id="upbottom"/><br>
 
 	<br><h3><?php _e('LOGO头像：','clrs'); ?></h3>
 	<input type="text" size="80" name="clrs_logo" id="clrs_logo" placeholder="<?php _e('粘贴链接或点击上传','clrs'); ?>" value="<?php echo get_option('clrs_logo'); ?>"/>
 	<input type="button" name="upload_button" value="<?php _e('上传','clrs'); ?>" id="upbottom"/><br>
-	<p style="display:none;"><?php _e('默认值：','clrs'); ?>http://blog.dimpurr.com/wp-content/themes/clearision/img/logo.png</p><br>
 
+	<br>
 	<img src="<?php echo get_option('clrs_logo'); ?>" style="max-width: 114px; -webkit-border-radius: 500px; -moz-border-radius: 500px; border-radius: 500px;" />
 
 	<?php wp_enqueue_script('thickbox'); wp_enqueue_style('thickbox'); ?>
@@ -328,6 +347,10 @@ jQuery(document).ready(function() {
 // 提交设置
 
 if(isset($_POST['option_save'])){
+	$clrs_opct = stripslashes($_POST['clrs_opct']);
+	update_option( 'clrs_opct', $clrs_opct );
+	$clrs_opbg = stripslashes($_POST['clrs_opbg']);
+	update_option( 'clrs_opbg', $clrs_opbg );
 	$clrs_tongji = stripslashes($_POST['clrs_tongji']);
 	update_option( 'clrs_tongji', $clrs_tongji );
 	$clrs_logo = stripslashes($_POST['clrs_logo']);

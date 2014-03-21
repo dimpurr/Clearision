@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Clearison en_US\n"
-"POT-Creation-Date: 2013-11-28 16:26+0800\n"
-"PO-Revision-Date: 2013-11-28 16:26+0800\n"
+"POT-Creation-Date: 2014-03-21 20:16+0800\n"
+"PO-Revision-Date: 2014-03-21 20:18+0800\n"
 "Last-Translator: Dimpurr <dimpurr@live.com>\n"
 "Language-Team: DimWorks <dimpurr@live.com>\n"
 "Language: en_US\n"
@@ -87,116 +87,140 @@ msgstr "% Reply"
 msgid "调教文章"
 msgstr "Edit Post"
 
-#: ../functions.php:15 ../functions.php:16
-msgid "Clearision 设置"
+#: ../functions.php:16 ../functions.php:17 ../functions.php:29
+msgid "Clearision 调教"
 msgstr "Clearision Setting"
 
-#: ../functions.php:25
+#: ../functions.php:38
 msgid "主菜单"
 msgstr "Main Menu"
 
-#: ../functions.php:26
+#: ../functions.php:39
 msgid "辅助链接"
 msgstr "Secondary Link"
 
-#: ../functions.php:33
+#: ../functions.php:46
 msgid "底部栏1"
 msgstr "Bottom Siderbar One"
 
-#: ../functions.php:46
+#: ../functions.php:59
 msgid "底部栏2"
 msgstr "Bottom Sidebar Two"
 
-#: ../functions.php:132
-msgid "上一页"
-msgstr "Prev Page"
-
-#: ../functions.php:133
-msgid "下一页"
-msgstr "Next Page"
-
-#: ../functions.php:177
-msgid "文章作者"
-msgstr "Write"
-
-#: ../functions.php:193
-msgid "你的评论正在等待和谐审查"
-msgstr "Your comment is waiting for examine."
-
-#: ../functions.php:198
-msgid "编辑"
-msgstr "Edit"
-
-#: ../functions.php:200
-msgid "回复"
-msgstr "Reply"
-
-#: ../functions.php:225
+#: ../functions.php:85
 #, php-format
 msgid "页面 %s"
 msgstr "Page %s"
 
-#: ../functions.php:251
+#: ../functions.php:168
+msgid "上一页"
+msgstr "Prev Page"
+
+#: ../functions.php:169
+msgid "下一页"
+msgstr "Next Page"
+
+#: ../functions.php:213
+msgid "文章作者"
+msgstr "Write"
+
+#: ../functions.php:229
+msgid "你的评论正在等待和谐审查"
+msgstr "Your comment is waiting for examine."
+
+#: ../functions.php:234
+msgid "编辑"
+msgstr "Edit"
+
+#: ../functions.php:236
+msgid "回复"
+msgstr "Reply"
+
+#: ../functions.php:265
 msgid "Clearision 主题设置"
 msgstr "Clearision Setting"
 
-#: ../functions.php:259
-msgid "LOGO头像："
-msgstr "LOGO:"
+#: ../functions.php:273
+msgid "模版样式："
+msgstr "Theme style:"
 
-#: ../functions.php:260
-msgid "粘贴链接或点击上传"
-msgstr "Paste image link or click upload."
+#: ../functions.php:274
+msgid "灰色素雅"
+msgstr "Gray"
 
-#: ../functions.php:261
+#: ../functions.php:275
+msgid "透明清新"
+msgstr "Opacity"
+
+#: ../functions.php:277
+msgid "透明样式下的页面背景，留空为默认。粘贴链接或点击上传"
+msgstr ""
+"Opacity style's page background. Left empty to set default. Paste image link "
+"or click upload."
+
+#: ../functions.php:278 ../functions.php:282
 msgid "上传"
 msgstr "Upload"
 
-#: ../functions.php:262
-msgid "默认值："
-msgstr "Default:"
+#: ../functions.php:280
+msgid "LOGO头像："
+msgstr "LOGO:"
 
-#: ../functions.php:282
+#: ../functions.php:281
+msgid "粘贴链接或点击上传"
+msgstr "Paste image link or click upload."
+
+#: ../functions.php:303
+msgid "网站图标："
+msgstr "Site icon:"
+
+#: ../functions.php:304
+msgid "输入 ICO/PNG 图标链接，留空调用根目录 favicon.ico"
+msgstr ""
+"Input ICO/PNG icon file link, or empty to load favicon.ico in the site root "
+"url"
+
+#: ../functions.php:306
 msgid "统计代码："
 msgstr "Analysis code:"
 
-#: ../functions.php:283
+#: ../functions.php:307
 msgid "输入网站统计代码"
 msgstr "Paste website analysis code. Also can add some text."
 
-#: ../functions.php:285
+#: ../functions.php:309
 msgid "访客环境："
 msgstr "Guest UA:"
 
-#: ../functions.php:286 ../functions.php:290 ../functions.php:308
+#: ../functions.php:310 ../functions.php:314 ../functions.php:332
 msgid "显示"
 msgstr "Enable"
 
-#: ../functions.php:287 ../functions.php:291 ../functions.php:309
+#: ../functions.php:311 ../functions.php:315 ../functions.php:333
 msgid "不显示"
 msgstr "Disable"
 
-#: ../functions.php:289
+#: ../functions.php:313
 msgid "文章作者："
 msgstr "Post writer:"
 
-#: ../functions.php:293
+#: ../functions.php:317
 msgid "社交图标"
 msgstr "SNS icon:"
 
-#: ../functions.php:307
+#: ../functions.php:331
 msgid "友情链接："
 msgstr "Links:"
 
-#: ../functions.php:310
+#: ../functions.php:334
 msgid "在这里使用 HTML 代码自定义友链区的内容"
 msgstr "Use HTML code to custom links section."
 
-#: ../functions.php:312
+#: ../functions.php:336
 msgid "提交更改："
 msgstr "Submit changes:"
 
-#: ../functions.php:313
+#: ../functions.php:337
 msgid "保存全部设置"
 msgstr "Save all changes"
 
@@ -211,6 +235,9 @@ msgstr "Ouch! Please retry."
 #: ../index.php:42
 msgid "友情链接"
 msgstr "Links"
+
+#~ msgid "默认值："
+#~ msgstr "Default:"
 
 #~ msgid "当前状态："
 #~ msgstr "Current status:"

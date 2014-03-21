@@ -8,4 +8,5 @@
 	<?php dynamic_sidebar( 'two' ); ?>
 </div>
 
+<div class="clearfix"></div>
 </div>
