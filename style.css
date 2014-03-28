@@ -1,7 +1,7 @@
 /*
 Theme Name: Clearision
 Theme URI: http://blog.dimpurr.com/Clearison
-Version: 2.5
+Version: 2.6
 Author: Dimpurr
 Author URI: http://dimpurr.com
 Description: A HTML5 grey and one column WordPress theme.
@@ -79,7 +79,7 @@ td {vertical-align:top;}
 body { background: #F5F5F5; color: #444; font-size: 15px; }
 p { font-size: 15px; line-height: 28px; }
 a { text-decoration: none; color: #222; border-bottom: 1px dashed #BBB; }
-a { -webkit-transition: color linear 0.2s; -moz-transition: color linear 0.2s; transition: color linear 0.2s; }
+a, a p { -webkit-transition: color linear 0.2s; -moz-transition: color linear 0.2s; transition: color linear 0.2s; }
 a:hover { color: #000; border-bottom: 1px dashed #666; }
 a:visited { color: #222 }
 blockquote , q { margin: 10px 30px 10px 50px; padding: 10px 5px;
@@ -189,10 +189,12 @@ input:hover , textarea:hover , input:focus , textarea:focus { background: #FFF; 
 
 /* 文章样式 */
 
-.post_ctn { border-top: 1px dashed #DDD; }
-.post_ctn .wp-caption { max-width: 100% !important; }
-.post_ctn .wp-caption img  { width: auto !important; height: auto !important; max-height: auto !important; max-width: 100% !important; min-height: 40px !important; }
+.post { border-top: 1px dashed #DDD; }
+.post .wp-caption { max-width: 100% !important; }
+.post .wp-caption img  { width: auto !important; height: auto !important; max-height: auto !important; max-width: 100% !important; min-height: 40px !important; }
 .wp-caption a { border: 0; }
+.post_hctn .avatar { display: none; }
+.post_auth { display: none; }
 .post_t { margin: 15px 0 15px 0; }
 .post_time { display: inline-block; float: right; padding: 5px; margin-left: 15px;
 	text-align: center; font-family: "Times New Roman", serif, sans-serif;
@@ -214,11 +216,28 @@ input:hover , textarea:hover , input:focus , textarea:focus { background: #FFF; 
 .post_c a { background: #999; color: #FFF; }
 .post_c a:hover { background: #777; color: #FFF; }
 .wp-postviews { cursor: pointer; }
+.post_h_quote { display: none; }
 .more-link { display: inline-block; padding: 0 5px; line-height: 22px; height: 22px;
 	background: #EEE; color: #000; border: 0;
 	text-align: right; font-size: 14px; font-weight: normal;
 	-webkit-transition: background linear 0.2s; -moz-transition: background linear 0.2s; transition: background linear 0.2s; }
 .more-link:hover { background: #DEDEDE; color: #000; border: 0; }
+.format-quote .post_hctn { display: none; }
+.format-quote .post_t { padding: 0px 30px 0px 50px; }
+.format-quote .post_t p { margin: 5px 0; font-size: 1.6em; line-height: 1.4em; font-style: italic; text-indent: 2em; }
+.format-quote p:hover { text-shadow: 1px 1px 1px #EEE; }
+.format-quote .post_h_quote { display: block; font-weight: normal; text-align: right; font-size: 1.2em; color: #999; }
+.format-quote .post_h_quote::before { content: "—— 「"; }
+.format-quote .post_h_quote::after { content: "」"; }
+.format-status .post_time, .format-status .post_ct, .format-status .post_h { display: none; }
+.format-status .post_h_l { border-bottom: none; padding: 0; }
+.format-status .post_t { margin-top: -10px; margin-left: 65px; }
+.format-status .post_auth { display: block; margin: 5px 0 -2px 0; padding: 3px 0 0 0; font-size: 1em; }
+.format-status .post_time_s { margin-left: 10px; font-weight: normal; font-size: 0.8em; vertical-align: middle; }
+.format-status .avatar { display: block; margin: 5px 15px 0 5px; float: left; box-shadow:0 0 10px #DDD; }
+.format-status .post_c { display: none; }
+.format-status .post_t p { font-size: 0.9em; line-height: 1.8em; }
+.format-quote #post_nav, .format-status #post_nav { border-top: 1px dashed #DDD; margin-top: 5px; padding-top: 30px; }
 
 #page_nav { text-align: center; }
 .page-numbers { margin: 0 5px; }
@@ -324,7 +343,7 @@ input:hover , textarea:hover , input:focus , textarea:focus { background: #FFF; 
 p { font-size: 14px; line-height: 26px; }
 blockquote , q { margin-left: 15px; }
 ol , ul { padding-left: 35px; font-size: 14px; }
-.post_ctn img  { width: auto !important; height: auto !important; max-height: auto !important; max-width: 100% !important; min-height: 1px !important; }
+.post img  { width: auto !important; height: auto !important; max-height: auto !important; max-width: 100% !important; min-height: 1px !important; }
 
 #page { margin: 0 auto 0 auto; text-align: left; }
 #float { width: auto; float: none; position: static; margin-top: 20px; padding: 0px; text-align: center; }

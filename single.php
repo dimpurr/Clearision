@@ -5,7 +5,7 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-<article class="post_ctn">
+<article <?php post_class(); ?>>
 
 	<?php get_template_part('content'); ?>
 

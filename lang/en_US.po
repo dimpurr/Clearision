@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Clearison en_US\n"
-"POT-Creation-Date: 2014-03-21 20:16+0800\n"
-"PO-Revision-Date: 2014-03-21 20:18+0800\n"
+"POT-Creation-Date: 2014-03-28 20:32+0800\n"
+"PO-Revision-Date: 2014-03-28 20:32+0800\n"
 "Last-Translator: Dimpurr <dimpurr@live.com>\n"
 "Language-Team: DimWorks <dimpurr@live.com>\n"
 "Language: en_US\n"
@@ -67,23 +67,27 @@ msgstr "Email"
 msgid "站点"
 msgstr "Site"
 
-#: ../content.php:12
+#: ../content.php:3
+msgid "前"
+msgstr " ago"
+
+#: ../content.php:14
 msgid "出品"
 msgstr "Written"
 
-#: ../content.php:14
+#: ../content.php:16
 msgid "木有吐槽"
 msgstr "No Reply"
 
-#: ../content.php:14
+#: ../content.php:16
 msgid "落单的吐槽"
 msgstr "Alone Relpy"
 
-#: ../content.php:14
+#: ../content.php:16
 msgid "%发吐槽"
 msgstr "% Reply"
 
-#: ../content.php:18
+#: ../content.php:20
 msgid "调教文章"
 msgstr "Edit Post"
 
@@ -91,136 +95,136 @@ msgstr "Edit Post"
 msgid "Clearision 调教"
 msgstr "Clearision Setting"
 
-#: ../functions.php:38
+#: ../functions.php:43
 msgid "主菜单"
 msgstr "Main Menu"
 
-#: ../functions.php:39
+#: ../functions.php:44
 msgid "辅助链接"
 msgstr "Secondary Link"
 
-#: ../functions.php:46
+#: ../functions.php:51
 msgid "底部栏1"
 msgstr "Bottom Siderbar One"
 
-#: ../functions.php:59
+#: ../functions.php:64
 msgid "底部栏2"
 msgstr "Bottom Sidebar Two"
 
-#: ../functions.php:85
+#: ../functions.php:90
 #, php-format
 msgid "页面 %s"
 msgstr "Page %s"
 
-#: ../functions.php:168
+#: ../functions.php:173
 msgid "上一页"
 msgstr "Prev Page"
 
-#: ../functions.php:169
+#: ../functions.php:174
 msgid "下一页"
 msgstr "Next Page"
 
-#: ../functions.php:213
+#: ../functions.php:218
 msgid "文章作者"
 msgstr "Write"
 
-#: ../functions.php:229
+#: ../functions.php:234
 msgid "你的评论正在等待和谐审查"
 msgstr "Your comment is waiting for examine."
 
-#: ../functions.php:234
+#: ../functions.php:239
 msgid "编辑"
 msgstr "Edit"
 
-#: ../functions.php:236
+#: ../functions.php:241
 msgid "回复"
 msgstr "Reply"
 
-#: ../functions.php:265
+#: ../functions.php:270
 msgid "Clearision 主题设置"
 msgstr "Clearision Setting"
 
-#: ../functions.php:273
+#: ../functions.php:278
 msgid "模版样式："
 msgstr "Theme style:"
 
-#: ../functions.php:274
+#: ../functions.php:279
 msgid "灰色素雅"
 msgstr "Gray"
 
-#: ../functions.php:275
+#: ../functions.php:280
 msgid "透明清新"
 msgstr "Opacity"
 
-#: ../functions.php:277
+#: ../functions.php:282
 msgid "透明样式下的页面背景，留空为默认。粘贴链接或点击上传"
 msgstr ""
 "Opacity style's page background. Left empty to set default. Paste image link "
 "or click upload."
 
-#: ../functions.php:278 ../functions.php:282
+#: ../functions.php:283 ../functions.php:287
 msgid "上传"
 msgstr "Upload"
 
-#: ../functions.php:280
+#: ../functions.php:285
 msgid "LOGO头像："
 msgstr "LOGO:"
 
-#: ../functions.php:281
+#: ../functions.php:286
 msgid "粘贴链接或点击上传"
 msgstr "Paste image link or click upload."
 
-#: ../functions.php:303
+#: ../functions.php:308
 msgid "网站图标："
 msgstr "Site icon:"
 
-#: ../functions.php:304
+#: ../functions.php:309
 msgid "输入 ICO/PNG 图标链接，留空调用根目录 favicon.ico"
 msgstr ""
 "Input ICO/PNG icon file link, or empty to load favicon.ico in the site root "
 "url"
 
-#: ../functions.php:306
+#: ../functions.php:311
 msgid "统计代码："
 msgstr "Analysis code:"
 
-#: ../functions.php:307
+#: ../functions.php:312
 msgid "输入网站统计代码"
 msgstr "Paste website analysis code. Also can add some text."
 
-#: ../functions.php:309
+#: ../functions.php:314
 msgid "访客环境："
 msgstr "Guest UA:"
 
-#: ../functions.php:310 ../functions.php:314 ../functions.php:332
+#: ../functions.php:315 ../functions.php:319 ../functions.php:337
 msgid "显示"
 msgstr "Enable"
 
-#: ../functions.php:311 ../functions.php:315 ../functions.php:333
+#: ../functions.php:316 ../functions.php:320 ../functions.php:338
 msgid "不显示"
 msgstr "Disable"
 
-#: ../functions.php:313
+#: ../functions.php:318
 msgid "文章作者："
 msgstr "Post writer:"
 
-#: ../functions.php:317
+#: ../functions.php:322
 msgid "社交图标"
 msgstr "SNS icon:"
 
-#: ../functions.php:331
+#: ../functions.php:336
 msgid "友情链接："
 msgstr "Links:"
 
-#: ../functions.php:334
+#: ../functions.php:339
 msgid "在这里使用 HTML 代码自定义友链区的内容"
 msgstr "Use HTML code to custom links section."
 
-#: ../functions.php:336
+#: ../functions.php:341
 msgid "提交更改："
 msgstr "Submit changes:"
 
-#: ../functions.php:337
+#: ../functions.php:342
 msgid "保存全部设置"
 msgstr "Save all changes"
 

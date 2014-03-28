@@ -5,7 +5,8 @@ body::after { content: ""; display: block; position: fixed; top: 0; left: 0; mar
 #page { padding: 0 10px; position: relative; z-index: 10; }
 a, #sidebar a { color: #FEFEFE; }
 del { color: #CCC; }
-a:hover, #sidebar a:hover, a:visited:hover, #sidebar a:visited:hover { color: #D4DA16; border-bottom: 1px dashed #DDD; }
+a:hover, a:hover p, #sidebar a:hover, a:visited:hover, a:visited:hover p, #sidebar a:visited:hover { color: #D4DA16; border-bottom: 1px dashed #DDD; }
+h2 a:hover, h2 a:visited:hover, a:hover p, a:visited:hover p { border: none; }
 a:visited, #sidebar a:visited { color: #DDD }
 blockquote , q { border-color: rgba(255,255,255,0.7); }
 pre , code { background: rgba(0,0,0,0.2); color: #FEFEFE; border: 1.5px solid #AAA; }
@@ -34,7 +35,7 @@ button:active , input[type="submit"]:active { border-color: rgba(255,255,255,0.7
 #title_r #tr_search { color: transparent; }
 #title_r #tr_search:focus { color: #FEFEFE; background: rgba(255,255,255,0.1) no-repeat; border-width: 4px; }
 #ctn , #link { background: #121314; background: rgba(255,255,255,0.15); box-shadow: 0 0 0 8px rgba(255,255,255,0.4); color: #FAFAFA; }
-.post_ctn { border-color: rgba(255,255,255,0.7); }
+.post { border-color: rgba(255,255,255,0.7); }
 .post_time { border-color: rgba(255,255,255,0.7); }
 .post_hctn a { color: #FFF; }
 .post_hctn a:hover { color: #D4DA16; }
@@ -46,6 +47,10 @@ button:active , input[type="submit"]:active { border-color: rgba(255,255,255,0.7
 .post_c a:hover { background-color: rgba(255,255,255,0.4); }
 .more-link { background: rgba(255,255,255,0.9); }
 .more-link:hover { background: rgba(255,255,255,0.7); }
+.post_hctn .avatar { box-shadow:0 0 0 5px rgba(255,255,255,0.4); margin-top: 7px; }
+.format-quote p { color: #FFF; }
+.format-quote p:hover { text-shadow: none; }
+.format-quote .post_h_quote { color: #CCC; }
 #page_nav a , #post_nav a , #cmt-nav a { background: rgba(255,255,255,0.9); color: #121314; box-shadow: none; }
 #page_nav a:hover , #post_nav a:hover , #cmt-nav a:hover { background: rgba(255,255,255,0.7); color: #000; }
 .comment-meta .avatar { box-shadow:0 0 0 5px rgba(255,255,255,0.4); }

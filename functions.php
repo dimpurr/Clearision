@@ -32,6 +32,11 @@ function clrs_admin_bar() {
 }
 add_action('wp_before_admin_bar_render', 'clrs_admin_bar');
 
+// 加载文章格式支持
+
+add_theme_support( 'post-formats', array( 'quote', 'status' ) );
+// add_theme_support( 'post-formats', array( 'image', 'video' ) );
+
 // 加载菜单设置
 
 register_nav_menus(array(

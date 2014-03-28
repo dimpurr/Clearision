@@ -1,4 +1,6 @@
 <hgroup class="post_hctn">
+	<a href="<?php echo get_the_author_meta('user_url'); ?>"><?php echo get_avatar( get_the_author_meta('ID'), 44 ); ?></a>
+	<h2 class="post_auth"><a href="<?php echo get_the_author_meta('user_url'); ?>">@<?php the_author(); ?></a><cite class="post_time_s"><?php echo human_time_diff(get_the_time('U'), current_time('timestamp')) . __('前','clrs'); ?></cite></h2>
 	<div class="post_time">
 		<div class="post_t_d"><?php the_time('m/j') ?></div>
 		<div class="post_t_u"><?php the_time('H:i') ?></div>
@@ -20,4 +22,13 @@
 	</div>
 </hgroup>
 
-<div class="post_t"><?php the_content('Read More →'); ?></div>
+<div class="post_t">
+	<?php if ( get_post_format() == 'quote' ) { ?>
+		<a href="<?php the_permalink(); ?>">
+			<?php the_content('Read More →'); ?>
+		</a>
+	<?php } else { ?>
+		<?php the_content('Read More →'); ?>
+	<?php }; ?>
+	<h2 class="post_h_quote"><?php the_title(); ?></h2>
+</div>
