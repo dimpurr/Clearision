@@ -1,1 +1,245 @@
- 
+msgid ""
+msgstr ""
+"Project-Id-Version: Clearison en_US\n"
+"POT-Creation-Date: 2014-03-21 20:18+0800\n"
+"PO-Revision-Date: 2014-03-21 20:18+0800\n"
+"Last-Translator: Dimpurr <dimpurr@live.com>\n"
+"Language-Team: DimWorks <dimpurr@live.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_n:1,2;_x:1,2c;_ex:1,2c\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../comments.php:13
+msgid "&larr; 更旧的吐槽"
+msgstr "&larr; 更舊的評論"
+
+#: ../comments.php:14
+msgid "更新的吐槽 &rarr;"
+msgstr "更新的評論 &rarr;"
+
+#: ../comments.php:19
+msgid "要和谐，不要吐槽~"
+msgstr "對不起，這裏禁止評論"
+
+#: ../comments.php:28
+#, php-format
+msgid "吐槽 %s"
+msgstr "評論 %s"
+
+#: ../comments.php:29
+msgid "放弃治疗"
+msgstr "收回評論"
+
+#: ../comments.php:30
+msgid "发射"
+msgstr "送出"
+
+#: ../comments.php:37
+#, php-format
+msgid "你必须 <a href=\"%s\">登录</a> 后吐槽。"
+msgstr "你必須 <a href=\"%s\">登录</a> 後再回覆。"
+
+#: ../comments.php:43
+#, php-format
+msgid ""
+"以 <a href=\"%1$s\">%2$s</a> 登录。 <a href=\"%3$s\" title=\"Log out of this "
+"account\">退出</a>"
+msgstr ""
+"以 <a href=\"%1$s\">%2$s</a> 登入。 <a href=\"%3$s\" title=\"Log out of this "
+"account\">退出</a>"
+
+#: ../comments.php:56
+msgid "称呼"
+msgstr "稱呼"
+
+#: ../comments.php:60
+msgid "邮箱"
+msgstr "電郵"
+
+#: ../comments.php:64
+msgid "站点"
+msgstr "網站"
+
+#: ../content.php:12
+msgid "出品"
+msgstr "撰写"
+
+#: ../content.php:14
+msgid "木有吐槽"
+msgstr "沒有評論"
+
+#: ../content.php:14
+msgid "落单的吐槽"
+msgstr "單個評論"
+
+#: ../content.php:14
+msgid "%发吐槽"
+msgstr "%條評論"
+
+#: ../content.php:18
+msgid "调教文章"
+msgstr "編輯文章"
+
+#: ../functions.php:16 ../functions.php:17 ../functions.php:29
+msgid "Clearision 调教"
+msgstr "Clearision 設定"
+
+#: ../functions.php:38
+msgid "主菜单"
+msgstr "主選單"
+
+#: ../functions.php:39
+msgid "辅助链接"
+msgstr "輔助鏈結"
+
+#: ../functions.php:46
+msgid "底部栏1"
+msgstr "底部欄1"
+
+#: ../functions.php:59
+msgid "底部栏2"
+msgstr "底部欄2"
+
+#: ../functions.php:85
+#, php-format
+msgid "页面 %s"
+msgstr "頁面 %s"
+
+#: ../functions.php:168
+msgid "上一页"
+msgstr "上一頁"
+
+#: ../functions.php:169
+msgid "下一页"
+msgstr "下一頁"
+
+#: ../functions.php:213
+msgid "文章作者"
+msgstr "作者"
+
+#: ../functions.php:229
+msgid "你的评论正在等待和谐审查"
+msgstr "你的評論正在審覈"
+
+#: ../functions.php:234
+msgid "编辑"
+msgstr "編輯"
+
+#: ../functions.php:236
+msgid "回复"
+msgstr "評論"
+
+#: ../functions.php:265
+msgid "Clearision 主题设置"
+msgstr "Clearision 主題設定"
+
+#: ../functions.php:273
+msgid "模版样式："
+msgstr "模板樣式："
+
+#: ../functions.php:274
+msgid "灰色素雅"
+msgstr "灰色素雅"
+
+#: ../functions.php:275
+msgid "透明清新"
+msgstr "透明清新"
+
+#: ../functions.php:277
+msgid "透明样式下的页面背景，留空为默认。粘贴链接或点击上传"
+msgstr "透明樣式下的頁面背景，留空爲默認背景。複製鏈結至此或點擊「上傳」"
+
+#: ../functions.php:278 ../functions.php:282
+msgid "上传"
+msgstr "上傳"
+
+#: ../functions.php:280
+msgid "LOGO头像："
+msgstr "LOGO頭像："
+
+#: ../functions.php:281
+msgid "粘贴链接或点击上传"
+msgstr "複製鏈結至此或點擊「上傳」"
+
+#: ../functions.php:303
+msgid "网站图标："
+msgstr "網站徽號："
+
+#: ../functions.php:304
+msgid "输入 ICO/PNG 图标链接，留空调用根目录 favicon.ico"
+msgstr "填入 ICO/PNG 徽號鏈結，留空爲調用根目錄的 favicon.ico"
+
+#: ../functions.php:306
+msgid "统计代码："
+msgstr "統計代碼："
+
+#: ../functions.php:307
+msgid "输入网站统计代码"
+msgstr "輸入網站統計代碼可適當加入字符。"
+
+#: ../functions.php:309
+msgid "访客环境："
+msgstr "訪客環境："
+
+#: ../functions.php:310 ../functions.php:314 ../functions.php:332
+msgid "显示"
+msgstr "顯示"
+
+#: ../functions.php:311 ../functions.php:315 ../functions.php:333
+msgid "不显示"
+msgstr "不顯示"
+
+#: ../functions.php:313
+msgid "文章作者："
+msgstr "作者："
+
+#: ../functions.php:317
+msgid "社交图标"
+msgstr "社交徽號"
+
+#: ../functions.php:331
+msgid "友情链接："
+msgstr "友情鏈結："
+
+#: ../functions.php:334
+msgid "在这里使用 HTML 代码自定义友链区的内容"
+msgstr "在這裏使用 HTML 代碼自訂友情鏈接區域的內容"
+
+#: ../functions.php:336
+msgid "提交更改："
+msgstr "確定更改"
+
+#: ../functions.php:337
+msgid "保存全部设置"
+msgstr "保存全部設定"
+
+#: ../index.php:24
+msgid "什么都没有找到"
+msgstr "找不到內容"
+
+#: ../index.php:28
+msgid "哎呀，你要找的东西好像被贝爷吃掉了……"
+msgstr "對不起，你要找的哪裏都沒有。"
+
+#: ../index.php:42
+msgid "友情链接"
+msgstr "友情鏈結"
+
+#~ msgid "默认值："
+#~ msgstr "默認值："
+
+#~ msgid "当前状态："
+#~ msgstr "當前狀態："
+
+#~ msgid "放弃吐槽"
+#~ msgstr "放棄評論"
+
+#~ msgid "Page %s"
+#~ msgstr "Page %s"
