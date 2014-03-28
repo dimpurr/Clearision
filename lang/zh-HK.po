@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Clearison en_US\n"
-"POT-Creation-Date: 2014-03-21 20:18+0800\n"
-"PO-Revision-Date: 2014-03-21 20:18+0800\n"
+"POT-Creation-Date: 2014-03-28 21:00+0800\n"
+"PO-Revision-Date: 2014-03-28 21:00+0800\n"
 "Last-Translator: Dimpurr <dimpurr@live.com>\n"
 "Language-Team: DimWorks <dimpurr@live.com>\n"
 "Language: en_US\n"
@@ -67,23 +67,27 @@ msgstr "E-Mail"
 msgid "站点"
 msgstr "你嘅網站"
 
-#: ../content.php:12
+#: ../content.php:3
+msgid "前"
+msgstr "前"
+
+#: ../content.php:14
 msgid "出品"
 msgstr "撰寫"
 
-#: ../content.php:14
+#: ../content.php:16
 msgid "木有吐槽"
 msgstr "冇評論"
 
-#: ../content.php:14
+#: ../content.php:16
 msgid "落单的吐槽"
 msgstr "孤獨嘅一條評論"
 
-#: ../content.php:14
+#: ../content.php:16
 msgid "%发吐槽"
 msgstr "%條評論"
 
-#: ../content.php:18
+#: ../content.php:20
 msgid "调教文章"
 msgstr "修改文章"
 
@@ -91,132 +95,134 @@ msgstr "修改文章"
 msgid "Clearision 调教"
 msgstr "Clearision 改設定"
 
-#: ../functions.php:38
+#: ../functions.php:43
 msgid "主菜单"
 msgstr "Menu"
 
-#: ../functions.php:39
+#: ../functions.php:44
 msgid "辅助链接"
 msgstr "輔助鏈結"
 
-#: ../functions.php:46
+#: ../functions.php:51
 msgid "底部栏1"
 msgstr "底部欄1"
 
-#: ../functions.php:59
+#: ../functions.php:64
 msgid "底部栏2"
 msgstr "底部欄2"
 
-#: ../functions.php:85
+#: ../functions.php:90
 #, php-format
 msgid "页面 %s"
 msgstr "頁面 %s"
 
-#: ../functions.php:168
+#: ../functions.php:173
 msgid "上一页"
 msgstr "上一頁"
 
-#: ../functions.php:169
+#: ../functions.php:174
 msgid "下一页"
 msgstr "下一頁"
 
-#: ../functions.php:213
+#: ../functions.php:218
 msgid "文章作者"
 msgstr "作者"
 
-#: ../functions.php:229
+#: ../functions.php:234
 msgid "你的评论正在等待和谐审查"
 msgstr "你嘅評論仲喺度審覈緊"
 
-#: ../functions.php:234
+#: ../functions.php:239
 msgid "编辑"
 msgstr "編輯"
 
-#: ../functions.php:236
+#: ../functions.php:241
 msgid "回复"
 msgstr "評論"
 
-#: ../functions.php:265
+#: ../functions.php:270
 msgid "Clearision 主题设置"
 msgstr "Clearision 主題設定"
 
-#: ../functions.php:273
+#: ../functions.php:278
 msgid "模版样式："
 msgstr "模板樣式："
 
-#: ../functions.php:274
+#: ../functions.php:279
 msgid "灰色素雅"
 msgstr "灰色素雅"
 
-#: ../functions.php:275
+#: ../functions.php:280
 msgid "透明清新"
 msgstr "透明清新"
 
-#: ../functions.php:277
+#: ../functions.php:282
 msgid "透明样式下的页面背景，留空为默认。粘贴链接或点击上传"
-msgstr "呢個喺透明樣式下嘅頁面背景，嘜都唔填即喺用嗰默認背景。複製嗰鏈結到呢度或者點「上傳」掣"
+msgstr ""
+"呢個喺透明樣式下嘅頁面背景，嘜都唔填即喺用嗰默認背景。複製嗰鏈結到呢度或者點"
+"「上傳」掣"
 
-#: ../functions.php:278 ../functions.php:282
+#: ../functions.php:283 ../functions.php:287
 msgid "上传"
 msgstr "上傳"
 
-#: ../functions.php:280
+#: ../functions.php:285
 msgid "LOGO头像："
 msgstr "LOGO："
 
-#: ../functions.php:281
+#: ../functions.php:286
 msgid "粘贴链接或点击上传"
 msgstr "複製嗰鏈結到呢度或者點「上傳」掣"
 
-#: ../functions.php:303
+#: ../functions.php:308
 msgid "网站图标："
 msgstr "網站嘅徽號："
 
-#: ../functions.php:304
+#: ../functions.php:309
 msgid "输入 ICO/PNG 图标链接，留空调用根目录 favicon.ico"
 msgstr "填入 ICO/PNG 徽號鏈結，留空爲調用根目錄的 favicon.ico"
 
-#: ../functions.php:306
+#: ../functions.php:311
 msgid "统计代码："
 msgstr "統計代碼："
 
-#: ../functions.php:307
+#: ../functions.php:312
 msgid "输入网站统计代码"
 msgstr "喺度輸入網站嘅統計代碼，可適當加入字符。"
 
-#: ../functions.php:309
+#: ../functions.php:314
 msgid "访客环境："
 msgstr "訪客環境："
 
-#: ../functions.php:310 ../functions.php:314 ../functions.php:332
+#: ../functions.php:315 ../functions.php:319 ../functions.php:337
 msgid "显示"
 msgstr "顯示"
 
-#: ../functions.php:311 ../functions.php:315 ../functions.php:333
+#: ../functions.php:316 ../functions.php:320 ../functions.php:338
 msgid "不显示"
 msgstr "不顯示"
 
-#: ../functions.php:313
+#: ../functions.php:318
 msgid "文章作者："
 msgstr "作者："
 
-#: ../functions.php:317
+#: ../functions.php:322
 msgid "社交图标"
 msgstr "社交徽號"
 
-#: ../functions.php:331
+#: ../functions.php:336
 msgid "友情链接："
 msgstr "友情鏈結："
 
-#: ../functions.php:334
+#: ../functions.php:339
 msgid "在这里使用 HTML 代码自定义友链区的内容"
 msgstr "喺度使用 HTML 代碼自訂友情鏈接果嗰位嘅內容"
 
-#: ../functions.php:336
+#: ../functions.php:341
 msgid "提交更改："
 msgstr "更改"
 
-#: ../functions.php:337
+#: ../functions.php:342
 msgid "保存全部设置"
 msgstr "保存全部嘅設定"
 
