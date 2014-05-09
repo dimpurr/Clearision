@@ -30,9 +30,18 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 
-<?php if ( is_user_logged_in() ) { // 适配 WordPress 顶部管理栏
+<?php
+
+if ( is_user_logged_in() ) { // 适配 WordPress 顶部管理栏
 	echo '<style type="text/css" media="screen"> #float { top: 32px; } </style>' ;
-} ?>
+}
+
+$clrs_style = get_option("clrs_style");
+if ( !empty($clrs_style) ) {
+	echo "<style>" . $clrs_style . "</style>";
+}
+
+?>
 
 <?php wp_head(); ?>
 

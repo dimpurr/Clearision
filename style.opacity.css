@@ -67,8 +67,10 @@ button:active , input[type="submit"]:active { border-color: rgba(255,255,255,0.7
 
 body { background-size: auto 100%; }
 #page { padding: 0; }
-#ctn_header { padding-top: 10px; }
-#title_r #tr_search , #title_r #tr_search:hover , #title_r #tr_search:focus { background: url(img/enter.png) right no-repeat; }
+#ctn_header { padding-top: 10px; margin: 0 auto 0 auto; }
+#title { margin: 0 0 16px 0; }
+#sidebar { padding: 0 5px 15px 20px; }
+#title_r #tr_search , #title_r #tr_search:hover , #title_r #tr_search:focus { margin: 10px 0; background: url(img/enter.png) right no-repeat; background-size: 12px; background-origin: content-box; border-width: 2px; }
 #ctn { margin: 0; }
 
 }

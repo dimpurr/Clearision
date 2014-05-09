@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Clearison en_US\n"
-"POT-Creation-Date: 2014-03-28 21:00+0800\n"
-"PO-Revision-Date: 2014-03-28 21:00+0800\n"
+"POT-Creation-Date: 2014-05-09 18:02+0800\n"
+"PO-Revision-Date: 2014-05-09 18:03+0800\n"
 "Last-Translator: Dimpurr <dimpurr@live.com>\n"
 "Language-Team: DimWorks <dimpurr@live.com>\n"
 "Language: en_US\n"
@@ -116,115 +116,141 @@ msgstr "Bottom Sidebar Two"
 msgid "页面 %s"
 msgstr "Page %s"
 
-#: ../functions.php:173
+#: ../functions.php:175
 msgid "上一页"
 msgstr "Prev Page"
 
-#: ../functions.php:174
+#: ../functions.php:176
 msgid "下一页"
 msgstr "Next Page"
 
-#: ../functions.php:218
+#: ../functions.php:220
 msgid "文章作者"
 msgstr "Write"
 
-#: ../functions.php:234
+#: ../functions.php:236
 msgid "你的评论正在等待和谐审查"
 msgstr "Your comment is waiting for examine."
 
-#: ../functions.php:239
+#: ../functions.php:241
 msgid "编辑"
 msgstr "Edit"
 
-#: ../functions.php:241
+#: ../functions.php:243
 msgid "回复"
 msgstr "Reply"
 
-#: ../functions.php:270
+#: ../functions.php:272
 msgid "Clearision 主题设置"
 msgstr "Clearision Setting"
 
-#: ../functions.php:278
+#: ../functions.php:280
 msgid "模版样式："
 msgstr "Theme style:"
 
-#: ../functions.php:279
+#: ../functions.php:281
 msgid "灰色素雅"
 msgstr "Gray"
 
-#: ../functions.php:280
+#: ../functions.php:282
 msgid "透明清新"
 msgstr "Opacity"
 
-#: ../functions.php:282
+#: ../functions.php:284
 msgid "透明样式下的页面背景，留空为默认。粘贴链接或点击上传"
 msgstr ""
 "Opacity style's page background. Left empty to set default. Paste image link "
 "or click upload."
 
-#: ../functions.php:283 ../functions.php:287
+#: ../functions.php:285 ../functions.php:289
 msgid "上传"
 msgstr "Upload"
 
-#: ../functions.php:285
+#: ../functions.php:287
 msgid "LOGO头像："
 msgstr "LOGO:"
 
-#: ../functions.php:286
+#: ../functions.php:288
 msgid "粘贴链接或点击上传"
 msgstr "Paste image link or click upload."
 
-#: ../functions.php:308
+#: ../functions.php:310
 msgid "网站图标："
 msgstr "Site icon:"
 
-#: ../functions.php:309
+#: ../functions.php:311
 msgid "输入 ICO/PNG 图标链接，留空调用根目录 favicon.ico"
 msgstr ""
 "Input ICO/PNG icon file link, or empty to load favicon.ico in the site root "
 "url"
 
-#: ../functions.php:311
+#: ../functions.php:313
 msgid "统计代码："
 msgstr "Analysis code:"
 
-#: ../functions.php:312
+#: ../functions.php:314
 msgid "输入网站统计代码"
 msgstr "Paste website analysis code. Also can add some text."
 
-#: ../functions.php:314
+#: ../functions.php:316
 msgid "访客环境："
 msgstr "Guest UA:"
 
-#: ../functions.php:315 ../functions.php:319 ../functions.php:337
+#: ../functions.php:317 ../functions.php:321 ../functions.php:339
 msgid "显示"
 msgstr "Enable"
 
-#: ../functions.php:316 ../functions.php:320 ../functions.php:338
+#: ../functions.php:318 ../functions.php:322 ../functions.php:340
 msgid "不显示"
 msgstr "Disable"
 
-#: ../functions.php:318
+#: ../functions.php:320
 msgid "文章作者："
 msgstr "Post writer:"
 
-#: ../functions.php:322
+#: ../functions.php:324
 msgid "社交图标"
 msgstr "SNS icon:"
 
-#: ../functions.php:336
+#: ../functions.php:338
 msgid "友情链接："
 msgstr "Links:"
 
-#: ../functions.php:339
+#: ../functions.php:341
 msgid "在这里使用 HTML 代码自定义友链区的内容"
 msgstr "Use HTML code to custom links section."
 
-#: ../functions.php:341
+#: ../functions.php:343
+msgid "自定义样式："
+msgstr "Custom style:"
+
+#: ../functions.php:344
+msgid "输入 CSS 代码，以便更新时不会被覆盖"
+msgstr "Input the CSS code what you didn't want be replace after update."
+
+#: ../functions.php:346
+msgid "检查更新："
+msgstr "Check update:"
+
+#: ../functions.php:347
+msgid "可以应对服务器设置导致的无限提示更新问题。需要更新时请手动打开此开关"
+msgstr ""
+"For infinite update remind. Please turn on this radio while you want to "
+"update."
+
+#: ../functions.php:348
+msgid "启用"
+msgstr "On"
+
+#: ../functions.php:349
+msgid "关闭"
+msgstr "Off"
+
+#: ../functions.php:351
 msgid "提交更改："
 msgstr "Submit changes:"
 
-#: ../functions.php:342
+#: ../functions.php:352
 msgid "保存全部设置"
 msgstr "Save all changes"
 

@@ -96,11 +96,13 @@ add_filter( 'wp_title', 'clrs_title', 10, 2 );
 
 // 检测主题更新
 
-require_once(TEMPLATEPATH . '/func/theme-update-checker.php'); 
-$wpdaxue_update_checker = new ThemeUpdateChecker(
-	'Clearision',
-	'http://work.dimpurr.com/theme/clearision/update/info.json'
-);
+if ( get_option('clrs_upcl') != "yes" ) {
+	require_once(TEMPLATEPATH . '/func/theme-update-checker.php'); 
+	$wpdaxue_update_checker = new ThemeUpdateChecker(
+		'Clearision',
+		'http://work.dimpurr.com/theme/clearision/update/info.json'
+	);
+}
 
 // 这段代码用来统计模版使用情况，只会获取站点的URL，希望能够保留！
 function clrs_thtj() {
@@ -338,6 +340,14 @@ jQuery(document).ready(function() {
 	<input type="radio" name="clrs_ldis" value="no" required="required" <?php clrs_vb("clrs_ldis"); ?> /><?php _e('不显示','clrs'); ?><br>
 	<br><textarea name="clrs_link" rows="10" cols="60" placeholder="<?php _e('在这里使用 HTML 代码自定义友链区的内容','clrs'); ?>" style="font-size: 14px; font-family: Consolas, monospace, sans-serif, sans"><?php echo get_option('clrs_link'); ?></textarea><br>
 	
+	<h3><?php _e('自定义样式：','clrs'); ?></h3>
+	<textarea name="clrs_style" rows="10" cols="60" placeholder="<?php _e('输入 CSS 代码，以便更新时不会被覆盖','clrs'); ?>" style="font-size: 14px; font-family: Consolas, monospace, sans-serif, sans"><?php echo get_option('clrs_style'); ?></textarea><br>
+
+	<br><h3><?php _e('检查更新：','clrs'); ?></h3>
+	<p><?php _e('可以应对服务器设置导致的无限提示更新问题。需要更新时请手动打开此开关','clrs'); ?></p>
+	<input type="radio" name="clrs_upcl" value="no" required="required" <?php clrs_va("clrs_upcl"); ?> /><?php _e('启用','clrs'); ?>&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="radio" name="clrs_upcl" value="yes" required="required" <?php clrs_vb("clrs_upcl"); ?> /><?php _e('关闭','clrs'); ?><br>
+
 	<br><h3><?php _e('提交更改：','clrs'); ?></h3>
 	<input type="submit" name="option_save" value="<?php _e('保存全部设置','clrs'); ?>" />
 
@@ -352,6 +362,7 @@ jQuery(document).ready(function() {
 // 提交设置
 
 if(isset($_POST['option_save'])){
+
 	$clrs_opct = stripslashes($_POST['clrs_opct']);
 	update_option( 'clrs_opct', $clrs_opct );
 	$clrs_opbg = stripslashes($_POST['clrs_opbg']);
@@ -370,6 +381,10 @@ if(isset($_POST['option_save'])){
 	update_option( 'clrs_adis', $clrs_adis );
 	$clrs_link = stripslashes($_POST['clrs_link']);
 	update_option( 'clrs_link', $clrs_link );
+	$clrs_style = stripslashes($_POST['clrs_style']);
+	update_option( 'clrs_style', $clrs_style );
+	$clrs_upcl = stripslashes($_POST['clrs_upcl']);
+	update_option( 'clrs_upcl', $clrs_upcl );
 	
 	$clrs_sns = array("profile","gplus","twitter","fb","weibo","qqw","github");
 	for ($i=0; $i<7; $i++) {
