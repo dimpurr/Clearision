@@ -1,7 +1,7 @@
 <?php
 
 // 加载内置插件
-include( get_stylesheet_directory().'/func/wp-useragent.php');
+include( get_template_directory().'/func/wp-useragent.php');
 
 // 加载语言包
 add_action('after_setup_theme', 'my_theme_setup');

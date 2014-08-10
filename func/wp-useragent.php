@@ -40,12 +40,12 @@ if(!defined('WP_CONTENT_URL'))
 if(!defined('WP_CONTENT_DIR'))
 	define('WP_CONTENT_DIR', ABSPATH.'wp-content');
 if(!defined('WP_PLUGIN_URL'))
-	define('WP_PLUGIN_URL', get_stylesheet_directory_uri());
+	define('WP_PLUGIN_URL', get_template_directory_uri());
 if(!defined('WP_PLUGIN_DIR'))
-	define('WP_PLUGIN_DIR', get_stylesheet_directory());
+	define('WP_PLUGIN_DIR', get_template_directory());
 
 // Plugin Options
-$url_img=get_stylesheet_directory_uri()."/func/img/";
+$url_img=get_template_directory_uri()."/func/img/";
 
 $ua_doctype				= get_option('ua_doctype');
 $ua_comment_size		= get_option('ua_comment_size');
@@ -62,7 +62,7 @@ $ua_hide_unknown_bool	= get_option('ua_hide_unknown_bool');
 $ua_output_location		= get_option('ua_output_location');
 
 // Include our main UA detection functions
-include(get_stylesheet_directory().'/func/wp-useragent-detect.php');
+include(get_template_directory().'/func/wp-useragent-detect.php');
 
 // Image generation function
 function clrs_img($code, $type, $title)
