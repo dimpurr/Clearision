@@ -90,7 +90,7 @@ pre , code { margin: 15px 0; padding: 10px; display: block;
 	background: #FBFBFD; color: #222; border: 1.5px solid #e1e1e8;
 	font-family: "Yahei Consolas Hybird", "Consolas", "Ubuntu Mono", Monaco, Menlo, "Courier New", monospace, sans-serif; font-size: 14px; word-break: break-all; word-wrap: break-word;
 	-webkit-transition: all linear 0.2s; -moz-transition: all linear 0.2s; transition: all linear 0.2s; }
-p pre, p code { display: inline; margin: 0 6px; padding: 2px; line-height: 24px; font-size: 12px; word-wrap: break-word; }
+p pre, p code, li pre, li code { display: inline; margin: 0 6px; padding: 2px; line-height: 24px; font-size: 12px; word-wrap: break-word; }
 pre:hover , code:hover { background: #FDFDFF; }
 pre:focus , code:focus { background: #FEFEFF; outline: none; border-color: #AAA; border-radius: 0; }
 button , input[type="submit"] { border: 2px #DDD solid; background: #EFEFEF; padding: 5px 10px;
