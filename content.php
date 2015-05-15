@@ -1,13 +1,13 @@
 <hgroup class="post_hctn">
 	<a href="<?php echo get_the_author_meta('user_url'); ?>"><?php echo get_avatar( get_the_author_meta('ID'), 44 ); ?></a>
 	<h2 class="post_auth"><a href="<?php echo get_the_author_meta('user_url'); ?>">@<?php the_author(); ?></a><cite class="post_time_s"><?php echo human_time_diff(get_the_time('U'), current_time('timestamp')) . __('前','clrs'); ?></cite></h2>
-	<div class="post_time">
+	<div class="post_time" title="<?php the_time('y/m/j - H:i') ?>">
 		<div class="post_t_d"><?php the_time('m/j') ?></div>
 		<div class="post_t_u"><?php the_time('H:i') ?></div>
 	</div>
 	<div class="post_h_l">
 		<span class="post_ct"><?php the_category(' ') ?></span>
-		<h2 class="post_h"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+		<h2 class="post_h"><a href="<?php the_permalink(); ?>" title="<?php the_title(); the_time('y/m/j - H:i') ?>"><?php the_title(); ?></a></h2>
 
 		<div class="post_tag">
 			<?php $adis = get_option('clrs_adis'); if ($adis == "yes") { $c_adis = ""; } else { $c_adis = 'style="display:none;"'; }; ?>
