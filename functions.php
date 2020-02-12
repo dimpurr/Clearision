@@ -3,6 +3,12 @@
 // 加载内置插件
 include( get_template_directory().'/func/wp-useragent.php');
 
+// 给 style.css 添加修改时间, 解决缓存问题
+add_filter('stylesheet_uri', 'clrs_css_mtime');
+function clrs_css_mtime() {
+	echo get_template_directory_uri().'/style.css?t='.filemtime(get_stylesheet_directory().'/style.css');
+}
+
 // 加载语言包
 add_action('after_setup_theme', 'my_theme_setup');
 function my_theme_setup() {

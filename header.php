@@ -7,7 +7,7 @@
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 <?php if (get_option('clrs_opct') == "no") { ?>
-	<link rel="stylesheet" href="<?=get_template_directory_uri(); ?>/style.opacity.css">
+	<link rel="stylesheet" href="<?=get_template_directory_uri(); ?>/style.opacity.css?t=<?=@filemtime(get_template_directory().'/style.opacity.css'); ?>">
 	<?php $bg = get_option('clrs_opbg'); if ( !empty( $bg ) ) { ?>
 	<style>body { background-image: url("<?=$bg;?>"); };</style>
 <?php }; }; ?>
