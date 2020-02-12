@@ -3,6 +3,12 @@
 // 加载内置插件
 include( get_template_directory().'/func/wp-useragent.php');
 
+// 给 style.css 添加修改时间, 解决缓存问题
+add_filter('stylesheet_uri', 'clrs_css_mtime');
+function clrs_css_mtime() {
+	echo get_template_directory_uri().'/style.css?t='.filemtime(get_stylesheet_directory().'/style.css');
+}
+
 // 加载语言包
 add_action('after_setup_theme', 'my_theme_setup');
 function my_theme_setup() {
@@ -146,9 +152,9 @@ if ($clrs_fitj == true) {
 
 function clrs_sns () {
 	// 修改此顺序可以改变输出顺序，记得修改对应的注释
-	$clrs_sns = array("profile","gplus","twitter","fb","weibo","qqw","github");
-	$clrs_snsn = array("个人页","Google+","Twitter","Facebook","SinaWeibo","QQ","Github");
-	for ($i=0; $i<7; $i++) {
+	$clrs_sns = array("profile","gplus","twitter","fb","weibo","qqw","github","telegram");
+	$clrs_snsn = array("个人页","Google+","Twitter","Facebook","SinaWeibo","QQ","Github","Telegram");
+	for ($i=0; $i<8; $i++) {
 		$clrs_sopt = 'clrs_s_' . $clrs_sns[$i];
 		if( get_option($clrs_sopt) != null ) {
 			echo '<a href="' . get_option($clrs_sopt) . '" title="' . $clrs_snsn[$i] . '" target="_blank"><button class="tr_' . $clrs_sns[$i] . '"></button></a>
@@ -325,10 +331,10 @@ jQuery(document).ready(function() {
 	请带上 http:// <br>
 	<?php
 
-	$clrs_sns = array("profile","gplus","twitter","fb","weibo","qqw","github");
-	$clrs_snsn = array("个人页","Google+","Twitter","Facebook","SinaWeibo","QQ / Qzone / QQWeibo","Github");
+	$clrs_sns = array("profile","gplus","twitter","fb","weibo","qqw","github","telegram");
+	$clrs_snsn = array("个人页","Google+","Twitter","Facebook","SinaWeibo","QQ / Qzone / QQWeibo","Github","Telegram");
 
-	for ($i=0; $i<7; $i++) {
+	for ($i=0; $i<8; $i++) {
 		$clrs_sopt = 'clrs_s_' . $clrs_sns[$i];
 		echo '<input type="text" size="80" name="' . $clrs_sopt . '" id="' . $clrs_sopt . '" placeholder="' . $clrs_snsn[$i] . '" value="' . get_option($clrs_sopt) . '"/>';
 	}
@@ -386,8 +392,8 @@ if(isset($_POST['option_save'])){
 	$clrs_upcl = stripslashes($_POST['clrs_upcl']);
 	update_option( 'clrs_upcl', $clrs_upcl );
 	
-	$clrs_sns = array("profile","gplus","twitter","fb","weibo","qqw","github");
-	for ($i=0; $i<7; $i++) {
+	$clrs_sns = array("profile","gplus","twitter","fb","weibo","qqw","github","telegram");
+	for ($i=0; $i<8; $i++) {
 		$clrs_sopt = 'clrs_s_' . $clrs_sns[$i];
 		update_option( $clrs_sopt, stripslashes($_POST[$clrs_sopt]) );
 	}

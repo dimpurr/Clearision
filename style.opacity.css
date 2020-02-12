@@ -9,9 +9,9 @@ a:hover, a:hover p, #sidebar a:hover, a:visited:hover, a:visited:hover p, #sideb
 h2 a:hover, h2 a:visited:hover, a:hover p, a:visited:hover p { border: none; }
 a:visited, #sidebar a:visited { color: #DDD }
 blockquote , q { border-color: rgba(255,255,255,0.7); }
-pre , code { background: rgba(0,0,0,0.2); color: #FEFEFE; border: 1.5px solid #AAA; }
-pre:hover , code:hover { background: rgba(18,19,20,0.9); color: #FEFEFE; }
-pre:focus , code:focus { background: rgba(18,19,20,0.9); color: #FFF; border-color: #FFF; }
+pre , :not(pre) > code { background: rgba(0,0,0,0.2); color: #FEFEFE; border: 1.5px solid #AAA; }
+pre:hover , :not(pre) > code:hover { background: rgba(18,19,20,0.9); color: #FEFEFE; }
+pre:focus , :not(pre) > code:focus { background: rgba(18,19,20,0.9); color: #FFF; border-color: #FFF; }
 input , textarea, input:invalid, textarea:invalid { border: 2px #DDD solid; border-color: rgba(255,255,255,0.7); background: #FAFAFA; background: rgba(255,255,255,0.08); padding: 5px 10px; color: #EFEFEF;
 	-webkit-transition: background linear 0.2s; -moz-transition: backgroundbackground linear 0.2s; transition: background linear 0.2s; }
 input:hover , textarea:hover , input:focus , textarea:focus { background: #FFF; background: rgba(255,255,255,0.0); }
