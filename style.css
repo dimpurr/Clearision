@@ -176,6 +176,7 @@ input:hover , textarea:hover , input:focus , textarea:focus { background: #FFF; 
 #title_r .tr_fb { background-image: url(img/sns_fb.png); }
 #title_r .tr_gplus { background-image: url(img/sns_gplus.png); }
 #title_r .tr_weibo { background-image: url(img/sns_weibo.png); }
+#title_r .tr_telegram { background-image: url(img/sns_telegram.png); }
 #title_r .tr_qqw { background-image: url(img/sns_qqw.png); }
 #title_r .tr_github { background-image: url(img/sns_github.png); background-size: 30px; }
 #title_r .tr_profile { background-image: url(img/profile.png); }
