@@ -120,6 +120,16 @@ input:hover , textarea:hover , input:focus , textarea:focus { background: #FFF; 
 /* 悬浮导航 */
 
 #float { padding-top: 40px; text-align: right; }
+/*
+用于修复页脚与左侧菜单栏的冲突问题（页脚覆盖了菜单，导致菜单链接无法点击）
+这是我在使用平板登录的时候发现的（我的网站使用了竖排样式的统计代码，所以页脚很长）
+可以删除这段注释,主要解释为什么加这段
+*/
+#float
+{
+	z-index: 1;
+}
+
 #logo { width: 112px; background: #FFF; margin-bottom: 26px;
 	border-style: solid; border-width: 1px; border-color: #DDD; box-shadow:0 0 10px #DDD;
 	-webkit-border-radius: 500px; -moz-border-radius: 500px; border-radius: 500px; }
@@ -255,6 +265,19 @@ input:hover , textarea:hover , input:focus , textarea:focus { background: #FFF; 
 
 #post_nav { margin: 30px 0 30px 0; }
 #p_n_r { float: right; margin-left: 0; }
+
+/*文章内分页样式*/
+#nav_DividedPages{
+	font-weight: bold;
+	padding-top:20px;
+	text-align:center;
+}
+.nav_page_num{padding-right:5px;padding-left:5px;}
+#nav_previous_page{padding-left:5px;}
+
+/*新版表格样式修复*/
+tbody{color:#000!important;}/*可以适当添加类来过滤选择部分表格*/
+td{padding:10px;}
 
 /* 评论样式 */
 
