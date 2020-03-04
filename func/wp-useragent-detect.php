@@ -1252,8 +1252,18 @@ function clrs_detect_os()
 		|| preg_match('/Win32/i', $useragent))
 	{
 		$link="http://www.microsoft.com/windows/";
-
-		if(preg_match('/Windows NT 6.3; Win64; x64;/i', $useragent)
+		if(preg_match('/Windows NT 10.0; Win64; x64/i', $useragent)
+		|| preg_match('/Windows NT 10.0; WOW64/i', $useragent))
+		{
+			$title="Windows 10 x64 Edition";
+			$code="win-6";
+		}
+		elseif(preg_match('/Windows NT 10.0/i', $useragent))
+		{
+			$title="Windows 10";
+			$code="win-6";
+		}
+		elseif(preg_match('/Windows NT 6.3; Win64; x64;/i', $useragent)
 			|| preg_match('/Windows NT 6.3; WOW64/i', $useragent))
 		{
 			 $title="Windows 8.1 x64 Edition";
