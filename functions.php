@@ -150,15 +150,23 @@ if ($clrs_fitj == true) {
 
 // 首页 SNS 输出
 
+// 此数组顺序对应输出顺序
+$clrs_sns = array(
+	"profile" => "个人页",
+	"gplus" => "Google+",
+	"twitter" => "Twitter",
+	"fb" => "Facebook",
+	"weibo" => "SinaWeibo",
+	"qqw" => "QQ",
+	"github" => "Github",
+	"telegram" => "Telegram");
+
 function clrs_sns () {
-	// 修改此顺序可以改变输出顺序，记得修改对应的注释
-	$clrs_sns = array("profile","gplus","twitter","fb","weibo","qqw","github","telegram");
-	$clrs_snsn = array("个人页","Google+","Twitter","Facebook","SinaWeibo","QQ","Github","Telegram");
-	for ($i=0; $i<8; $i++) {
-		$clrs_sopt = 'clrs_s_' . $clrs_sns[$i];
-		if( get_option($clrs_sopt) != null ) {
-			echo '<a href="' . get_option($clrs_sopt) . '" title="' . $clrs_snsn[$i] . '" target="_blank"><button class="tr_' . $clrs_sns[$i] . '"></button></a>
-';
+	global $clrs_sns;
+	foreach($clrs_sns as $key=>$val) {
+		$clrs_sopt = get_option('clrs_s_' . $key);
+		if($clrs_sopt) {
+			echo('<a href="' . $clrs_sopt . '" title="' . $val . '" target="_blank"><button id="tr_' . $key . '"></button></a>');
 		}
 	}
 }
@@ -268,7 +276,7 @@ function clrs_vb($option) {
 
 // 后台设置页面
 
-function clrs_config(){ clrs_thtj(); ?>
+function clrs_config(){ global $clrs_sns; clrs_thtj(); ?>
 
 <style type="text/css">
 input[type="text"] { max-width: 510px; }
@@ -330,15 +338,10 @@ jQuery(document).ready(function() {
 	<br><h3><?php _e('社交图标','clrs'); ?></h3>
 	请带上 http:// <br>
 	<?php
-
-	$clrs_sns = array("profile","gplus","twitter","fb","weibo","qqw","github","telegram");
-	$clrs_snsn = array("个人页","Google+","Twitter","Facebook","SinaWeibo","QQ / Qzone / QQWeibo","Github","Telegram");
-
-	for ($i=0; $i<8; $i++) {
-		$clrs_sopt = 'clrs_s_' . $clrs_sns[$i];
-		echo '<input type="text" size="80" name="' . $clrs_sopt . '" id="' . $clrs_sopt . '" placeholder="' . $clrs_snsn[$i] . '" value="' . get_option($clrs_sopt) . '"/>';
+	foreach($clrs_sns as $key=>$val) {
+		$clrs_sopt = 'clrs_s_' . $key;
+		echo '<input type="text" size="80" name="' . $clrs_sopt . '" id="' . $clrs_sopt . '" placeholder="' . $val . '" value="' . get_option($clrs_sopt) . '"/>';
 	}
-
 	?>
 
 	<br><h3><?php _e('友情链接：','clrs'); ?></h3>
@@ -392,12 +395,10 @@ if(isset($_POST['option_save'])){
 	$clrs_upcl = stripslashes($_POST['clrs_upcl']);
 	update_option( 'clrs_upcl', $clrs_upcl );
 	
-	$clrs_sns = array("profile","gplus","twitter","fb","weibo","qqw","github","telegram");
-	for ($i=0; $i<8; $i++) {
-		$clrs_sopt = 'clrs_s_' . $clrs_sns[$i];
-		update_option( $clrs_sopt, stripslashes($_POST[$clrs_sopt]) );
+	foreach(array_keys($clrs_sns) as $key) {
+		$clrs_sopt = 'clrs_s_' . $key;
+		update_option($clrs_sopt, stripslashes($_POST[$clrs_sopt]));
 	}
-
 }
 
 ?>

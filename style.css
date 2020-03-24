@@ -165,7 +165,7 @@ input:hover , textarea:hover , input:focus , textarea:focus { background: #FFF; 
 	-webkit-transition: width ease 0.2s, height ease 0.2s, box-shadow linear 0.2s, background linear 0.2s, -webkit-transform linear 0.08s; -moz-transition: width ease 0.2s, height ease 0.2s, box-shadow linear 0.2s, background linear 0.2s, -moz-transform linear 0.08s; transition: width ease 0.2s, height ease 0.2s, box-shadow linear 0.2s, background linear 0.2s, transform linear 0.08s;
 	display: inline-block; width: 38px; height: 38px; padding: 2px 8px; margin: 0 0 10px 10px;
 	cursor: pointer; border: 0;
-	background: url(img/search.png) no-repeat #FFF center; background-size: 18px;
+	background: url(img/search.svg) no-repeat #FFF center; background-size: 24px;
 	-webkit-border-radius: 500px; -moz-border-radius: 500px; border-radius: 500px;
 	box-shadow:0 0 10px #DDD;
 }
@@ -174,22 +174,23 @@ input:hover , textarea:hover , input:focus , textarea:focus { background: #FFF; 
 
 #title_r form { display: inline-block; }
 #title_r #tr_search { width: 22px; height: 34px; }
-#title_r #tr_search:hover { background: url(img/search.png) no-repeat #F9F9F9 center; background-size: 18px; }
+#title_r #tr_search:hover { background: url(img/search.svg) no-repeat #F9F9F9 center; background-size: 30px; }
 #title_r #tr_search:focus { width: 180px; height: 32px; padding: 2px 18px; vertical-align: middle;
-	background: #FFF url(img/enter.png) right no-repeat; background-size: 12px; background-origin: content-box;
+	background: #FFF url(img/enter.svg) right no-repeat; background-size: 16px; background-origin: content-box;
 	border-style: solid; border-width: 2px; border-color: #E7E7E7; cursor: text;
 	box-shadow: inset 0 0 0 #DDD; }
 
-#title_r #tr_admin { background-image: url(img/admin.png); }
-#title_r #tr_rss { background-image: url(img/rss.png); }
-#title_r .tr_twitter { background-image: url(img/sns_twitter.png); }
-#title_r .tr_fb { background-image: url(img/sns_fb.png); }
-#title_r .tr_gplus { background-image: url(img/sns_gplus.png); }
-#title_r .tr_weibo { background-image: url(img/sns_weibo.png); }
-#title_r .tr_telegram { background-image: url(img/sns_telegram.png); }
-#title_r .tr_qqw { background-image: url(img/sns_qqw.png); }
-#title_r .tr_github { background-image: url(img/sns_github.png); background-size: 30px; }
-#title_r .tr_profile { background-image: url(img/profile.png); }
+#title_r button { background-size: 24px; }
+#title_r #tr_admin { background-image: url(img/admin.svg); }
+#title_r #tr_rss { background-image: url(img/rss.svg); }
+#title_r #tr_twitter { background-image: url(img/twitter.svg); }
+#title_r #tr_fb { background-image: url(img/facebook.svg); }
+#title_r #tr_gplus { background-image: url(img/google_plus.svg); }
+#title_r #tr_weibo { background-image: url(img/sina_weibo.svg); }
+#title_r #tr_telegram { background-image: url(img/telegram.svg); }
+#title_r #tr_qqw { background-image: url(img/qq.svg); }
+#title_r #tr_github { background-image: url(img/github.svg); }
+#title_r #tr_profile { background-image: url(img/profile.svg); }
 
 
 /* 内容容器 */
