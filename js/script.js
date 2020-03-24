@@ -1,28 +1,18 @@
 // Ctrl + Enter 提交表单
-function cmt_submit(){
-	if(event.ctrlKey && window.event.keyCode==13) {
-		document.getElementById("cmt_form").submit.click();
-	};
-};
-
-// 代码可编辑
-function clrs_code(){
-	var controls = document.getElementsByTagName('pre');
-	for(var i=0; i<controls.length; i++){
-		controls[i].spellcheck = false;
-		controls[i].setAttribute("contenteditable","true")
-	};
-	var controls = document.getElementsByTagName('code');
-	for(var i=0; i<controls.length; i++){
-		controls[i].spellcheck = false;
-		controls[i].setAttribute("contenteditable","true");
-	};
+document.onkeydown = function () {
+	if (event.ctrlKey && window.event.keyCode == 13) {
+		document.getElementById('cmt_form').submit.click();
+	}
 }
 
-document.onkeydown = cmt_submit;
-window.onload = clrs_code;
+// 代码可编辑
+window.onload = function () {
+	for (let item of document.querySelectorAll('code, pre')) {
+		item.spellcheck = false;
+		item.contentEditable = true;
+	}
+}
 
-console.log('Theme Clearision by Dimpurr')
-console.log('http://dimpurr.com')
-console.log('')
-console.log('Welcome to my blog!')
+console.log('Welcome to my blog!');
+console.log('');
+console.log('Theme Clearision by Dimpurr (http://dimpurr.com)');

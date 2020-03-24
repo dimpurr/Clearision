@@ -16,6 +16,7 @@ audio:not([controls]) {display:none;}
 html {font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
 html,button,input,select,textarea {font-family: "Segeo UI Mono", "Hiragino Sans GB", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "Droid Sans Fallback", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "SimHei", "ST Heiti", "WenQuanYi Zen Hei Sharp", Sans; color:#222;}
 body {margin:0;font-size:1em;line-height:1.4;}
+html, body {overflow-x: hidden;}
 ::-moz-selection {background: #999;color: #FFF; text-shadow:none;}
 ::selection {background: #999;color: #FFF; text-shadow:none;}
 a {color:#00e;}
@@ -165,31 +166,32 @@ input:hover , textarea:hover , input:focus , textarea:focus { background: #FFF; 
 	-webkit-transition: width ease 0.2s, height ease 0.2s, box-shadow linear 0.2s, background linear 0.2s, -webkit-transform linear 0.08s; -moz-transition: width ease 0.2s, height ease 0.2s, box-shadow linear 0.2s, background linear 0.2s, -moz-transform linear 0.08s; transition: width ease 0.2s, height ease 0.2s, box-shadow linear 0.2s, background linear 0.2s, transform linear 0.08s;
 	display: inline-block; width: 38px; height: 38px; padding: 2px 8px; margin: 0 0 10px 10px;
 	cursor: pointer; border: 0;
-	background: url(img/search.png) no-repeat #FFF center; background-size: 18px;
+	background: url(img/search.svg) no-repeat #FFF center; background-size: 24px;
 	-webkit-border-radius: 500px; -moz-border-radius: 500px; border-radius: 500px;
 	box-shadow:0 0 10px #DDD;
 }
 #title_r input:hover , #title_r button:hover { background-color: #F9F9F9; }
-#title_r button:active { box-shadow: 0 0 20px #DDD; -webkit-transform:scale(1.1); -moz-transform:scale(1.1); }
+#title_r button:active { box-shadow: 0 0 20px #DDD; transform:scale(1.1); -webkit-transform:scale(1.1); -moz-transform:scale(1.1); }
 
 #title_r form { display: inline-block; }
 #title_r #tr_search { width: 22px; height: 34px; }
-#title_r #tr_search:hover { background: url(img/search.png) no-repeat #F9F9F9 center; background-size: 18px; }
+#title_r #tr_search:hover { background: url(img/search.svg) no-repeat #F9F9F9 center; background-size: 30px; }
 #title_r #tr_search:focus { width: 180px; height: 32px; padding: 2px 18px; vertical-align: middle;
-	background: #FFF url(img/enter.png) right no-repeat; background-size: 12px; background-origin: content-box;
+	background: #FFF url(img/enter.svg) right no-repeat; background-size: 16px; background-origin: content-box;
 	border-style: solid; border-width: 2px; border-color: #E7E7E7; cursor: text;
 	box-shadow: inset 0 0 0 #DDD; }
 
-#title_r #tr_admin { background-image: url(img/admin.png); }
-#title_r #tr_rss { background-image: url(img/rss.png); }
-#title_r .tr_twitter { background-image: url(img/sns_twitter.png); }
-#title_r .tr_fb { background-image: url(img/sns_fb.png); }
-#title_r .tr_gplus { background-image: url(img/sns_gplus.png); }
-#title_r .tr_weibo { background-image: url(img/sns_weibo.png); }
-#title_r .tr_telegram { background-image: url(img/sns_telegram.png); }
-#title_r .tr_qqw { background-image: url(img/sns_qqw.png); }
-#title_r .tr_github { background-image: url(img/sns_github.png); background-size: 30px; }
-#title_r .tr_profile { background-image: url(img/profile.png); }
+#title_r button { background-size: 24px; }
+#title_r #tr_admin { background-image: url(img/admin.svg); }
+#title_r #tr_rss { background-image: url(img/rss.svg); }
+#title_r #tr_twitter { background-image: url(img/twitter.svg); }
+#title_r #tr_fb { background-image: url(img/facebook.svg); }
+#title_r #tr_gplus { background-image: url(img/google_plus.svg); }
+#title_r #tr_weibo { background-image: url(img/sina_weibo.svg); }
+#title_r #tr_telegram { background-image: url(img/telegram.svg); }
+#title_r #tr_qqw { background-image: url(img/qq.svg); }
+#title_r #tr_github { background-image: url(img/github.svg); }
+#title_r #tr_profile { background-image: url(img/profile.svg); }
 
 
 /* 内容容器 */
@@ -207,7 +209,7 @@ input:hover , textarea:hover , input:focus , textarea:focus { background: #FFF; 
 .post_hctn .avatar { display: none; }
 .post_auth { display: none; }
 .post_t { margin: 15px 0 15px 0; }
-.post_time { display: inline-block; float: right; padding: 5px; margin-left: 15px;
+.post_time { float: right; padding: 5px; margin-left: 15px;
 	text-align: center; font-family: "Times New Roman", serif, sans-serif;
 	border-width: 0 1px 1px 1px; border-style: dashed; border-color: #DDD; }
 .post_t_u { font-size: 18px; line-height: 18px; }
@@ -318,7 +320,7 @@ td{padding:10px;}
 #author { margin-right: 10px; margin-bottom: 15px; }
 #email { margin-right: 10px; margin-bottom: 15px; }
 #url { margin-right: 0; margin-bottom: 15px; }
-#respond textarea { width: 91.7%; max-width: 666px; padding: 15px; margin-top: -10px; }
+#respond textarea { width: 100%; max-width: 666px; padding: 15px; margin-top: -10px; box-sizing: border-box; }
 #respond input[type="submit"] { min-width: 0; width: 80px; }
 
 /* 边栏样式 */
@@ -394,12 +396,12 @@ ol , ul { padding-left: 35px; font-size: 14px; }
 #site-description { font-size: 14px !important; margin: 0; }
 
 #title_r { text-align: center; margin: 0; }
-#title_r button { box-shadow: none; background: none; background-repeat: no-repeat; background-position: center; background-size: 16px; margin: -5px 0 0 0;  }
+#title_r button { box-shadow: none; background: none; background-repeat: no-repeat; background-position: center; margin: -5px 0 0 0;  }
 #title_r #tr_admin , #title_r #tr_rss { display: none; }
 #tr_clear { display: block; }
 #title_r #tr_search { text-align: center; margin: 0; }
 #title_r #tr_search , #title_r #tr_search:hover , #title_r #tr_search:focus {
-	display: block; width: 180px; height: 20px; padding: 2px 18px; vertical-align: middle;
+	display: block; width: 180px; height: 20px; padding: 2px 18px;
 	background: #FFF url(img/enter.png) right no-repeat; background-size: 12px; background-origin: content-box;
 	border-style: solid; border-width: 2px; border-color: #E7E7E7; cursor: text; box-shadow: inset 0 0 0 #DDD; }
 
@@ -419,7 +421,6 @@ ol , ul { padding-left: 35px; font-size: 14px; }
 
 .cmt_list { margin-left: -30px; }
 .comment .children li { margin-left: -20px; }
-.cmt_list li, .comment li { }
 .comment { font-size: 13px; }
 .comment p { font-size: 13px; line-height: 24px; }
 .comment-meta .avatar { width: 24px; height: 24px; margin: 0 12px 0 0; }
@@ -435,4 +436,5 @@ ol , ul { padding-left: 35px; font-size: 14px; }
 
 #footer { float: none; margin: auto; padding: 10px 0; width: auto; text-align: center; }
 
+div#wpadminbar { position: fixed; }
 }

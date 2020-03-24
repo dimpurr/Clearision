@@ -1,6 +1,6 @@
 ::-moz-selection { background: #DDD; background: rgba(255,255,255,0.2); }
 ::selection { background: #DDD; background: rgba(255,255,255,0.2); }
-body { background: url('img/background.jpg'); background-size: cover; background-attachment: fixed; background-color: rgb(98, 223, 247); color: #EFEFEF; }
+body { background: url('img/background.jpg'); background-size: initial; background-repeat: repeat; background-attachment: fixed; background-color: rgb(98, 223, 247); color: #EFEFEF; }
 body::after { content: ""; display: block; position: fixed; top: 0; left: 0; margin: 0; padding: 0; height: 100%; width: 100%; background: rgba(0,0,0,0.55); z-index: 0; }
 #page { padding: 0 10px; position: relative; z-index: 10; }
 a, #sidebar a { color: #FEFEFE; }
@@ -70,7 +70,7 @@ body { background-size: auto 100%; }
 #ctn_header { padding-top: 10px; margin: 0 auto 0 auto; }
 #title { margin: 0 0 16px 0; }
 #sidebar { padding: 0 5px 15px 20px; }
-#title_r #tr_search , #title_r #tr_search:hover , #title_r #tr_search:focus { margin: 10px 0; background: url(img/enter.png) right no-repeat; background-size: 12px; background-origin: content-box; border-width: 2px; }
+#title_r #tr_search , #title_r #tr_search:hover , #title_r #tr_search:focus { margin: 10px 0; background: url(img/enter.svg) right no-repeat; background-size: 16px; background-origin: content-box; border-width: 2px; }
 #ctn { margin: 0; }
 
 }
