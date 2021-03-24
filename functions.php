@@ -89,7 +89,7 @@ if (function_exists('register_sidebar')) {
 }
 
 // 检测主题更新
-if (get_option('clrs_upcl') != "no") {
+if (get_option('clrs_upcl') != "0") {
 	require_once(get_template_directory() . '/func/theme-update-checker.php');
 	new ThemeUpdateChecker(
 		'Clearision',
